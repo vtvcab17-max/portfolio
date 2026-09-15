@@ -101,6 +101,8 @@
   .hero p.lede{
     margin-top:22px;color:var(--ink-dim);font-size:17px;max-width:46ch;
   }
+  .hero-info{display:flex;align-items:center;gap:10px;margin-top:18px;font-size:13.5px;color:var(--ink-dim);flex-wrap:wrap;}
+  .hero-info-dot{color:var(--brass-dim);}
   .hero-actions{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;}
   .btn{
     display:inline-flex;align-items:center;gap:8px;
@@ -156,6 +158,9 @@
   }
   .video-frame iframe{width:100%;height:100%;border:0;display:block;}
   .video-meta{display:flex;justify-content:space-between;margin-top:16px;font-size:13px;color:var(--ink-dim);flex-wrap:wrap;gap:8px;}
+
+  .video-grid-secondary{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:44px;}
+  @media (max-width:780px){.video-grid-secondary{grid-template-columns:1fr;}}
 
   /* ---------- GEAR CAROUSEL ---------- */
   .gear-carousel-wrap{position:relative;}
@@ -297,6 +302,11 @@
       <div class="eyebrow"><span class="dot"></span>Videographer · Ngành thẩm mỹ &amp; làm đẹp</div>
       <h1 class="title">Kể chuyện chuyển hóa nhan sắc, bằng hình ảnh.</h1>
       <p class="lede">Mình là Hà — quay dựng nội dung video cho ngành thẩm mỹ hơn 6 tháng qua, từ hành trình khách hàng trước - sau đến nội dung thương hiệu trên YouTube, TikTok. Xuất thân từ nền tảng thiết kế, mình mang tư duy hình ảnh vào từng khung hình.</p>
+      <div class="hero-info">
+        <span>Sinh ngày 13/02/2000</span>
+        <span class="hero-info-dot">·</span>
+        <span>Quê quán: Hà Nội</span>
+      </div>
       <div class="hero-actions">
         <a href="#work" class="btn btn-solid">Xem video</a>
         <a href="https://www.youtube.com/@havvkingofficial" target="_blank" rel="noopener" class="btn btn-ghost">Kênh YouTube</a>
@@ -306,7 +316,7 @@
     <div class="portrait-frame">
       <div class="ring"></div>
       <img src="assets/avatar.jpg" alt="Chân dung Phạm Việt Hà">
-      <div class="frame-caption">HÀ NỘI, VIỆT NAM</div>
+      <div class="frame-caption">HÀ NỘI, VIỆT NAM · 13.02.2000</div>
     </div>
   </div>
 </section>
@@ -318,11 +328,12 @@
       <h2 class="h-section">Từ thiết kế đồ họa đến sau ống kính máy quay</h2>
     </div>
     <div class="reveal">
+      <p style="margin-bottom:20px;"><strong>Họ tên:</strong> Phạm Việt Hà &nbsp;·&nbsp; <strong>Ngày sinh:</strong> 13/02/2000 &nbsp;·&nbsp; <strong>Quê quán:</strong> Hà Nội</p>
       <p>Mình từng làm <strong>Designer</strong> tại Luxcasa.vn, Sonets.vn và bộ phận Digital Marketing — nền tảng đó cho mình con mắt về bố cục, màu sắc và câu chuyện hình ảnh. Sáu tháng gần đây, mình chuyển hẳn sang <strong>quay dựng video</strong> cho một viện thẩm mỹ, phụ trách toàn bộ nội dung hình ảnh: từ before-after khách hàng, phỏng vấn bác sĩ, đến video quảng bá dịch vụ trên đa nền tảng.</p>
-      <p>Trước đó mình cũng từng là Trưởng phòng tổ chức sự kiện tại X Genius English, nên hiểu rõ cách dựng một câu chuyện có nhịp điệu, cao trào và cảm xúc — dù là trên sân khấu hay trên màn hình.</p>
+      <p>Trước đó, mình có 6 năm gắn bó với hệ thống Anh ngữ Apax / X Genius English trong vai trò <strong>Video Grapher &amp; Editor</strong> — 3 năm tại Apax English, và tiếp tục 3 năm nữa tại X Genius English sau khi hệ thống này tiếp quản Apax. Từ đó mình được đề bạt lên <strong>Trưởng phòng Truyền thông &amp; Sự kiện</strong>, nên hiểu rõ cách dựng một câu chuyện có nhịp điệu, cao trào và cảm xúc — dù là trên sân khấu hay trên màn hình.</p>
       <div class="stat-row">
         <div class="stat"><b>6+</b><span>tháng kinh nghiệm quay dựng thẩm mỹ</span></div>
-        <div class="stat"><b>5</b><span>vị trí công việc đã trải qua</span></div>
+        <div class="stat"><b>6</b><span>năm quay dựng &amp; truyền thông tại Apax/X Genius</span></div>
         <div class="stat"><b>4</b><span>thiết bị quay dựng chuyên nghiệp</span></div>
       </div>
     </div>
@@ -340,6 +351,25 @@
       <div class="video-meta">
         <span>Quay &amp; dựng — nội dung ngành thẩm mỹ</span>
         <span>Sony ZV-E10 Mark I · DJI RS 4 Pro</span>
+      </div>
+    </div>
+
+    <div class="video-grid-secondary reveal">
+      <div>
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/gqQBtvt0KNM" title="Video Grapher &amp; Editor — Apax / X Genius English" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="video-meta">
+          <span>Video Grapher &amp; Editor — Apax / X Genius English</span>
+        </div>
+      </div>
+      <div>
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/qVWhU1zDxUA" title="Video Grapher &amp; Editor — Apax / X Genius English" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="video-meta">
+          <span>Video Grapher &amp; Editor — Apax / X Genius English</span>
+        </div>
       </div>
     </div>
   </div>
@@ -430,11 +460,15 @@
       </div>
       <div class="exp-item">
         <div class="exp-time">Trước đó</div>
-        <div><div class="exp-role">Trưởng phòng tổ chức sự kiện — X Genius English (tiền thân Apax English)</div><div class="exp-desc">Điều phối và dàn dựng chương trình sự kiện quy mô lớn.</div></div>
+        <div><div class="exp-role">Trưởng phòng Truyền thông &amp; Sự kiện — X Genius English</div><div class="exp-desc">Được đề bạt sau nhiều năm gắn bó với công ty; phụ trách toàn bộ hoạt động truyền thông và điều phối, dàn dựng các chương trình sự kiện quy mô lớn.</div></div>
       </div>
       <div class="exp-item">
         <div class="exp-time">Trước đó</div>
-        <div><div class="exp-role">Designer — X Genius English</div><div class="exp-desc">Thiết kế hình ảnh truyền thông nội bộ và quảng cáo.</div></div>
+        <div><div class="exp-role">Video Grapher &amp; Editor — X Genius English</div><div class="exp-desc">3 năm tiếp tục đảm nhiệm vị trí quay dựng sau khi X Genius English tiếp quản hệ thống, khi Apax English gặp biến cố và ngừng hoạt động.</div></div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-time">Trước đó</div>
+        <div><div class="exp-role">Video Grapher &amp; Editor — Apax English</div><div class="exp-desc">3 năm phụ trách quay dựng nội dung: video quảng bá, sự kiện nội bộ và tư liệu truyền thông cho hệ thống trung tâm Anh ngữ Apax.</div></div>
       </div>
       <div class="exp-item">
         <div class="exp-time">Trước đó</div>
