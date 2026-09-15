@@ -209,6 +209,28 @@
   .exp-desc{color:var(--ink-dim);font-size:14.5px;}
 
   /* ---------- SKILLS ---------- */
+  .tag-cloud{display:flex;flex-wrap:wrap;gap:10px;}
+  .tag-pill{
+    font-size:13.5px;padding:9px 16px;border:1px solid var(--line);color:var(--ink-dim);
+    transition:border-color .25s, color .25s;
+  }
+  .tag-pill:hover{border-color:var(--brass-dim);color:var(--brass);}
+  .edu-block{border:1px solid var(--line);background:var(--bg-raised);padding:28px 32px;margin-bottom:44px;}
+  .edu-block .edu-school{font-family:'Fraunces',serif;font-size:20px;margin-bottom:8px;}
+  .edu-block .edu-desc{color:var(--ink-dim);font-size:14.5px;}
+
+  .tool-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;background:var(--line);border:1px solid var(--line);}
+  @media (max-width:780px){.tool-grid{grid-template-columns:repeat(3,1fr);}}
+  @media (max-width:480px){.tool-grid{grid-template-columns:repeat(2,1fr);}}
+  .tool-cell{
+    background:var(--bg);padding:22px 14px;text-align:center;
+    display:flex;flex-direction:column;align-items:center;gap:10px;
+    transition:background .25s;
+  }
+  .tool-cell:hover{background:var(--bg-raised);}
+  .tool-cell svg{width:34px;height:34px;}
+  .tool-cell span{font-size:12.5px;color:var(--ink-dim);}
+
   .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--line);border:1px solid var(--line);}
   @media (max-width:640px){.skills-grid{grid-template-columns:1fr;}}
   .skill-cell{background:var(--bg);padding:26px 28px;}
@@ -262,7 +284,9 @@
       <li><a href="#work">Video</a></li>
       <li><a href="#gear">Thiết bị</a></li>
       <li><a href="#experience">Kinh nghiệm</a></li>
+      <li><a href="#education">Học vấn</a></li>
       <li><a href="#contact">Liên hệ</a></li>
+      <li><a href="noi-bo.html">Nội bộ</a></li>
     </ul>
   </div>
 </nav>
@@ -420,6 +444,113 @@
         <div class="exp-time">Trước đó</div>
         <div><div class="exp-role">Designer — Sonets.vn &amp; Luxcasa.vn</div><div class="exp-desc">Thiết kế hình ảnh sản phẩm và thương hiệu.</div></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="kicker reveal">Học vấn</div>
+    <h2 class="h-section reveal">Nền tảng đào tạo</h2>
+
+    <div class="edu-block reveal">
+      <div class="edu-school">Đại học FPT — Cử nhân Trí tuệ nhân tạo</div>
+      <div class="edu-desc">Tốt nghiệp chuyên ngành Trí tuệ nhân tạo — nền tảng giúp mình tiếp cận nhanh các công cụ AI trong quy trình dựng nội dung và tối ưu công việc sáng tạo.</div>
+    </div>
+
+    <div class="edu-block reveal">
+      <div class="edu-school">Arena Multimedia</div>
+      <div class="edu-desc">Trường đào tạo mỹ thuật đa phương tiện — nơi hình thành nền tảng thiết kế, dựng hình và tư duy hình ảnh mà mình mang theo vào công việc quay dựng hiện tại.</div>
+    </div>
+
+    <div class="kicker reveal">Công cụ sử dụng</div>
+    <h2 class="h-section reveal">Phần mềm &amp; nền tảng</h2>
+    <div class="tool-grid reveal">
+
+      <div class="tool-cell">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 6 L40 15 V33 L24 42 L8 33 V15 Z" stroke="#C9A469" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M8 15 L24 24 L40 15" stroke="#C9A469" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M24 24 V42" stroke="#C9A469" stroke-width="2"/>
+        </svg>
+        <span>3ds Max</span>
+      </div>
+
+      <div class="tool-cell">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="18" cy="14" r="8" stroke="#C9A469" stroke-width="2"/>
+          <rect x="10" y="22" width="16" height="16" rx="8" stroke="#C9A469" stroke-width="2"/>
+          <circle cx="34" cy="30" r="8" stroke="#C9A469" stroke-width="2"/>
+        </svg>
+        <span>Figma</span>
+      </div>
+
+      <div class="tool-cell">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="9" width="32" height="30" rx="2" stroke="#C9A469" stroke-width="2"/>
+          <path d="M8 17 H40" stroke="#C9A469" stroke-width="2"/>
+          <path d="M16 24 H32 M16 30 H28" stroke="#C9A469" stroke-width="1.8"/>
+        </svg>
+        <span>InDesign</span>
+      </div>
+
+      <div class="tool-cell">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="24" r="16" stroke="#C9A469" stroke-width="2"/>
+          <path d="M18 32 V16 h7 a6 6 0 0 1 0 12 h-7" stroke="#C9A469" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+        <span>Photoshop</span>
+      </div>
+
+      <div class="tool-cell">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="19" r="11" stroke="#C9A469" stroke-width="2"/>
+          <path d="M15 27 c-3 4 -3 9 0 12 M33 27 c3 4 3 9 0 12" stroke="#C9A469" stroke-width="2"/>
+          <circle cx="19" cy="17" r="2" fill="#C9A469"/>
+          <circle cx="29" cy="17" r="2" fill="#C9A469"/>
+        </svg>
+        <span>ZBrush</span>
+      </div>
+
+      <div class="tool-cell">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="12" width="32" height="24" rx="2" stroke="#C9A469" stroke-width="2"/>
+          <path d="M20 18 L30 24 L20 30 Z" fill="#C9A469"/>
+        </svg>
+        <span>Premiere Pro</span>
+      </div>
+
+      <div class="tool-cell">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 8 L28 20 L40 24 L28 28 L24 40 L20 28 L8 24 L20 20 Z" stroke="#C9A469" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+        <span>After Effects</span>
+      </div>
+
+      <div class="tool-cell">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 38 L24 8 L38 38 H30 L27 31 H21 L18 38 Z" stroke="#C9A469" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+        <span>Illustrator</span>
+      </div>
+
+      <div class="tool-cell">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="18" cy="18" r="9" stroke="#C9A469" stroke-width="2"/>
+          <circle cx="31" cy="30" r="9" stroke="#C9A469" stroke-width="2"/>
+          <path d="M24 24 L25 25" stroke="#C9A469" stroke-width="2"/>
+        </svg>
+        <span>Canva</span>
+      </div>
+
+      <div class="tool-cell">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 10 V30 a6 6 0 1 1 -6 -6" stroke="#C9A469" stroke-width="2" stroke-linecap="round"/>
+          <path d="M20 12 c3 5 7 7 11 7" stroke="#C9A469" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>TikTok Studio</span>
+      </div>
+
     </div>
   </div>
 </section>
