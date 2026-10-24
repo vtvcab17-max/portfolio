@@ -1,6 +1,6 @@
 # Portfolio · Phạm Việt Hà
 
-Videographer ngành thẩm mỹ và người xây hệ sinh thái **Beta** (Bravinall: Bravin, Antifact, Micron, Micow · Beta HQ · Beta Holding).
+Người sáng lập **Beta**, xây sản phẩm AI. Cử nhân Trí tuệ nhân tạo (ĐH FPT), đang học Kỹ sư phần mềm tại Học viện Công nghệ Bưu chính Viễn thông. Hệ sinh thái (Bravinall: Bravin, Antifact, Micron, Micow · Beta HQ · Beta Holding).
 
 **Xem trang:** https://vtvcab17-max.github.io/portfolio/
 
