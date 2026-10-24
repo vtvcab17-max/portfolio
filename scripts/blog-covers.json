@@ -1,0 +1,162 @@
+[
+ {
+  "slug": "pham-viet-ha-la-ai",
+  "title": "Phạm Việt Hà là ai? Người sáng lập Beta, nghệ danh HAVVKING",
+  "category": "Phạm Việt Hà",
+  "image": "assets/avatars/hero.jpg",
+  "cover": "assets/blog/pham-viet-ha-la-ai.jpg",
+  "color": "#8b7dff"
+ },
+ {
+  "slug": "havvking-la-ai",
+  "title": "HAVVKING là ai? Nghệ danh âm nhạc của Phạm Việt Hà",
+  "category": "HAVVKING",
+  "image": "assets/music/avatar.jpg",
+  "cover": "assets/blog/havvking-la-ai.jpg",
+  "color": "#ff4fb0"
+ },
+ {
+  "slug": "he-sinh-thai-beta",
+  "title": "Hệ sinh thái Beta của Phạm Việt Hà: Bravin, Antifact, Micron, Micow và Beta HQ",
+  "category": "Sản phẩm",
+  "image": "assets/blog/img/he-sinh-thai.jpg",
+  "cover": "assets/blog/he-sinh-thai-beta.jpg",
+  "color": "#14c9c9"
+ },
+ {
+  "slug": "phong-cach-am-nhac-havvking",
+  "title": "Phong cách âm nhạc HAVVKING: xẩm Hà Nội gặp drill và Latin trap",
+  "category": "HAVVKING",
+  "image": "assets/music/banner.jpg",
+  "cover": "assets/blog/phong-cach-am-nhac-havvking.jpg",
+  "color": "#ff4fb0"
+ },
+ {
+  "slug": "danh-sach-bai-hat-havvking",
+  "title": "Danh sách bài hát HAVVKING (cập nhật tháng 10/2026)",
+  "category": "HAVVKING",
+  "image": "assets/blog/img/tracks.jpg",
+  "cover": "assets/blog/danh-sach-bai-hat-havvking.jpg",
+  "color": "#ff4fb0"
+ },
+ {
+  "slug": "trai-thu-do-2026-havvking",
+  "title": "Trai Thủ Đô 2026: bản instrumental xẩm Hà Nội × hip-hop của HAVVKING",
+  "category": "HAVVKING",
+  "image": "assets/music/udsj6ugoTBk.jpg",
+  "cover": "assets/blog/trai-thu-do-2026-havvking.jpg",
+  "color": "#ff4fb0"
+ },
+ {
+  "slug": "nghe-nhac-havvking-o-dau",
+  "title": "Nghe nhạc HAVVKING ở đâu? YouTube, Spotify, SoundCloud và Instagram",
+  "category": "HAVVKING",
+  "image": "assets/music/spotify.jpg",
+  "cover": "assets/blog/nghe-nhac-havvking-o-dau.jpg",
+  "color": "#ff4fb0"
+ },
+ {
+  "slug": "havvking-tu-lam-lyric-video",
+  "title": "HAVVKING tự làm lyric video: khi rapper từng là người dựng phim chuyên nghiệp",
+  "category": "HAVVKING",
+  "image": "assets/music/sf3o1bXu9kI.jpg",
+  "cover": "assets/blog/havvking-tu-lam-lyric-video.jpg",
+  "color": "#ff4fb0"
+ },
+ {
+  "slug": "tiktok-havvking",
+  "title": "TikTok @havvking: kênh đời thường và thử nghiệm dựng video của Phạm Việt Hà",
+  "category": "HAVVKING",
+  "image": "assets/tiktok/v6.jpg",
+  "cover": "assets/blog/tiktok-havvking.jpg",
+  "color": "#ff4fb0"
+ },
+ {
+  "slug": "ba-kenh-tiktok-pham-viet-ha",
+  "title": "Ba kênh TikTok của Phạm Việt Hà: @havvking, @havv_king và @medialabotary",
+  "category": "Phạm Việt Hà",
+  "image": "assets/avatars/tt-havv_king.jpg",
+  "cover": "assets/blog/ba-kenh-tiktok-pham-viet-ha.jpg",
+  "color": "#8b7dff"
+ },
+ {
+  "slug": "media-lab-review-cong-nghe",
+  "title": "Media Lab (@medialabotary): kênh review công nghệ Phạm Việt Hà xây trên TikTok",
+  "category": "Phạm Việt Hà",
+  "image": "assets/tiktok/ml1.jpg",
+  "cover": "assets/blog/media-lab-review-cong-nghe.jpg",
+  "color": "#8b7dff"
+ },
+ {
+  "slug": "hanh-trinh-pham-viet-ha",
+  "title": "Hành trình của Phạm Việt Hà: từ designer, người dựng phim đến người sáng lập Beta",
+  "category": "Phạm Việt Hà",
+  "image": "assets/blog/img/hanh-trinh.jpg",
+  "cover": "assets/blog/hanh-trinh-pham-viet-ha.jpg",
+  "color": "#8b7dff"
+ },
+ {
+  "slug": "pham-viet-ha-hoc-van",
+  "title": "Phạm Việt Hà học gì? Cử nhân AI ĐH FPT, Kỹ sư phần mềm PTIT và Deep Learning",
+  "category": "Phạm Việt Hà",
+  "image": "assets/blog/img/hoc-van.jpg",
+  "cover": "assets/blog/pham-viet-ha-hoc-van.jpg",
+  "color": "#8b7dff"
+ },
+ {
+  "slug": "bravin-trinh-dung-video",
+  "title": "Bravin: trình dựng video Phạm Việt Hà xây, chạy trên web, Android và Windows",
+  "category": "Sản phẩm",
+  "image": "assets/blog/img/bravin-hero.jpg",
+  "cover": "assets/blog/bravin-trinh-dung-video.jpg",
+  "color": "#14c9c9"
+ },
+ {
+  "slug": "antifact-thiet-ke-tren-trinh-duyet",
+  "title": "Antifact: công cụ thiết kế trên trình duyệt của Phạm Việt Hà, nối thẳng sang video",
+  "category": "Sản phẩm",
+  "image": "assets/blog/img/antifact-hero.jpg",
+  "cover": "assets/blog/antifact-thiet-ke-tren-trinh-duyet.jpg",
+  "color": "#14c9c9"
+ },
+ {
+  "slug": "micron-canvas-ai-mo",
+  "title": "Micron: canvas AI mở của Phạm Việt Hà, mang AI của bạn và bấm Chạy",
+  "category": "Sản phẩm",
+  "image": "assets/blog/img/micron-hero.jpg",
+  "cover": "assets/blog/micron-canvas-ai-mo.jpg",
+  "color": "#14c9c9"
+ },
+ {
+  "slug": "micow-mo-hinh-lam-nhac",
+  "title": "Micow: mô hình làm nhạc chạy trên máy do HAVVKING (Phạm Việt Hà) xây",
+  "category": "Sản phẩm",
+  "image": "assets/blog/img/micow-hero.jpg",
+  "cover": "assets/blog/micow-mo-hinh-lam-nhac.jpg",
+  "color": "#14c9c9"
+ },
+ {
+  "slug": "beta-hq-van-phong-ai",
+  "title": "Beta HQ: văn phòng 2.5D nơi các tác nhân AI của Phạm Việt Hà làm việc trực tiếp",
+  "category": "Sản phẩm",
+  "image": "assets/blog/img/beta-hq-van-phong.jpg",
+  "cover": "assets/blog/beta-hq-van-phong-ai.jpg",
+  "color": "#14c9c9"
+ },
+ {
+  "slug": "bo-cong-cu-pham-viet-ha",
+  "title": "Bộ công cụ của Phạm Việt Hà: Adobe, Blender, Maya, Figma và các AI hàng đầu",
+  "category": "Phạm Việt Hà",
+  "image": "assets/blog/img/cong-cu.jpg",
+  "cover": "assets/blog/bo-cong-cu-pham-viet-ha.jpg",
+  "color": "#8b7dff"
+ },
+ {
+  "slug": "lam-nhac-nen-capcut-drop-dung-giay",
+  "title": "Hướng dẫn làm nhạc nền CapCut có drop đúng giây bằng Micow",
+  "category": "Hướng dẫn",
+  "image": "assets/blog/img/micow-drop.jpg",
+  "cover": "assets/blog/lam-nhac-nen-capcut-drop-dung-giay.jpg",
+  "color": "#ffb340"
+ }
+]

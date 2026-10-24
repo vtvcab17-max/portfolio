@@ -2,8 +2,8 @@
   "name": "portfolio",
   "main": "worker.js",
   "compatibility_date": "2025-10-01",
-  // Chỉ đưa trang lên web: chép index.html và assets/ vào dist/ trước mỗi lần deploy
+  // Chỉ đưa trang lên web: chép index.html, assets/, blog/, sitemap.xml, robots.txt vào dist/ trước mỗi lần deploy
   // (worker.js, README, bản cũ không lộ ra ngoài). GitHub Pages vẫn phục vụ thẳng từ gốc repo.
-  "build": { "command": "rm -rf dist && mkdir -p dist && cp -r index.html assets dist/" },
+  "build": { "command": "rm -rf dist && mkdir -p dist && cp -r index.html assets blog sitemap.xml robots.txt dist/" },
   "assets": { "directory": "./dist", "binding": "ASSETS", "run_worker_first": ["/api/*"] }
 }
