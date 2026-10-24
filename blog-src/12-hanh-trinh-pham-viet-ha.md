@@ -21,7 +21,7 @@ Hành trình của **Phạm Việt Hà** đi qua ba chặng: thiết kế, hình
 | Vị trí | Nơi làm | Công việc |
 |---|---|---|
 | Thực tập sinh | VTVcab (Tổng công ty Truyền hình Cáp Việt Nam) | Làm quen quy trình sản xuất nội dung truyền hình |
-| Digital Marketing | Medialabotary | Nội dung số, chiến dịch online, kênh TikTok Media Lab |
+| Digital Marketing | Medialabotary | Nội dung số, chiến dịch online, kênh TikTok Media Lab, website bách hoá điện tử |
 | Video Grapher & Editor (3 năm) | Apax English (Apax Leaders) | Video quảng bá, sự kiện nội bộ, tư liệu truyền thông |
 | Video Grapher & Editor (3 năm) | X Genius English | Tiếp tục quay dựng sau khi X Genius English tiếp quản hệ thống Apax |
 | Trưởng phòng Truyền thông & Sự kiện | X Genius English | Toàn bộ truyền thông, điều phối và dàn dựng sự kiện quy mô lớn |

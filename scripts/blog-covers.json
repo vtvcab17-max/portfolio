@@ -81,7 +81,7 @@
  },
  {
   "slug": "media-lab-review-cong-nghe",
-  "title": "Media Lab (@medialabotary): kênh review công nghệ Phạm Việt Hà xây trên TikTok",
+  "title": "Media Lab (@medialabotary): kênh review công nghệ và website bách hoá điện tử của Phạm Việt Hà",
   "category": "Phạm Việt Hà",
   "image": "assets/tiktok/ml1.jpg",
   "cover": "assets/blog/media-lab-review-cong-nghe.jpg",
@@ -158,5 +158,13 @@
   "image": "assets/blog/img/micow-drop.jpg",
   "cover": "assets/blog/lam-nhac-nen-capcut-drop-dung-giay.jpg",
   "color": "#ffb340"
+ },
+ {
+  "slug": "new-reviewer-review-truyen-tranh",
+  "title": "NEW REVIEWER: kênh YouTube review truyện tranh, hoạt hình tu tiên của Phạm Việt Hà",
+  "category": "Phạm Việt Hà",
+  "image": "assets/youtube/QD7unv8qW98.jpg",
+  "cover": "assets/blog/new-reviewer-review-truyen-tranh.jpg",
+  "color": "#8b7dff"
  }
 ]

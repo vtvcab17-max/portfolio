@@ -23,6 +23,7 @@ SAME_AS = [
     "https://www.tiktok.com/@havv_king",
     "https://www.tiktok.com/@medialabotary",
     "https://www.instagram.com/havvking_/",
+    "https://www.youtube.com/@newsreviewer11",
 ]
 CATS = {  # tên chuyên mục → màu
     "HAVVKING": "#ff4fb0",

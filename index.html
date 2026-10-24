@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Phạm Việt Hà","jobTitle":"Người sáng lập Beta · Phát triển sản phẩm AI","birthDate":"2000-02-13","homeLocation":"Hà Nội","email":"mailto:vtvcab17@gmail.com","image":"https://portfolio.vtvcab17.workers.dev/assets/avatars/hero.jpg","alumniOf":["Đại học FPT","Học viện Công nghệ Bưu chính Viễn thông","Arena Multimedia"],"knowsAbout":["Trí tuệ nhân tạo","Deep Learning","Kỹ thuật phần mềm"],"alternateName":"HAVVKING","sameAs":["https://www.youtube.com/@havvkingofficial","https://open.spotify.com/artist/2ytqsqgD4mLZ0qkOlQnsmn","https://soundcloud.com/ph-m-h-329852250","https://www.tiktok.com/@havvking","https://www.tiktok.com/@havv_king","https://www.tiktok.com/@medialabotary","https://www.instagram.com/havvking_/"]}
+{"@context":"https://schema.org","@type":"Person","name":"Phạm Việt Hà","jobTitle":"Người sáng lập Beta · Phát triển sản phẩm AI","birthDate":"2000-02-13","homeLocation":"Hà Nội","email":"mailto:vtvcab17@gmail.com","image":"https://portfolio.vtvcab17.workers.dev/assets/avatars/hero.jpg","alumniOf":["Đại học FPT","Học viện Công nghệ Bưu chính Viễn thông","Arena Multimedia"],"knowsAbout":["Trí tuệ nhân tạo","Deep Learning","Kỹ thuật phần mềm"],"alternateName":"HAVVKING","sameAs":["https://www.youtube.com/@havvkingofficial","https://open.spotify.com/artist/2ytqsqgD4mLZ0qkOlQnsmn","https://soundcloud.com/ph-m-h-329852250","https://www.tiktok.com/@havvking","https://www.tiktok.com/@havv_king","https://www.tiktok.com/@medialabotary","https://www.instagram.com/havvking_/","https://www.youtube.com/@newsreviewer11"]}
 </script>
 <style>
 /* ============ Liquid Glass: token ============ */
@@ -729,6 +729,29 @@ footer a{color:var(--ink-2)}
 @media (max-width:1000px){.bcards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:900px){.blog-m{display:flex;align-items:center;height:36px;margin-left:auto;padding:0 14px;border-radius:99px;text-decoration:none;font:600 14px/1 var(--font);color:var(--ink);background:var(--glass-2);box-shadow:inset 0 1px 0 var(--edge)}.nav .me{margin-right:10px}}
 @media (max-width:640px){.bcards{display:flex;gap:12px;margin:28px -16px 0;padding:4px 16px 10px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:16px;scrollbar-width:none}.bcards::-webkit-scrollbar{display:none}.bcard{flex:0 0 86%;scroll-snap-align:start}}
+
+
+/* thẻ website lẻ cuối cùng trải ngang: ảnh trái, chữ phải */
+@media (min-width:801px){.webs .web:last-child:nth-child(odd){grid-column:1/-1;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:center;gap:28px;padding:12px}
+  .webs .web:last-child:nth-child(odd) .body{padding:0 20px 0 0}}
+/* ============ Kênh NEW REVIEWER ============ */
+.nr{margin-top:22px;padding:22px;border-radius:40px}
+.nr-head{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:22px;align-items:center}
+.nr-av{width:104px;height:104px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 4px rgba(255,255,255,.18),0 18px 40px -16px #e5383b;transition:transform .6s cubic-bezier(.2,1.4,.3,1)}
+.nr:hover .nr-av{transform:rotate(-8deg) scale(1.06)}
+.nr-txt h3{margin:10px 0 6px;font:800 clamp(26px,3vw,36px)/1 var(--font);letter-spacing:-.03em}
+.nr-txt p{margin:0;color:var(--ink-2);max-width:62ch}
+.nr-stats{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:10px;color:var(--ink-2);font-size:14px}
+.nr-stats b{color:var(--ink);font-size:17px}
+.nr-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:22px}
+.nr-grid .vid:first-child{grid-column:span 2;grid-row:span 2}
+.nr-grid .vid{padding:8px}
+.nr-grid .vid .cap{font-size:13.5px;padding:10px 8px 4px}
+.nr-grid .vid:not(:first-child) .yt .play{width:54px;height:54px}
+@media (max-width:900px){.nr-head{grid-template-columns:auto minmax(0,1fr)}.nr-head .btn{grid-column:1/-1;justify-self:start}.nr-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.nr-grid .vid:first-child{grid-row:auto}}
+@media (max-width:640px){.nr{padding:16px;border-radius:30px}.nr-av{width:72px;height:72px}.nr-head{gap:14px}
+  .nr-grid{display:flex;gap:12px;margin:18px -16px 0;padding:4px 16px 10px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:16px;scrollbar-width:none}.nr-grid::-webkit-scrollbar{display:none}
+  .nr-grid .vid{flex:0 0 86%;scroll-snap-align:start}}
 </style>
 </head>
 <body>
@@ -1092,6 +1115,15 @@ footer a{color:var(--ink-2)}
           <div class="links"><a href="https://bravinall.vtvcab17.workers.dev/" target="_blank" rel="noopener">Xem website ↗</a></div>
         </div>
       </article>
+      <article class="web glass reveal">
+        <div class="shot dev" style="--c1:#5e0020;--c2:#f2c6d6"><div class="browser"><div class="bar"><i></i><i></i><i></i><span>medialabotary.wordpress.com</span></div><div class="scr"><img src="assets/web-medialab-desktop.jpg" alt="Giao diện máy tính website Media Labotary" loading="lazy" width="800" height="4200"></div></div><div class="phone"><img src="assets/web-medialab-mobile.jpg" alt="Giao diện điện thoại website Media Labotary" loading="lazy" width="390" height="844"></div></div>
+        <div class="body">
+          <div class="tools"><span class="tag">WordPress</span><span class="tag">Digital Marketing</span></div>
+          <h3>Media Labotary · Bách hoá điện tử</h3>
+          <p>Website bán thiết bị công nghệ: danh mục laptop, âm thanh, bàn phím, chuột, màn hình, đồ chơi công nghệ; sản phẩm đề cử, trang chi tiết có thông số và hướng dẫn, thương hiệu AULA, Machenike, Sanhuo.</p>
+          <div class="links"><a href="https://medialabotary.wordpress.com/" target="_blank" rel="noopener">Xem website ↗</a></div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -1267,6 +1299,25 @@ footer a{color:var(--ink-2)}
         </figure>
       </div>
     </div>
+    <div class="nr glass reveal">
+      <div class="nr-head">
+        <img class="nr-av" src="assets/avatars/yt-newreviewer.jpg" alt="Ảnh đại diện kênh NEW REVIEWER" loading="lazy" width="400" height="400">
+        <div class="nr-txt">
+          <span class="eyebrow glass">YouTube · review truyện tranh</span>
+          <h3>NEW REVIEWER</h3>
+          <p>Kênh review truyện tranh và hoạt hình tu tiên, kiếm hiệp, dựng thành những video dài từ một đến gần chín tiếng.</p>
+          <div class="nr-stats"><span><b>221</b> người đăng ký</span><span><b>31</b> video</span><span><b>108K+</b> lượt xem</span></div>
+        </div>
+        <a class="btn tint magnet" href="https://www.youtube.com/@newsreviewer11" target="_blank" rel="noopener" style="--iris:#e5383b"><svg><use href="#i-yt"/></svg>Mở kênh</a>
+      </div>
+      <div class="nr-grid">
+        <figure class="vid glass reveal" style="margin:0"><button class="yt" data-id="lpeAFnw_orQ" aria-label="Phát video: Hệ Thống Vô Tri Nhất Tu Tiên: Cứ Vỗ Mông Là Vô Địch Thiên Hạ?! · Review hoạt hình 3D (Phần 1)"><img src="assets/youtube/lpeAFnw_orQ.jpg" alt="" loading="lazy"><span class="play glass"><svg><use href="#i-play"/></svg></span></button><figcaption class="cap">Hệ Thống Vô Tri Nhất Tu Tiên: Cứ Vỗ Mông Là Vô Địch Thiên Hạ?! · Review hoạt hình 3D (Phần 1)<span>465 lượt xem · 1:02:54</span></figcaption></figure>
+        <figure class="vid glass reveal" style="margin:0"><button class="yt" data-id="QD7unv8qW98" aria-label="Phát video: Hà Nhân Hitler Đại quốc trưởng · Phần 1"><img src="assets/youtube/QD7unv8qW98.jpg" alt="" loading="lazy"><span class="play glass"><svg><use href="#i-play"/></svg></span></button><figcaption class="cap">Hà Nhân Hitler Đại quốc trưởng · Phần 1<span>4,4 nghìn lượt xem · 7:19:35</span></figcaption></figure>
+        <figure class="vid glass reveal" style="margin:0"><button class="yt" data-id="0ad6aQVANB8" aria-label="Phát video: Lão Tổ Ẩn Cư 10 Vạn Năm Rời Núi Vô Địch Thiên Hạ · Full phần 1"><img src="assets/youtube/0ad6aQVANB8.jpg" alt="" loading="lazy"><span class="play glass"><svg><use href="#i-play"/></svg></span></button><figcaption class="cap">Lão Tổ Ẩn Cư 10 Vạn Năm Rời Núi Vô Địch Thiên Hạ · Full phần 1<span>1,2 nghìn lượt xem · 8:56:49</span></figcaption></figure>
+        <figure class="vid glass reveal" style="margin:0"><button class="yt" data-id="3ONj8CorL2Y" aria-label="Phát video: Hà Nhân Hitler Đại quốc trưởng · Phần 2"><img src="assets/youtube/3ONj8CorL2Y.jpg" alt="" loading="lazy"><span class="play glass"><svg><use href="#i-play"/></svg></span></button><figcaption class="cap">Hà Nhân Hitler Đại quốc trưởng · Phần 2<span>1 nghìn lượt xem · 58:36</span></figcaption></figure>
+        <figure class="vid glass reveal" style="margin:0"><button class="yt" data-id="kZiicEfCR0Q" aria-label="Phát video: Vô Thượng Tác Giả Cảnh · Tập 1–66"><img src="assets/youtube/kZiicEfCR0Q.jpg" alt="" loading="lazy"><span class="play glass"><svg><use href="#i-play"/></svg></span></button><figcaption class="cap">Vô Thượng Tác Giả Cảnh · Tập 1–66<span>37 lượt xem · 5:18:25</span></figcaption></figure>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1306,6 +1357,7 @@ footer a{color:var(--ink-2)}
         <a class="chip glass" href="https://www.instagram.com/havvking_/" target="_blank" rel="noopener">Instagram</a>
         <a class="chip glass" href="https://open.spotify.com/artist/2ytqsqgD4mLZ0qkOlQnsmn" target="_blank" rel="noopener">Spotify</a>
         <a class="chip glass" href="https://soundcloud.com/ph-m-h-329852250" target="_blank" rel="noopener">SoundCloud</a>
+        <a class="chip glass" href="https://www.youtube.com/@newsreviewer11" target="_blank" rel="noopener">YouTube NEW REVIEWER</a>
         
       </div>
     </div>
@@ -1505,7 +1557,7 @@ footer a{color:var(--ink-2)}
 <script>
 /* Điện thoại: chấm vị trí cho dải vuốt, thu gọn hành trình */
 (() => {
-  document.querySelectorAll(".rail,.edus,.skills,.webs,.listen,.toolgroups,.vids,.bcards").forEach(r => {
+  document.querySelectorAll(".rail,.edus,.skills,.webs,.listen,.toolgroups,.vids,.bcards,.nr-grid").forEach(r => {
     const items = () => [...r.children].flatMap(c => c.classList.contains("side") ? [...c.children] : [c]);
     const dots = document.createElement("div"); dots.className = "rail-dots"; dots.setAttribute("aria-hidden", "true");
     items().forEach(() => dots.appendChild(document.createElement("i")));

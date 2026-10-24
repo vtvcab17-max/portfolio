@@ -62,11 +62,12 @@ Những năm đó cho mình con mắt về bố cục, nhịp dựng và cách k
 | [YouTube @havvkingofficial](https://www.youtube.com/@havvkingofficial) | Nhạc và lyric video của HAVVKING |
 | [Spotify](https://open.spotify.com/artist/2ytqsqgD4mLZ0qkOlQnsmn) | Các bài HAVVKING đã phát hành |
 | [SoundCloud](https://soundcloud.com/ph-m-h-329852250) | Demo, beat, bản thử |
+| [YouTube NEW REVIEWER](https://www.youtube.com/@newsreviewer11) | Review truyện tranh, hoạt hình tu tiên |
 | [TikTok @havvking](https://www.tiktok.com/@havvking) | Kênh chính: đời thường, thử nghiệm dựng video |
 | [TikTok @havv_king](https://www.tiktok.com/@havv_king) | Kênh du lịch, trekking |
 | [Instagram @havvking_](https://www.instagram.com/havvking_/) | Hình ảnh cá nhân |
 
-Ba kênh TikTok mình giải thích kỹ trong bài [Ba kênh TikTok của Phạm Việt Hà](post:ba-kenh-tiktok-pham-viet-ha).
+Ba kênh TikTok mình giải thích kỹ trong bài [Ba kênh TikTok của Phạm Việt Hà](post:ba-kenh-tiktok-pham-viet-ha), còn kênh review truyện tranh nằm ở bài [NEW REVIEWER](post:new-reviewer-review-truyen-tranh).
 
 ## Một lưu ý nhỏ về cái tên
 
