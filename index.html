@@ -392,6 +392,22 @@ html.refract .lens{-webkit-backdrop-filter:url(#lg-refract) saturate(220%) brigh
 .trk .eq i{width:3px;background:#ff4fb0;border-radius:2px;animation:eq .9s ease-in-out infinite}
 .trk .eq i:nth-child(2){animation-delay:-.3s}.trk .eq i:nth-child(3){animation-delay:-.6s}.trk .eq i:nth-child(4){animation-delay:-.15s}
 @keyframes eq{0%,100%{height:25%}50%{height:100%}}
+.listen{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:16px}
+.lcard{border-radius:32px;padding:12px;display:grid;gap:12px;align-content:start}
+.lcard header{display:flex;align-items:center;gap:14px;padding:8px 8px 4px}
+.lcard header img{width:64px;height:64px;border-radius:18px;object-fit:cover;box-shadow:0 10px 26px -10px var(--p)}
+.lcard header div{flex:1;min-width:0}
+.lcard .pl{display:inline-flex;align-items:center;gap:6px;font:700 12px/1 var(--font);letter-spacing:.06em;text-transform:uppercase;color:var(--p)}
+.lcard .pl svg{width:16px;height:16px}
+.lcard b{display:block;margin-top:5px;font:750 22px/1.15 var(--font);letter-spacing:-.02em}
+.lcard small{display:block;font-size:13px;color:var(--ink-3)}
+.lcard .go{width:44px;height:44px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--p);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 10px 24px -10px var(--p);transition:transform .3s}
+.lcard .go:hover{transform:rotate(45deg) scale(1.08)}
+.lcard .go svg{width:18px;height:18px}
+.lembed{min-height:352px;border-radius:22px;overflow:hidden;display:grid;place-items:center;background:color-mix(in srgb,var(--p) 10%,transparent);color:var(--ink-3);font-size:14px}
+.lembed iframe{display:block;width:100%;border:0;border-radius:22px}
+.lembed.ready{background:transparent}
+@media (max-width:900px){.listen{grid-template-columns:1fr}}
 .spot{margin-top:16px;border-radius:32px;padding:10px;min-height:172px}
 .spot iframe{display:block;width:100%;height:352px;border:0;border-radius:24px}
 .spot-ph{display:flex;align-items:center;gap:16px;padding:14px}
@@ -784,8 +800,17 @@ footer a{color:var(--ink-2)}
       <ol class="tracks glass reveal" aria-label="Danh sách bài"><li><button class="trk on" data-id="udsj6ugoTBk" data-title="Trai Thủ Đô 2026"><span class="n">01</span><img src="assets/music/udsj6ugoTBk.jpg" alt="" loading="lazy"><span class="tt2"><b>Trai Thủ Đô 2026</b><small>Instrumental · Sẩm Hà Nội × Hip-hop</small></span><span class="mv">14,9K lượt xem</span><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></button></li><li><button class="trk" data-id="sf3o1bXu9kI" data-title="Thuyết Tương Đối (Cench Theory)"><span class="n">02</span><img src="assets/music/sf3o1bXu9kI.jpg" alt="" loading="lazy"><span class="tt2"><b>Thuyết Tương Đối (Cench Theory)</b><small>Lyrics Video · Vietnamese Drill</small></span><span class="mv">mới phát hành</span><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></button></li><li><button class="trk" data-id="5t9-XrnhL5c" data-title="Trai Thủ Đô"><span class="n">03</span><img src="assets/music/5t9-XrnhL5c.jpg" alt="" loading="lazy"><span class="tt2"><b>Trai Thủ Đô</b><small>Lyric Video Official</small></span><span class="mv">4,1K lượt xem</span><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></button></li><li><button class="trk" data-id="rT4Qri-2KM0" data-title="Cô Gái Quàng Khăn Đỏ"><span class="n">04</span><img src="assets/music/rT4Qri-2KM0.jpg" alt="" loading="lazy"><span class="tt2"><b>Cô Gái Quàng Khăn Đỏ</b><small>Official Audio · Ethnic Trap</small></span><span class="mv">Club Banger</span><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></button></li><li><button class="trk" data-id="k9cc1AThCto" data-title="Safe House Tango"><span class="n">05</span><img src="assets/music/k9cc1AThCto.jpg" alt="" loading="lazy"><span class="tt2"><b>Safe House Tango</b><small>Lyrics Video · Latin Trap</small></span><span class="mv">mới phát hành</span><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></button></li><li><button class="trk" data-id="wcovMcddwKo" data-title="Lớp Thượng Tầng (High Class)"><span class="n">06</span><img src="assets/music/wcovMcddwKo.jpg" alt="" loading="lazy"><span class="tt2"><b>Lớp Thượng Tầng (High Class)</b><small>Lyrics Video</small></span><span class="mv">Havvking</span><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></button></li></ol>
     </div>
 
-    <div class="spot glass reveal" id="spot" data-src="https://open.spotify.com/embed/artist/2ytqsqgD4mLZ0qkOlQnsmn?utm_source=generator&amp;theme=0">
-      <div class="spot-ph"><img src="assets/music/spotify.jpg" alt=""><span><b>Havvking trên Spotify</b><small>Trình phát Spotify tự mở khi bạn cuộn tới</small></span></div>
+    <div class="listen">
+      <article class="lcard glass reveal" style="--p:#1db954">
+        <header><img src="assets/music/spotify.jpg" alt=""><div><span class="pl"><svg><use href="#i-spotify"/></svg>Spotify</span><b>Havvking</b><small>Nghe các bài đã phát hành, lưu vào thư viện của bạn</small></div>
+          <a class="go" href="https://open.spotify.com/artist/2ytqsqgD4mLZ0qkOlQnsmn" target="_blank" rel="noopener" aria-label="Mở Havvking trên Spotify"><svg><use href="#i-arrow"/></svg></a></header>
+        <div class="lembed" data-src="https://open.spotify.com/embed/artist/2ytqsqgD4mLZ0qkOlQnsmn?utm_source=generator&amp;theme=0" data-h="352" data-title="Havvking trên Spotify"><span>Trình phát Spotify tự mở khi bạn cuộn tới</span></div>
+      </article>
+      <article class="lcard glass reveal" style="--p:#ff5500">
+        <header><img src="assets/music/soundcloud.jpg" alt=""><div><span class="pl"><svg><use href="#i-sc"/></svg>SoundCloud</span><b>𝐇𝐚𝐯𝐯𝐤𝐢𝐧𝐠</b><small>48 bản nhạc · bản demo, beat, bản thử trước khi phát hành</small></div>
+          <a class="go" href="https://soundcloud.com/ph-m-h-329852250" target="_blank" rel="noopener" aria-label="Mở Havvking trên SoundCloud"><svg><use href="#i-arrow"/></svg></a></header>
+        <div class="lembed" data-src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fapi.soundcloud.com%2Fusers%2F617146230&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=false&amp;visual=false" data-h="352" data-title="Havvking trên SoundCloud"><span>Danh sách SoundCloud tự mở khi bạn cuộn tới</span></div>
+      </article>
     </div>
   </div>
 </section>
@@ -1025,9 +1050,10 @@ footer a{color:var(--ink-2)}
     if (deck.classList.contains("playing")) play(); else deck.classList.add("playing");
   }));
   document.getElementById("playBtn").addEventListener("click", play);
-  // Spotify: chỉ tải trình phát khi cuộn tới
-  const spot = document.getElementById("spot");
-  new IntersectionObserver((es, o) => es.forEach(e => { if (!e.isIntersecting) return; o.disconnect(); const f = document.createElement("iframe"); f.src = spot.dataset.src; f.title = "Havvking trên Spotify"; f.loading = "lazy"; f.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"; spot.innerHTML = ""; spot.append(f); }), { rootMargin: "200px" }).observe(spot);
+  // Spotify, SoundCloud: chỉ tải trình phát khi cuộn tới
+  document.querySelectorAll(".lembed").forEach(box => new IntersectionObserver((es, o) => es.forEach(e => { if (!e.isIntersecting) return; o.disconnect();
+    const f = document.createElement("iframe"); f.src = box.dataset.src; f.title = box.dataset.title; f.height = box.dataset.h; f.loading = "lazy"; f.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
+    box.innerHTML = ""; box.append(f); box.classList.add("ready"); }), { rootMargin: "200px" }).observe(box));
 
   // ===== TikTok: chuyển kênh =====
   const seg = document.querySelector(".seg"), tabs = [...seg.querySelectorAll("button")];
