@@ -120,6 +120,7 @@ section{padding:clamp(72px,10vw,128px) 0 0}
   .tabbar a{flex:1;display:grid;justify-items:center;gap:2px;padding:7px 0 6px;border-radius:99px;text-decoration:none;font:600 10.5px/1.1 var(--font);color:var(--ink-3);transition:color .2s,background .3s}
   .tabbar a.on{color:var(--iris);background:var(--glass-2);box-shadow:inset 0 1px 0 var(--edge)}
   .tabbar svg{width:22px;height:22px}
+  .tabbar a{font-size:10px;letter-spacing:-.01em}
   body{padding-bottom:96px}
 }
 
@@ -489,6 +490,41 @@ html.refract .lens{-webkit-backdrop-filter:url(#lg-refract) saturate(220%) brigh
 @media (max-width:1000px){.wgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.wstats{grid-template-columns:repeat(2,minmax(0,1fr))}.brandsys{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){.ph-track{animation:none}}
 
+/* ============ Khoá dự án ============ */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.lock{display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px 20px;align-items:center;margin-top:36px;padding:26px;border-radius:36px;max-width:760px}
+.lock-ic{width:64px;height:64px;border-radius:20px;display:grid;place-items:center;color:#fff;background:linear-gradient(160deg,#8b7dff,#ff4fb0);box-shadow:0 14px 34px -12px #8b7dff;animation:float 4s ease-in-out infinite}
+.lock-ic svg{width:30px;height:30px}
+.lock-txt b{display:block;font:700 19px/1.3 var(--font)}
+.lock-txt small{color:var(--ink-3);font-size:13.5px}
+.lock-row{grid-column:1/-1;display:flex;gap:10px}
+.lock input{flex:1;min-width:0;height:52px;padding:0 20px;border:0;border-radius:99px;font:500 16px var(--font);color:var(--ink);background:var(--glass);box-shadow:inset 0 1px 0 var(--edge-soft),inset 0 0 0 1px var(--edge-soft);outline:none;transition:box-shadow .3s}
+.lock input:focus{box-shadow:inset 0 1px 0 var(--edge),0 0 0 3px color-mix(in srgb,var(--iris) 45%,transparent)}
+.lock-msg{grid-column:1/-1;margin:0;min-height:20px;font-size:13.5px;color:var(--ink-3)}
+.lock-msg.err{color:#ff6b81}
+.lock.shake{animation:shake .45s}
+@keyframes shake{20%,60%{transform:translateX(-10px)}40%,80%{transform:translateX(10px)}}
+.lock.open{animation:unlock .6s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes unlock{to{opacity:0;transform:scale(.92);filter:blur(8px)}}
+#duAn .duan-in{animation:panelIn .8s cubic-bezier(.2,.8,.2,1)}
+.lb-in iframe.wide{width:min(90vw,900px);aspect-ratio:16/9}
+.xg-sep{height:1px;margin:clamp(48px,7vw,80px) 0 clamp(28px,4vw,44px);background:linear-gradient(90deg,transparent,var(--edge),transparent)}
+.xg-media{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:16px}
+.wv.wide img{aspect-ratio:16/9}
+.xg-gal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}
+.xgi{padding:0;border:0;border-radius:22px;overflow:hidden;cursor:zoom-in;background:none;aspect-ratio:4/3}
+.xgi img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.xgi:hover img{transform:scale(1.06)}
+.docs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:16px;align-items:start}
+.dcol{padding:20px;border-radius:28px}
+.dcol h4{margin:0 0 10px;font:700 13px/1 var(--font);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.dcol ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.dcol a{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:12px;text-decoration:none;font-size:14.5px;line-height:1.35;transition:background .25s,transform .25s}
+.dcol a::before{content:"";width:6px;height:6px;flex:none;border-radius:50%;background:var(--iris)}
+.dcol a:hover{background:var(--glass);transform:translateX(4px)}
+@media (max-width:900px){.docs,.xg-gal{grid-template-columns:1fr 1fr}.xg-media{grid-template-columns:1fr}.lock{grid-template-columns:1fr;justify-items:start}}
+@media (max-width:560px){.docs{grid-template-columns:1fr}.lock-row{flex-direction:column}.lock input{flex:none;width:100%}.lock-row .btn{width:100%}}
+
 /* ============ Liên hệ ============ */
 .contact{margin-top:0;padding:clamp(36px,6vw,72px);border-radius:48px;text-align:center;overflow:hidden}
 .contact .h2{margin-inline:auto;max-width:18ch}
@@ -535,6 +571,7 @@ footer a{color:var(--ink-2)}
   <symbol id="i-spotify" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22zm5 15.9a.7.7 0 0 1-.9.2c-2.6-1.6-5.8-1.9-9.6-1a.7.7 0 1 1-.3-1.3c4.2-1 7.7-.6 10.6 1.2.3.2.4.6.2.9zm1.3-3a.9.9 0 0 1-1.2.3c-2.9-1.8-7.4-2.3-10.9-1.3a.9.9 0 1 1-.5-1.7c4-1.2 9-.6 12.3 1.5.4.3.5.8.3 1.2zm.1-3.1C14.9 8.7 9 8.5 5.6 9.5a1 1 0 1 1-.6-2c3.9-1.2 10.4-1 14.4 1.4a1 1 0 0 1-1 1.8z"/></symbol>
   <symbol id="i-sc" viewBox="0 0 24 24"><path fill="currentColor" d="M1 14.5c0 1.2.6 2.1 1.2 2.1V12.4c-.6 0-1.2.9-1.2 2.1zm2 2.4h.9V11.2H3zm1.7 0h.9V10.3h-.9zm1.8 0h.9V9.8h-.9zm1.8 0h.9V8.4h-.9zm1.7 0h.9V7.5h-.9zm1.8 0H20a3.5 3.5 0 0 0 0-7c-.4 0-.8.1-1.2.2A5.7 5.7 0 0 0 13.2 5c-.8 0-1.4.2-1.4.6z"/></symbol>
   <symbol id="i-ig" viewBox="0 0 24 24"><path fill="currentColor" d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4zm4.5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zm5-3.2a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 8V7a3 3 0 1 1 6 0v3zm3 4a2 2 0 0 1 1 3.73V19h-2v-1.27A2 2 0 0 1 12 14z"/></symbol>
   <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></symbol>
 </svg>
 
@@ -546,6 +583,7 @@ footer a{color:var(--ink-2)}
     <li><a href="#he-sinh-thai">Hệ sinh thái</a></li>
     <li><a href="#hoc-van">Học vấn</a></li>
     <li><a href="#hanh-trinh">Hành trình</a></li>
+    <li><a href="#du-an">Dự án</a></li>
     <li><a href="#am-nhac">Âm nhạc</a></li>
     <li><a href="#tiktok">TikTok</a></li>
   </ul>
@@ -555,6 +593,7 @@ footer a{color:var(--ink-2)}
   <a href="#top"><svg><use href="#i-home"/></svg>Giới thiệu</a>
   <a href="#he-sinh-thai"><svg><use href="#i-grid"/></svg>Sản phẩm</a>
   <a href="#hoc-van"><svg><use href="#i-cap"/></svg>Học vấn</a>
+  <a href="#du-an"><svg><use href="#i-lock"/></svg>Dự án</a>
   <a href="#am-nhac"><svg><use href="#i-note"/></svg>Âm nhạc</a>
   <a href="#tiktok"><svg><use href="#i-tiktok"/></svg>TikTok</a>
   <a href="#lien-he"><svg><use href="#i-mail"/></svg>Liên hệ</a>
@@ -776,34 +815,24 @@ footer a{color:var(--ink-2)}
 </section>
 
 <!-- ============ DỰ ÁN QUAY DỰNG ============ -->
-<section id="du-an" data-nav="hanh-trinh">
+<section id="du-an" data-nav="du-an">
   <div class="wrap">
     <div class="reveal">
-      <span class="eyebrow glass"><svg class="ic" style="width:16px;height:16px"><use href="#i-cam"/></svg>Dự án quay dựng · ngành thẩm mỹ</span>
-      <h2 class="h2">Ba tuần, 29 video, <span class="grad">79 khung hình.</span></h2>
-      <p class="lead">Toàn bộ nội dung video dọc cho một viện thẩm mỹ: bác sĩ giải đáp, kiến thức hậu phẫu, chiến dịch ưu đãi và hậu trường. Mình quay, dựng, làm đồ hoạ theo một bộ quy chuẩn riêng.</p>
+      <span class="eyebrow glass"><svg class="ic" style="width:16px;height:16px"><use href="#i-lock"/></svg>Dự án · khu riêng</span>
+      <h2 class="h2">Sản phẩm <span class="grad">đã làm cho doanh nghiệp.</span></h2>
+      <p class="lead">Video, ảnh, bài viết và kịch bản làm cho viện thẩm mỹ và X Genius English. Phần này có mật khẩu: nhập đúng mới xem được.</p>
     </div>
-    <div class="wstats reveal">
-      <div class="glass"><b>29</b><span>video dọc đã dựng</span></div>
-      <div class="glass"><b>79</b><span>ảnh tư liệu, hậu trường</span></div>
-      <div class="glass"><b>9:16</b><span>chuẩn TikTok, Reels, Shorts</span></div>
-      <div class="glass"><b>1</b><span>bộ quy chuẩn dựng riêng</span></div>
-    </div>
-    <div class="filters reveal" role="group" aria-label="Lọc video">
-      <button class="on" data-f="all">Tất cả</button><button data-f="bs">Bác sĩ giải đáp</button><button data-f="hp">Hậu phẫu</button><button data-f="sk">Chiến dịch &amp; sự kiện</button>
-    </div>
-    <div class="wgrid reveal" id="wgrid"><button class="wv glass" data-cat="bs" data-drive="1F_Os51etg9frpa1q-LnzPNQ4zhwwIcNH" data-title="Giải đáp chất liệu độn thái dương an toàn"><img src="assets/work/v-1F_Os51etg9frpa1q-LnzPNQ4zhwwIcNH.jpg" alt="" loading="lazy" width="540" height="960"><span class="wv-play"><svg><use href="#i-play"/></svg></span><span class="wv-cap"><small>Bác sĩ giải đáp</small><b>Giải đáp chất liệu độn thái dương an toàn</b></span></button><button class="wv glass" data-cat="bs" data-drive="1A1QI9X8rWDOR_G9L2XcrWQyIP-pMj-OF" data-title="Những dấu hiệu thái dương bị lệch"><img src="assets/work/v-1A1QI9X8rWDOR_G9L2XcrWQyIP-pMj-OF.jpg" alt="" loading="lazy" width="540" height="960"><span class="wv-play"><svg><use href="#i-play"/></svg></span><span class="wv-cap"><small>Bác sĩ giải đáp</small><b>Những dấu hiệu thái dương bị lệch</b></span></button><button class="wv glass" data-cat="bs" data-drive="1U_wnWN-PVLCu9AcKeedfQu15zidCtgTI" data-title="Xử lý mũi nâng lâu năm bị rung lắc"><img src="assets/work/v-1U_wnWN-PVLCu9AcKeedfQu15zidCtgTI.jpg" alt="" loading="lazy" width="540" height="960"><span class="wv-play"><svg><use href="#i-play"/></svg></span><span class="wv-cap"><small>Bác sĩ giải đáp</small><b>Xử lý mũi nâng lâu năm bị rung lắc</b></span></button><button class="wv glass" data-cat="hp" data-drive="1S9PvTwPXBHOWDgfeGBNEtO1djnTy5FCY" data-title="Điều quan trọng của việc ăn uống sau phẫu thuật"><img src="assets/work/v-1S9PvTwPXBHOWDgfeGBNEtO1djnTy5FCY.jpg" alt="" loading="lazy" width="540" height="960"><span class="wv-play"><svg><use href="#i-play"/></svg></span><span class="wv-cap"><small>Hậu phẫu</small><b>Điều quan trọng của việc ăn uống sau phẫu thuật</b></span></button><button class="wv glass" data-cat="hp" data-drive="1jQigiFvw0VEiapmPpRChijrhDE18Lt8A" data-title="Độn thái dương kiêng gì sau phẫu thuật"><img src="assets/work/v-1jQigiFvw0VEiapmPpRChijrhDE18Lt8A.jpg" alt="" loading="lazy" width="540" height="960"><span class="wv-play"><svg><use href="#i-play"/></svg></span><span class="wv-cap"><small>Hậu phẫu</small><b>Độn thái dương kiêng gì sau phẫu thuật</b></span></button><button class="wv glass" data-cat="sk" data-drive="1beaC_pRc9Igmr42XlZJiM0m3Q6lmx7mJ" data-title="Đếm ngược 7 ngày"><img src="assets/work/v-1beaC_pRc9Igmr42XlZJiM0m3Q6lmx7mJ.jpg" alt="" loading="lazy" width="540" height="960"><span class="wv-play"><svg><use href="#i-play"/></svg></span><span class="wv-cap"><small>Chiến dịch & sự kiện</small><b>Đếm ngược 7 ngày</b></span></button><button class="wv glass" data-cat="sk" data-drive="1ef7KhSckrA57fDQS67yPP8mzMhE1NZZo" data-title="Theo chân bác sĩ trải nghiệm suối nước nóng"><img src="assets/work/v-1ef7KhSckrA57fDQS67yPP8mzMhE1NZZo.jpg" alt="" loading="lazy" width="540" height="960"><span class="wv-play"><svg><use href="#i-play"/></svg></span><span class="wv-cap"><small>Chiến dịch & sự kiện</small><b>Theo chân bác sĩ trải nghiệm suối nước nóng</b></span></button><button class="wv glass" data-cat="sk" data-drive="1jdBn6SP1kMEz4X_JG7jjl1mUpMv3Pq8j" data-title="Chương trình ưu đãi Trung thu 2026"><img src="assets/work/v-1jdBn6SP1kMEz4X_JG7jjl1mUpMv3Pq8j.jpg" alt="" loading="lazy" width="540" height="960"><span class="wv-play"><svg><use href="#i-play"/></svg></span><span class="wv-cap"><small>Chiến dịch & sự kiện</small><b>Chương trình ưu đãi Trung thu 2026</b></span></button></div>
-    <div class="brandsys glass reveal">
-      <button class="bs-img" data-img="assets/work/brand-system.jpg" aria-label="Xem bộ quy chuẩn dựng"><img src="assets/work/brand-system.jpg" alt="Bộ quy chuẩn dựng: bảng màu, phông chữ, đồ hoạ" loading="lazy" width="1400" height="2508"></button>
-      <div>
-        <span class="eyebrow glass">Quy chuẩn dựng</span>
-        <h3>Một hệ thống hình ảnh cho cả chuỗi video</h3>
-        <p>Bảng màu chủ đạo theo thương hiệu, màu phụ, dải chuyển màu, hệ thống phông chữ và cách đặt tiêu đề, giá, ưu đãi trên khung hình. Nhờ đó 29 video vẫn nhìn như một bộ, dù dựng trong ba tuần.</p>
-        <div class="tools"><span class="tag">Bảng màu</span><span class="tag">Hệ thống phông</span><span class="tag">Đồ hoạ tiêu đề</span><span class="tag">Liquid Glass</span></div>
+    <form class="lock glass reveal" id="lock" autocomplete="off">
+      <div class="lock-ic" aria-hidden="true"><svg><use href="#i-lock"/></svg></div>
+      <div class="lock-txt"><b>Nhập mật khẩu để xem dự án</b><small>Nội dung được mã hoá, chỉ mở trên máy bạn khi mật khẩu đúng.</small></div>
+      <div class="lock-row">
+        <label class="sr" for="lockPw">Mật khẩu</label>
+        <input id="lockPw" type="password" placeholder="Mật khẩu" autocomplete="current-password" required>
+        <button class="btn tint" type="submit" id="lockBtn"><svg><use href="#i-lock"/></svg>Mở khoá</button>
       </div>
-    </div>
-    <div class="phstrip reveal" aria-label="Ảnh hậu trường"><div class="ph-track"><button class="ph" data-img="assets/work/ph-020.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-020.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-023.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-023.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-025.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-025.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-026.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-026.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-028.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-028.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-029.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-029.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-034.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-034.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-037.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-037.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-041.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-041.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-042.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-042.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-045.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-045.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-048.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-048.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-020.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-020.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-023.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-023.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-025.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-025.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-026.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-026.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-028.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-028.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-029.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-029.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-034.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-034.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-037.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-037.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-041.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-041.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-042.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-042.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-045.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-045.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-048.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-048.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button></div></div>
-    <p class="note-sm">Video và ảnh có khách hàng hoặc giấy tờ cá nhân được giữ lại trong Drive, không đưa lên trang.</p>
+      <p class="lock-msg" id="lockMsg" role="status" aria-live="polite"></p>
+    </form>
+    <div id="duAn"></div>
   </div>
 </section>
 
@@ -1152,13 +1181,38 @@ footer a{color:var(--ink-2)}
   const closeLb = () => { lb.hidden = true; lbIn.innerHTML = ""; document.documentElement.style.overflow = ""; if (lastFocus) lastFocus.focus(); };
   lb.addEventListener("click", e => { if (e.target === lb || e.target.closest(".lb-x")) closeLb(); });
   addEventListener("keydown", e => { if (e.key === "Escape" && !lb.hidden) closeLb(); });
-  document.querySelectorAll(".wv").forEach(b => b.addEventListener("click", () => {
-    const f = document.createElement("iframe"); f.src = "https://drive.google.com/file/d/" + b.dataset.drive + "/preview"; f.allow = "autoplay; fullscreen"; f.allowFullscreen = true; f.title = b.dataset.title; openLb(f, b.dataset.title); }));
-  document.querySelectorAll("[data-img]").forEach(b => b.addEventListener("click", () => { const im = new Image(); im.src = b.dataset.img; im.alt = b.querySelector("img").alt; openLb(im, im.alt); }));
-  document.querySelectorAll(".filters button").forEach(btn => btn.addEventListener("click", () => {
-    document.querySelectorAll(".filters button").forEach(x => x.classList.toggle("on", x === btn));
-    document.querySelectorAll(".wv").forEach(v => v.classList.toggle("hide", btn.dataset.f !== "all" && v.dataset.cat !== btn.dataset.f));
-  }));
+  const initDuAn = root => {
+    root.querySelectorAll(".wv").forEach(b => b.addEventListener("click", () => {
+      const f = document.createElement("iframe"); f.src = "https://drive.google.com/file/d/" + b.dataset.drive + "/preview"; f.allow = "autoplay; fullscreen"; f.allowFullscreen = true; f.title = b.dataset.title; if (b.dataset.wide) f.className = "wide"; openLb(f, b.dataset.title); }));
+    root.querySelectorAll("[data-img]").forEach(b => b.addEventListener("click", () => { const im = new Image(); im.src = b.dataset.img; im.alt = b.querySelector("img").alt; openLb(im, im.alt); }));
+    root.querySelectorAll(".filters button").forEach(btn => btn.addEventListener("click", () => {
+      root.querySelectorAll(".filters button").forEach(x => x.classList.toggle("on", x === btn));
+      root.querySelectorAll(".wv[data-cat]").forEach(v => v.classList.toggle("hide", btn.dataset.f !== "all" && v.dataset.cat !== btn.dataset.f));
+    }));
+  };
+  // ===== Khoá dự án: giải mã AES-GCM bằng khoá dẫn xuất từ mật khẩu (PBKDF2-SHA256) =====
+  const lock = document.getElementById("lock"), lockMsg = document.getElementById("lockMsg"), lockBtn = document.getElementById("lockBtn"), duAn = document.getElementById("duAn");
+  const b64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+  const unlock = async rawKey => {
+    const buf = new Uint8Array(await (await fetch("assets/du-an.bin", { cache: "no-cache" })).arrayBuffer());
+    const salt = buf.slice(4, 20), iv = buf.slice(20, 32), body = buf.slice(32);
+    const key = await crypto.subtle.importKey("raw", rawKey, "AES-GCM", true, ["decrypt"]);
+    const data = JSON.parse(new TextDecoder().decode(await crypto.subtle.decrypt({ name: "AES-GCM", iv }, key, body)));
+    const urls = {}; for (const [n, v] of Object.entries(data.imgs)) urls[n] = URL.createObjectURL(new Blob([b64(v)], { type: "image/jpeg" }));
+    duAn.innerHTML = data.html.replace(/IMG:([\w.\-]+\.jpg)/g, (m, n) => urls[n] || "");
+    lock.classList.add("open"); setTimeout(() => lock.hidden = true, 600);
+    initDuAn(duAn); duAn.querySelectorAll(".reveal").forEach(e => e.classList.add("in"));
+  };
+  const derive = async pw => { const buf = new Uint8Array(await (await fetch("assets/du-an.bin", { cache: "no-cache" })).arrayBuffer());
+    const base = await crypto.subtle.importKey("raw", new TextEncoder().encode(pw), "PBKDF2", false, ["deriveBits"]);
+    return new Uint8Array(await crypto.subtle.deriveBits({ name: "PBKDF2", hash: "SHA-256", salt: buf.slice(4, 20), iterations: 310000 }, base, 256)); };
+  lock.addEventListener("submit", async e => { e.preventDefault(); const pw = document.getElementById("lockPw").value; if (!pw) return;
+    lockBtn.disabled = true; lockMsg.className = "lock-msg"; lockMsg.textContent = "Đang mở khoá…";
+    try { const raw = await derive(pw); await unlock(raw); try { sessionStorage.setItem("pf-k", btoa(String.fromCharCode(...raw))); } catch {} lockMsg.textContent = ""; }
+    catch { lockMsg.className = "lock-msg err"; lockMsg.textContent = "Sai mật khẩu, thử lại nhé."; lock.classList.remove("shake"); void lock.offsetWidth; lock.classList.add("shake"); document.getElementById("lockPw").select(); }
+    lockBtn.disabled = false; });
+  // đã mở trong phiên này thì tự mở lại
+  try { const k = sessionStorage.getItem("pf-k"); if (k) unlock(b64(k)).catch(() => sessionStorage.removeItem("pf-k")); } catch {}
 
   // Beta Holding: số liệu thật đọc từ repo công khai (raw.githubusercontent, không tính hạn mức API)
   const RAW = "https://raw.githubusercontent.com/vtvcab17-max/beta-holding/";
