@@ -245,6 +245,9 @@ section{padding:clamp(72px,10vw,128px) 0 0}
 .edus .card{min-height:0}
 .edus .now{grid-row:span 1}
 .logo.seal{display:grid;place-items:center;color:#fff;font:800 15px/1 var(--font);letter-spacing:.02em}
+.edu-logo{display:grid;place-items:center;background:#fff;padding:7px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06),0 10px 24px -10px rgba(0,0,0,.5)}
+.edu-logo img{width:100%;height:100%;object-fit:contain}
+.edu-logo.wide{padding:3px}
 .edus h3{font-size:20px;line-height:1.2}
 @media (max-width:1000px){.edus{grid-template-columns:1fr}}
 
@@ -470,25 +473,25 @@ footer a{color:var(--ink-2)}
     <div class="edus">
       <article class="card glass reveal now" style="--c:#c8102e">
         <div class="glow" aria-hidden="true"></div>
-        <div class="top"><div class="logo seal" style="background:linear-gradient(160deg,#e53935,#a3001f)">PTIT</div><div><h3>Học viện Công nghệ Bưu chính Viễn thông</h3><div class="kind"><span class="dot" aria-hidden="true" style="display:inline-block;margin-right:6px"></span>Đang học</div></div></div>
+        <div class="top"><div class="logo edu-logo"><img src="assets/edu/ptit.svg" alt="Logo Học viện Công nghệ Bưu chính Viễn thông"></div><div><h3>Học viện Công nghệ Bưu chính Viễn thông</h3><div class="kind"><span class="dot" aria-hidden="true" style="display:inline-block;margin-right:6px"></span>Đang học</div></div></div>
         <p><b>Kỹ sư phần mềm</b> · trình độ bậc 6. Kiến trúc phần mềm, kiểm thử, quy trình phát triển: đúng những thứ cần để Beta lớn lên mà vẫn vững.</p>
         <div class="tags"><span class="tag">Kỹ thuật phần mềm</span><span class="tag">Bậc 6</span><span class="tag">Đang học</span></div>
       </article>
       <article class="card glass reveal now" style="--c:#0f9d8f">
         <div class="glow" aria-hidden="true"></div>
-        <div class="top"><div class="logo seal" style="background:linear-gradient(160deg,#16b8a6,#0b6e8f)">DL</div><div><h3>Deep Learning Specialization</h3><div class="kind"><span class="dot" aria-hidden="true" style="display:inline-block;margin-right:6px"></span>Đang học · DeepLearning.AI trên Coursera</div></div></div>
-        <p>Chuỗi khoá của <b>Andrew Ng</b>: mạng nơ-ron, tối ưu huấn luyện, CNN, mô hình chuỗi. Kiến thức dùng thẳng vào các mô hình chạy trên máy như Micow.</p>
-        <div class="tags"><span class="tag">Deep Learning</span><span class="tag">DeepLearning.AI</span><span class="tag">Coursera</span><span class="tag">Đang học</span></div>
+        <div class="top"><div class="logo edu-logo"><img src="assets/edu/deeplearning-ai.png" alt="Logo DeepLearning.AI"></div><div><h3>Deep Learning Specialization</h3><div class="kind"><span class="dot" aria-hidden="true" style="display:inline-block;margin-right:6px"></span>Đang học · DeepLearning.AI</div></div></div>
+        <p>Do <b>Andrew Ng</b> giảng dạy: giáo sư Stanford, đồng sáng lập Google Brain. Mạng nơ-ron, tối ưu huấn luyện, CNN, mô hình chuỗi; kiến thức dùng thẳng vào các mô hình chạy trên máy như Micow.</p>
+        <div class="tags"><span class="tag">Deep Learning</span><span class="tag">Andrew Ng</span><span class="tag">DeepLearning.AI</span><span class="tag">Đang học</span></div>
       </article>
       <article class="card glass reveal" style="--c:#f37021">
         <div class="glow" aria-hidden="true"></div>
-        <div class="top"><div class="logo seal" style="background:linear-gradient(160deg,#f7931e,#e05a00)">FPT</div><div><h3>Đại học FPT</h3><div class="kind">Đã tốt nghiệp</div></div></div>
+        <div class="top"><div class="logo edu-logo"><img src="assets/edu/fpt.png" alt="Logo Đại học FPT"></div><div><h3>Đại học FPT</h3><div class="kind">Đã tốt nghiệp</div></div></div>
         <p><b>Cử nhân Trí tuệ nhân tạo.</b> Nền tảng để mình tự xây các mô hình và tác nhân AI của Bravinall, từ Micow đến hệ thống tác tử Beta Holding.</p>
         <div class="tags"><span class="tag">Trí tuệ nhân tạo</span><span class="tag">Cử nhân</span></div>
       </article>
       <article class="card glass reveal" style="--c:#8b7dff">
         <div class="glow" aria-hidden="true"></div>
-        <div class="top"><div class="logo seal" style="background:linear-gradient(160deg,#8b7dff,#5b47e0)">AM</div><div><h3>Arena Multimedia</h3><div class="kind">Mỹ thuật đa phương tiện</div></div></div>
+        <div class="top"><div class="logo edu-logo wide"><img src="assets/edu/arena.png" alt="Logo Arena Multimedia"></div><div><h3>Arena Multimedia</h3><div class="kind">Mỹ thuật đa phương tiện</div></div></div>
         <p>Nơi hình thành nền tảng thiết kế, dựng hình và tư duy hình ảnh, thứ làm giao diện các sản phẩm Beta trông như hôm nay.</p>
         <div class="tags"><span class="tag">Thiết kế</span><span class="tag">Dựng hình</span></div>
       </article>
@@ -508,7 +511,7 @@ footer a{color:var(--ink-2)}
       <div class="tl glass reveal">
         <ol>
           <li><i></i><div><div class="when">Hiện tại</div><h3>Người sáng lập · Beta</h3><p>Xây và vận hành hệ sinh thái Beta: Bravin, Antifact, Micron, Micow trong Bravinall, cùng Beta HQ và hệ thống tác tử Beta Holding. Làm việc cùng các tác nhân AI (Claude, Antigravity).</p></div></li>
-          <li><i></i><div><div class="when">Hiện tại</div><h3>Sinh viên Kỹ sư phần mềm · PTIT</h3><p>Học viện Công nghệ Bưu chính Viễn thông, trình độ bậc 6; song song học Deep Learning Specialization (DeepLearning.AI, Coursera).</p></div></li>
+          <li><i></i><div><div class="when">Hiện tại</div><h3>Sinh viên Kỹ sư phần mềm · PTIT</h3><p>Học viện Công nghệ Bưu chính Viễn thông, trình độ bậc 6; song song học Deep Learning Specialization của Andrew Ng (DeepLearning.AI).</p></div></li>
           <li><i></i><div><div class="when">Gần đây</div><h3>Phụ trách nội dung hình ảnh · Viện thẩm mỹ</h3><p>Toàn bộ nội dung video: before – after, phỏng vấn bác sĩ, quảng bá dịch vụ trên YouTube và TikTok.</p></div></li>
           <li><i></i><div><div class="when">Trước đó</div><h3>Trưởng phòng Truyền thông &amp; Sự kiện · X Genius English</h3><p>Được đề bạt sau nhiều năm gắn bó; phụ trách toàn bộ truyền thông, điều phối và dàn dựng các chương trình sự kiện quy mô lớn.</p></div></li>
           <li><i></i><div><div class="when">3 năm</div><h3>Video Grapher &amp; Editor · X Genius English</h3><p>Tiếp tục quay dựng sau khi X Genius English tiếp quản hệ thống Apax.</p></div></li>
