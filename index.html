@@ -446,6 +446,49 @@ html.refract .lens{-webkit-backdrop-filter:url(#lg-refract) saturate(220%) brigh
 .embed-ph img{width:96px;height:96px;border-radius:50%;object-fit:cover;animation:float 3s ease-in-out infinite}
 @media (max-width:560px){.seg button{font-size:13px;gap:6px}.seg button img{width:24px;height:24px}.seg .sub{display:none}.panel .tt-stats{grid-template-columns:repeat(3,minmax(0,1fr))!important}.panel .tt-stats div{padding:12px 10px}}
 
+/* ============ Dự án quay dựng ============ */
+.wstats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:36px}
+.wstats div{padding:18px 18px 16px;border-radius:22px}
+.wstats b{display:block;font:750 clamp(30px,3.4vw,44px)/1 var(--font);letter-spacing:-.04em}
+.wstats span{display:block;margin-top:8px;font-size:13px;color:var(--ink-2)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.filters button{height:42px;padding:0 18px;border:0;border-radius:99px;cursor:pointer;font:600 14px/1 var(--font);color:var(--ink-2);background:var(--glass);box-shadow:inset 0 1px 0 var(--edge-soft);transition:background .3s,color .3s,transform .3s}
+.filters button:hover{transform:translateY(-2px)}
+.filters button.on{color:#fff;background:linear-gradient(180deg,color-mix(in srgb,var(--iris) 90%,#fff),var(--iris));box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 10px 24px -10px var(--iris)}
+.wgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:18px}
+.wv{position:relative;display:block;padding:6px;border:0;border-radius:26px;cursor:pointer;text-align:left;color:#fff;transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .35s,filter .35s}
+.wv img{width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;border-radius:20px;display:block}
+.wv::after{content:"";position:absolute;inset:6px;border-radius:20px;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.78));pointer-events:none;z-index:3}
+.wv-play{position:absolute;left:50%;top:44%;z-index:4;width:62px;height:62px;margin:-31px 0 0 -31px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.18);-webkit-backdrop-filter:blur(12px) saturate(180%);backdrop-filter:blur(12px) saturate(180%);box-shadow:inset 0 1px 0 rgba(255,255,255,.6);transition:transform .35s}
+.wv-play svg{width:24px;height:24px;margin-left:3px}
+.wv:hover .wv-play{transform:scale(1.15)}
+.wv-cap{position:absolute;left:18px;right:18px;bottom:18px;z-index:4}
+.wv-cap small{display:inline-block;margin-bottom:6px;padding:4px 9px;border-radius:99px;font:600 11px/1 var(--font);background:rgba(255,255,255,.18);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.wv-cap b{display:block;font:700 15px/1.3 var(--font);text-shadow:0 2px 10px rgba(0,0,0,.5)}
+.wv.hide{opacity:.12;filter:grayscale(1) blur(2px);transform:scale(.94);pointer-events:none}
+.brandsys{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:28px;align-items:center;margin-top:16px;padding:16px;border-radius:36px}
+.bs-img{display:block;padding:0;border:0;border-radius:24px;overflow:hidden;cursor:zoom-in;max-height:380px;background:none}
+.bs-img img{width:100%;height:auto;display:block;transition:transform 6s ease}
+.bs-img:hover img{transform:translateY(calc(-100% + 380px))}
+.brandsys h3{margin:14px 0 8px;font:750 clamp(22px,2.4vw,30px)/1.15 var(--font);letter-spacing:-.02em}
+.brandsys p{margin:0 0 16px;color:var(--ink-2)}
+.phstrip{margin-top:16px;overflow:hidden;border-radius:28px;-webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.ph-track{display:flex;gap:12px;width:max-content;animation:mq 60s linear infinite}
+.phstrip:hover .ph-track{animation-play-state:paused}
+.ph{padding:0;border:0;border-radius:20px;overflow:hidden;cursor:zoom-in;background:none;flex:none}
+.ph img{display:block;width:150px;height:auto;aspect-ratio:9/16;object-fit:cover;transition:transform .5s}
+.ph:hover img{transform:scale(1.08)}
+.note-sm{margin:14px 4px 0;font-size:12.5px;color:var(--ink-3)}
+.lb{position:fixed;inset:0;z-index:90;display:grid;place-items:center;padding:20px;background:rgba(0,0,0,.55);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);animation:fade .3s}
+.lb[hidden]{display:none}
+.lb-box{position:relative;padding:12px;border-radius:32px;max-width:min(96vw,980px);max-height:92vh;display:grid;gap:10px;animation:pop .45s cubic-bezier(.2,1.2,.3,1)}
+.lb-in iframe{display:block;border:0;border-radius:22px;width:min(88vw,calc(80vh * 9 / 16));aspect-ratio:9/16;background:#000}
+.lb-in img{display:block;max-width:min(90vw,940px);max-height:80vh;border-radius:22px;object-fit:contain}
+.lb-t{padding:0 8px 4px;font:600 15px/1.3 var(--font)}
+.lb-x{position:absolute;top:-14px;right:-14px;z-index:5;width:44px;height:44px;border:0;border-radius:50%;cursor:pointer;font-size:18px;color:var(--ink);background:var(--glass-strong);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:inset 0 1px 0 var(--edge),0 8px 20px -6px rgba(0,0,0,.6)}
+@media (max-width:1000px){.wgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.wstats{grid-template-columns:repeat(2,minmax(0,1fr))}.brandsys{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.ph-track{animation:none}}
+
 /* ============ Liên hệ ============ */
 .contact{margin-top:0;padding:clamp(36px,6vw,72px);border-radius:48px;text-align:center;overflow:hidden}
 .contact .h2{margin-inline:auto;max-width:18ch}
@@ -732,6 +775,41 @@ footer a{color:var(--ink-2)}
   </div>
 </section>
 
+<!-- ============ DỰ ÁN QUAY DỰNG ============ -->
+<section id="du-an" data-nav="hanh-trinh">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow glass"><svg class="ic" style="width:16px;height:16px"><use href="#i-cam"/></svg>Dự án quay dựng · ngành thẩm mỹ</span>
+      <h2 class="h2">Ba tuần, 29 video, <span class="grad">79 khung hình.</span></h2>
+      <p class="lead">Toàn bộ nội dung video dọc cho một viện thẩm mỹ: bác sĩ giải đáp, kiến thức hậu phẫu, chiến dịch ưu đãi và hậu trường. Mình quay, dựng, làm đồ hoạ theo một bộ quy chuẩn riêng.</p>
+    </div>
+    <div class="wstats reveal">
+      <div class="glass"><b>29</b><span>video dọc đã dựng</span></div>
+      <div class="glass"><b>79</b><span>ảnh tư liệu, hậu trường</span></div>
+      <div class="glass"><b>9:16</b><span>chuẩn TikTok, Reels, Shorts</span></div>
+      <div class="glass"><b>1</b><span>bộ quy chuẩn dựng riêng</span></div>
+    </div>
+    <div class="filters reveal" role="group" aria-label="Lọc video">
+      <button class="on" data-f="all">Tất cả</button><button data-f="bs">Bác sĩ giải đáp</button><button data-f="hp">Hậu phẫu</button><button data-f="sk">Chiến dịch &amp; sự kiện</button>
+    </div>
+    <div class="wgrid reveal" id="wgrid"><button class="wv glass" data-cat="bs" data-drive="1F_Os51etg9frpa1q-LnzPNQ4zhwwIcNH" data-title="Giải đáp chất liệu độn thái dương an toàn"><img src="assets/work/v-1F_Os51etg9frpa1q-LnzPNQ4zhwwIcNH.jpg" alt="" loading="lazy" width="540" height="960"><span class="wv-play"><svg><use href="#i-play"/></svg></span><span class="wv-cap"><small>Bác sĩ giải đáp</small><b>Giải đáp chất liệu độn thái dương an toàn</b></span></button><button class="wv glass" data-cat="bs" data-drive="1A1QI9X8rWDOR_G9L2XcrWQyIP-pMj-OF" data-title="Những dấu hiệu thái dương bị lệch"><img src="assets/work/v-1A1QI9X8rWDOR_G9L2XcrWQyIP-pMj-OF.jpg" alt="" loading="lazy" width="540" height="960"><span class="wv-play"><svg><use href="#i-play"/></svg></span><span class="wv-cap"><small>Bác sĩ giải đáp</small><b>Những dấu hiệu thái dương bị lệch</b></span></button><button class="wv glass" data-cat="bs" data-drive="1U_wnWN-PVLCu9AcKeedfQu15zidCtgTI" data-title="Xử lý mũi nâng lâu năm bị rung lắc"><img src="assets/work/v-1U_wnWN-PVLCu9AcKeedfQu15zidCtgTI.jpg" alt="" loading="lazy" width="540" height="960"><span class="wv-play"><svg><use href="#i-play"/></svg></span><span class="wv-cap"><small>Bác sĩ giải đáp</small><b>Xử lý mũi nâng lâu năm bị rung lắc</b></span></button><button class="wv glass" data-cat="hp" data-drive="1S9PvTwPXBHOWDgfeGBNEtO1djnTy5FCY" data-title="Điều quan trọng của việc ăn uống sau phẫu thuật"><img src="assets/work/v-1S9PvTwPXBHOWDgfeGBNEtO1djnTy5FCY.jpg" alt="" loading="lazy" width="540" height="960"><span class="wv-play"><svg><use href="#i-play"/></svg></span><span class="wv-cap"><small>Hậu phẫu</small><b>Điều quan trọng của việc ăn uống sau phẫu thuật</b></span></button><button class="wv glass" data-cat="hp" data-drive="1jQigiFvw0VEiapmPpRChijrhDE18Lt8A" data-title="Độn thái dương kiêng gì sau phẫu thuật"><img src="assets/work/v-1jQigiFvw0VEiapmPpRChijrhDE18Lt8A.jpg" alt="" loading="lazy" width="540" height="960"><span class="wv-play"><svg><use href="#i-play"/></svg></span><span class="wv-cap"><small>Hậu phẫu</small><b>Độn thái dương kiêng gì sau phẫu thuật</b></span></button><button class="wv glass" data-cat="sk" data-drive="1beaC_pRc9Igmr42XlZJiM0m3Q6lmx7mJ" data-title="Đếm ngược 7 ngày"><img src="assets/work/v-1beaC_pRc9Igmr42XlZJiM0m3Q6lmx7mJ.jpg" alt="" loading="lazy" width="540" height="960"><span class="wv-play"><svg><use href="#i-play"/></svg></span><span class="wv-cap"><small>Chiến dịch & sự kiện</small><b>Đếm ngược 7 ngày</b></span></button><button class="wv glass" data-cat="sk" data-drive="1ef7KhSckrA57fDQS67yPP8mzMhE1NZZo" data-title="Theo chân bác sĩ trải nghiệm suối nước nóng"><img src="assets/work/v-1ef7KhSckrA57fDQS67yPP8mzMhE1NZZo.jpg" alt="" loading="lazy" width="540" height="960"><span class="wv-play"><svg><use href="#i-play"/></svg></span><span class="wv-cap"><small>Chiến dịch & sự kiện</small><b>Theo chân bác sĩ trải nghiệm suối nước nóng</b></span></button><button class="wv glass" data-cat="sk" data-drive="1jdBn6SP1kMEz4X_JG7jjl1mUpMv3Pq8j" data-title="Chương trình ưu đãi Trung thu 2026"><img src="assets/work/v-1jdBn6SP1kMEz4X_JG7jjl1mUpMv3Pq8j.jpg" alt="" loading="lazy" width="540" height="960"><span class="wv-play"><svg><use href="#i-play"/></svg></span><span class="wv-cap"><small>Chiến dịch & sự kiện</small><b>Chương trình ưu đãi Trung thu 2026</b></span></button></div>
+    <div class="brandsys glass reveal">
+      <button class="bs-img" data-img="assets/work/brand-system.jpg" aria-label="Xem bộ quy chuẩn dựng"><img src="assets/work/brand-system.jpg" alt="Bộ quy chuẩn dựng: bảng màu, phông chữ, đồ hoạ" loading="lazy" width="1400" height="2508"></button>
+      <div>
+        <span class="eyebrow glass">Quy chuẩn dựng</span>
+        <h3>Một hệ thống hình ảnh cho cả chuỗi video</h3>
+        <p>Bảng màu chủ đạo theo thương hiệu, màu phụ, dải chuyển màu, hệ thống phông chữ và cách đặt tiêu đề, giá, ưu đãi trên khung hình. Nhờ đó 29 video vẫn nhìn như một bộ, dù dựng trong ba tuần.</p>
+        <div class="tools"><span class="tag">Bảng màu</span><span class="tag">Hệ thống phông</span><span class="tag">Đồ hoạ tiêu đề</span><span class="tag">Liquid Glass</span></div>
+      </div>
+    </div>
+    <div class="phstrip reveal" aria-label="Ảnh hậu trường"><div class="ph-track"><button class="ph" data-img="assets/work/ph-020.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-020.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-023.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-023.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-025.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-025.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-026.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-026.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-028.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-028.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-029.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-029.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-034.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-034.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-037.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-037.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-041.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-041.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-042.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-042.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-045.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-045.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-048.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-048.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-020.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-020.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-023.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-023.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-025.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-025.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-026.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-026.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-028.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-028.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-029.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-029.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-034.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-034.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-037.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-037.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-041.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-041.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-042.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-042.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-045.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-045.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button><button class="ph" data-img="assets/work/ph-048.jpg" aria-label="Xem ảnh hậu trường"><img src="assets/work/ph-048.jpg" alt="Ảnh hậu trường phòng tiểu phẫu và thiết bị" loading="lazy" width="720" height="1280"></button></div></div>
+    <p class="note-sm">Video và ảnh có khách hàng hoặc giấy tờ cá nhân được giữ lại trong Drive, không đưa lên trang.</p>
+  </div>
+</section>
+
+<!-- hộp xem lớn -->
+<div class="lb" id="lb" hidden><div class="lb-box glass" role="dialog" aria-modal="true" aria-label="Xem nội dung"><button class="lb-x" aria-label="Đóng">✕</button><div class="lb-in" id="lbIn"></div><div class="lb-t" id="lbT"></div></div></div>
+
 <!-- ============ DỰ ÁN WEB ============ -->
 <section id="du-an-web" data-nav="he-sinh-thai">
   <div class="wrap">
@@ -1002,7 +1080,7 @@ footer a{color:var(--ink-2)}
     ticking = false; }); };
   addEventListener("scroll", onScroll, { passive: true }); onScroll();
   // đếm số
-  document.querySelectorAll(".stat b, .tt-stats b").forEach(b => {
+  document.querySelectorAll(".stat b, .tt-stats b, .wstats b").forEach(b => {
     const m = /^([\d.,]+)/.exec(b.textContent); if (!m || RM) return;
     const raw = m[1], dec = raw.includes(",") ? raw.split(",")[1].length : 0, val = parseFloat(raw.replace(/\./g, "").replace(",", ".")), rest = b.textContent.slice(raw.length);
     const o = new IntersectionObserver(es => es.forEach(e => { if (!e.isIntersecting) return; o.disconnect(); const t0 = performance.now();
@@ -1066,6 +1144,21 @@ footer a{color:var(--ink-2)}
     seg.dataset.i = i; if (i === 1) loadTrek();
   }));
   seg.addEventListener("keydown", e => { if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return; const i = tabs.findIndex(t => t.getAttribute("aria-selected") === "true"), n = (i + (e.key === "ArrowRight" ? 1 : tabs.length - 1)) % tabs.length; tabs[n].click(); tabs[n].focus(); });
+
+  // ===== Dự án quay dựng: lọc + hộp xem lớn =====
+  const lb = document.getElementById("lb"), lbIn = document.getElementById("lbIn"), lbT = document.getElementById("lbT");
+  let lastFocus = null;
+  const openLb = (node, title) => { lastFocus = document.activeElement; lbIn.innerHTML = ""; lbIn.append(node); lbT.textContent = title || ""; lb.hidden = false; document.documentElement.style.overflow = "hidden"; lb.querySelector(".lb-x").focus(); };
+  const closeLb = () => { lb.hidden = true; lbIn.innerHTML = ""; document.documentElement.style.overflow = ""; if (lastFocus) lastFocus.focus(); };
+  lb.addEventListener("click", e => { if (e.target === lb || e.target.closest(".lb-x")) closeLb(); });
+  addEventListener("keydown", e => { if (e.key === "Escape" && !lb.hidden) closeLb(); });
+  document.querySelectorAll(".wv").forEach(b => b.addEventListener("click", () => {
+    const f = document.createElement("iframe"); f.src = "https://drive.google.com/file/d/" + b.dataset.drive + "/preview"; f.allow = "autoplay; fullscreen"; f.allowFullscreen = true; f.title = b.dataset.title; openLb(f, b.dataset.title); }));
+  document.querySelectorAll("[data-img]").forEach(b => b.addEventListener("click", () => { const im = new Image(); im.src = b.dataset.img; im.alt = b.querySelector("img").alt; openLb(im, im.alt); }));
+  document.querySelectorAll(".filters button").forEach(btn => btn.addEventListener("click", () => {
+    document.querySelectorAll(".filters button").forEach(x => x.classList.toggle("on", x === btn));
+    document.querySelectorAll(".wv").forEach(v => v.classList.toggle("hide", btn.dataset.f !== "all" && v.dataset.cat !== btn.dataset.f));
+  }));
 
   // Beta Holding: số liệu thật đọc từ repo công khai (raw.githubusercontent, không tính hạn mức API)
   const RAW = "https://raw.githubusercontent.com/vtvcab17-max/beta-holding/";
