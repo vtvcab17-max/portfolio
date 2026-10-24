@@ -645,6 +645,74 @@ a:active,button:active,.tool:active{transform:scale(.95)!important;transition-du
 .contact .soc a{text-decoration:none}
 footer{padding:48px 0 56px;text-align:center;color:var(--ink-3);font-size:13px}
 footer a{color:var(--ink-2)}
+
+/* ============ Điện thoại: gọn như một ứng dụng ============ */
+.rail{display:contents}
+.tl-more,.rail-dots{display:none}
+@media (max-width:640px){
+  section{padding-top:64px}
+  .wrap{width:calc(100% - 32px)}
+  .h2{font-size:31px;margin:14px 0 10px}
+  .lead{font-size:15px;line-height:1.55}
+  .card{padding:20px;min-height:0;gap:12px;border-radius:28px}
+  /* hero gọn trong khoảng hai màn hình */
+  .hero{padding-top:88px}
+  .hero .wrap{gap:28px;grid-template-columns:minmax(0,1fr)}
+  .hero h1{font-size:clamp(36px,11.2vw,46px);margin:16px 0 14px}
+  .hero p.lead{font-size:15.5px}
+  .hero .cta{margin-top:20px;flex-wrap:nowrap}
+  .hero .cta .btn{flex:1;justify-content:center;padding-inline:10px;white-space:nowrap;font-size:14.5px}
+  .tabbar a{white-space:nowrap;font-size:clamp(9px,2.6vw,10px)}
+  .hero .meta{flex-wrap:nowrap;overflow-x:auto;margin:18px -16px 0;padding:2px 16px 6px;scrollbar-width:none}
+  .hero .meta::-webkit-scrollbar{display:none}
+  .portrait{width:min(76%,290px)}
+  .portrait .frame{padding:9px;border-radius:34px}
+  .portrait img{border-radius:26px}
+  .portrait .float{padding:6px 12px 6px 6px;font-size:12px;gap:8px}
+  .portrait .float img{width:24px;height:24px;border-radius:7px}
+  .portrait .float small{font-size:10.5px}
+  .portrait .f1{left:-22px}.portrait .f2{right:-26px}.portrait .f3{left:-14px}
+  .hero .stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:36px}
+  .stat{padding:16px 16px 14px;border-radius:24px}
+  .stat b{font-size:24px}
+  .stat span{font-size:12.5px;margin-top:6px;line-height:1.4}
+  /* danh sách dài thành dải vuốt ngang */
+  .rail,.edus,.skills,.webs,.listen,.toolgroups,.orgs,.vids{display:flex!important;gap:12px;margin-inline:-16px;padding:4px 16px 10px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding-inline:16px;scrollbar-width:none}
+  .rail::-webkit-scrollbar,.edus::-webkit-scrollbar,.skills::-webkit-scrollbar,.webs::-webkit-scrollbar,.listen::-webkit-scrollbar,.toolgroups::-webkit-scrollbar,.orgs::-webkit-scrollbar,.vids::-webkit-scrollbar{display:none}
+  .rail>*,.edus>*,.skills>*,.webs>*,.listen>*,.toolgroups>*,.vids>*,.vids .side>*{flex:0 0 86%;min-width:0;scroll-snap-align:start}
+  .edus,.skills,.webs,.toolgroups,.vids{margin-top:28px}
+  .vids .side{display:contents}
+  .orgs{margin-inline:-14px;padding-inline:14px;scroll-padding-inline:14px}
+  .orgs>*{flex:0 0 40%;scroll-snap-align:start}
+  .rail-dots{display:flex;justify-content:center;gap:6px;margin-top:8px}
+  .rail-dots i{width:6px;height:6px;border-radius:99px;background:var(--ink-3);opacity:.45;transition:width .35s cubic-bezier(.2,1.2,.3,1),opacity .3s,background .3s}
+  .rail-dots i.on{width:22px;opacity:1;background:var(--iris)}
+  .bento{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;margin-top:28px}
+  .bento>.rail{grid-column:1/-1}
+  /* bộ công cụ: mỗi nhóm một trang, 4 ô một hàng */
+  .toolgroups{align-items:flex-start}
+  .tgroup{padding:16px;border-radius:26px}
+  .tgrid{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+  .tool{padding:10px 2px 8px;gap:6px;border-radius:16px}
+  .tico{width:38px;height:38px;border-radius:11px}
+  .tico::before{width:21px;height:21px}
+  .tico.txt{font-size:18px}.tico.txt.sm{font-size:14px}
+  .tname{font-size:10.5px}
+  /* hành trình: bốn chặng gần nhất, bấm để xem hết */
+  .tl{padding:8px}
+  .tl li{grid-template-columns:16px minmax(0,1fr) 46px!important;gap:12px;padding:12px 10px}
+  .tl li i{margin-left:2px}
+  .tl-img{width:46px;height:46px;border-radius:12px}
+  .tl h3{font-size:15.5px}
+  .tl p{font-size:13.5px}
+  .tl:not(.open) li:nth-child(n+5){display:none}
+  .tl-more{display:flex;margin:6px auto 8px}
+  .tl-more svg{transform:rotate(135deg);transition:transform .4s}
+  .tl.open .tl-more svg{transform:rotate(-45deg)}
+  .journey{grid-template-columns:minmax(0,1fr)}
+  .polaroids{display:none}
+  .side-col{gap:12px}
+}
 </style>
 </head>
 <body>
@@ -785,6 +853,7 @@ footer a{color:var(--ink-2)}
       </article>
 
       <!-- Bravinall: 4 ứng dụng -->
+      <div class="rail">
       <article id="bravin" class="card glass span-3 reveal" style="--c:#4285f4">
         <div class="glow" aria-hidden="true"></div>
         <div class="top"><img class="logo" src="assets/brand/bravin.svg" alt=""><div><h3>Bravin</h3><div class="kind" id="bravinall">Bravinall · dựng video</div></div></div>
@@ -840,6 +909,7 @@ footer a{color:var(--ink-2)}
         </dl>
         <div class="links"><a class="main" href="https://beta-holding.vtvcab17.workers.dev/" target="_blank" rel="noopener">Xem trực tiếp <svg class="ic" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a></div>
       </article>
+      </div>
     </div>
   </div>
 </section>
@@ -902,6 +972,7 @@ footer a{color:var(--ink-2)}
           <li><i></i><div><div class="when">Thực tập</div><h3>Thực tập sinh · VTVcab</h3><p>Thực tập tại Tổng công ty Truyền hình Cáp Việt Nam (VTVcab): làm quen quy trình sản xuất nội dung truyền hình.</p></div><img class="tl-img logo w" src="assets/logos/vtvcab-sq.png" alt="" loading="lazy"></li>
           <li><i></i><div><div class="when">Khởi đầu</div><h3>Designer · Sonets.vn &amp; Luxcasa.vn</h3><p>Thiết kế hình ảnh sản phẩm và thương hiệu.</p></div><img class="tl-img logo w" src="assets/logos/sonets.png" alt="" loading="lazy"></li>
         </ol>
+        <button class="tl-more btn glass" type="button" aria-expanded="false"><svg><use href="#i-arrow"/></svg><span>Xem cả hành trình</span></button>
       </div>
       <div class="side-col">
         <div class="polaroids reveal" aria-label="Khoảnh khắc trên hành trình">
@@ -1396,6 +1467,30 @@ footer a{color:var(--ink-2)}
     document.getElementById("heroLive").textContent = alive ? "Beta Holding đang chạy · " + ago(hb.timestamp) : "văn phòng AI · xem trực tiếp";
   }
   live(); setInterval(live, 120000);
+})();
+</script>
+<script>
+/* Điện thoại: chấm vị trí cho dải vuốt, thu gọn hành trình */
+(() => {
+  document.querySelectorAll(".rail,.edus,.skills,.webs,.listen,.toolgroups,.vids").forEach(r => {
+    const items = () => [...r.children].flatMap(c => c.classList.contains("side") ? [...c.children] : [c]);
+    const dots = document.createElement("div"); dots.className = "rail-dots"; dots.setAttribute("aria-hidden", "true");
+    items().forEach(() => dots.appendChild(document.createElement("i")));
+    r.after(dots);
+    const upd = () => {
+      const its = items(), x0 = r.getBoundingClientRect().left; let k = 0, best = 1e9;
+      its.forEach((c, j) => { const d = Math.abs(c.getBoundingClientRect().left - x0 - 16); if (d < best) { best = d; k = j; } });
+      [...dots.children].forEach((d, j) => d.classList.toggle("on", j === k));
+    };
+    r.addEventListener("scroll", upd, { passive: true }); upd();
+  });
+  const tl = document.querySelector(".tl"), more = tl && tl.querySelector(".tl-more");
+  if (more) {
+    const n = tl.querySelectorAll("li").length - 4;
+    const label = () => { const o = tl.classList.contains("open"); more.querySelector("span").textContent = o ? "Thu gọn" : "Xem thêm " + n + " chặng"; more.setAttribute("aria-expanded", o); };
+    more.addEventListener("click", () => { tl.classList.toggle("open"); label(); if (!tl.classList.contains("open")) tl.scrollIntoView({ block: "start", behavior: "smooth" }); });
+    label();
+  }
 })();
 </script>
 </body>
