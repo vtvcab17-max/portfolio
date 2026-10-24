@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Phạm Việt Hà","jobTitle":"Người sáng lập Beta · Phát triển sản phẩm AI","birthDate":"2000-02-13","homeLocation":"Hà Nội","email":"mailto:vtvcab17@gmail.com","image":"https://portfolio.vtvcab17.workers.dev/assets/avatars/hero.jpg","alumniOf":["Đại học FPT","Học viện Công nghệ Bưu chính Viễn thông","Arena Multimedia"],"knowsAbout":["Trí tuệ nhân tạo","Deep Learning","Kỹ thuật phần mềm"],"alternateName":"HAVVKING","sameAs":["https://www.youtube.com/@havvkingofficial","https://open.spotify.com/artist/2ytqsqgD4mLZ0qkOlQnsmn","https://soundcloud.com/ph-m-h-329852250","https://www.tiktok.com/@havvking","https://www.tiktok.com/@havv_king","https://www.instagram.com/havvking_/"]}
+{"@context":"https://schema.org","@type":"Person","name":"Phạm Việt Hà","jobTitle":"Người sáng lập Beta · Phát triển sản phẩm AI","birthDate":"2000-02-13","homeLocation":"Hà Nội","email":"mailto:vtvcab17@gmail.com","image":"https://portfolio.vtvcab17.workers.dev/assets/avatars/hero.jpg","alumniOf":["Đại học FPT","Học viện Công nghệ Bưu chính Viễn thông","Arena Multimedia"],"knowsAbout":["Trí tuệ nhân tạo","Deep Learning","Kỹ thuật phần mềm"],"alternateName":"HAVVKING","sameAs":["https://www.youtube.com/@havvkingofficial","https://open.spotify.com/artist/2ytqsqgD4mLZ0qkOlQnsmn","https://soundcloud.com/ph-m-h-329852250","https://www.tiktok.com/@havvking","https://www.tiktok.com/@havv_king","https://www.tiktok.com/@medialabotary","https://www.instagram.com/havvking_/"]}
 </script>
 <style>
 /* ============ Liquid Glass: token ============ */
@@ -439,12 +439,13 @@ html.refract .lens{-webkit-backdrop-filter:url(#lg-refract) saturate(220%) brigh
 .creator .banner::after{background:linear-gradient(180deg,rgba(255,45,85,.18),color-mix(in srgb,var(--bg) 75%,transparent) 85%)}
 .creator .tt-title{font-size:clamp(44px,7vw,88px)!important;letter-spacing:-.04em;background:linear-gradient(100deg,#25f4ee,#fff 45%,#ff2d55);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 6px 24px rgba(255,45,85,.35))}
 .creator .artist-av{box-shadow:0 0 0 5px color-mix(in srgb,var(--bg) 70%,transparent),-6px 0 30px -6px #25f4ee,6px 10px 40px -8px #ff2d55}
-.seg{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:6px;margin:16px auto 0;border-radius:99px;max-width:620px}
+.seg{position:relative;display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;padding:6px;margin:16px auto 0;border-radius:99px;max-width:860px}
 .seg button{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;gap:10px;height:52px;border:0;border-radius:99px;background:transparent;cursor:pointer;font:600 14.5px/1 var(--font);color:var(--ink-2);transition:color .3s}
 .seg button[aria-selected="true"]{color:var(--ink)}
 .seg button img{width:30px;height:30px;border-radius:50%;object-fit:cover}
-.seg-pill{position:absolute;z-index:1;top:6px;bottom:6px;left:6px;width:calc(50% - 8px);border-radius:99px;background:var(--glass-2);box-shadow:inset 0 1px 0 var(--edge),0 8px 24px -10px rgba(0,0,0,.6);transition:transform .55s cubic-bezier(.3,1.4,.4,1)}
+.seg-pill{position:absolute;z-index:1;top:6px;bottom:6px;left:6px;width:calc((100% - 20px) / 3);border-radius:99px;background:var(--glass-2);box-shadow:inset 0 1px 0 var(--edge),0 8px 24px -10px rgba(0,0,0,.6);transition:transform .55s cubic-bezier(.3,1.4,.4,1)}
 .seg[data-i="1"] .seg-pill{transform:translateX(calc(100% + 4px))}
+.seg[data-i="2"] .seg-pill{transform:translateX(calc(200% + 8px))}
 .panel{margin-top:16px;animation:panelIn .6s cubic-bezier(.2,.8,.2,1)}
 @keyframes panelIn{from{opacity:0;transform:translateY(18px) scale(.985);filter:blur(6px)}}
 .prof{display:flex;gap:16px;align-items:center;padding:16px;border-radius:26px}
@@ -458,7 +459,8 @@ html.refract .lens{-webkit-backdrop-filter:url(#lg-refract) saturate(220%) brigh
 .embed iframe{border-radius:22px}
 .embed-ph{display:grid;justify-items:center;gap:12px;color:var(--ink-3);text-align:center}
 .embed-ph img{width:96px;height:96px;border-radius:50%;object-fit:cover;animation:float 3s ease-in-out infinite}
-@media (max-width:560px){.seg button{font-size:13px;gap:6px}.seg button img{width:24px;height:24px}.seg .sub{display:none}.panel .tt-stats{grid-template-columns:repeat(3,minmax(0,1fr))!important}.panel .tt-stats div{padding:12px 10px}}
+.seg .sub::before{content:" · "}
+@media (max-width:560px){.seg button{font-size:12.5px;gap:6px;flex-direction:column;height:auto;padding:8px 0}.seg{border-radius:26px}.seg-pill{border-radius:20px}.seg button img{width:28px;height:28px}.seg .hd{display:none}.seg .sub::before{content:none}.panel .tt-stats{grid-template-columns:repeat(3,minmax(0,1fr))!important}.panel .tt-stats div{padding:12px 10px}}
 
 /* ============ Dự án quay dựng ============ */
 .wstats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:36px}
@@ -896,7 +898,7 @@ footer a{color:var(--ink-2)}
           <li><i></i><div><div class="when">Trước đó</div><h3>Trưởng phòng Truyền thông &amp; Sự kiện · X Genius English</h3><p>Được đề bạt sau nhiều năm gắn bó; phụ trách toàn bộ truyền thông, điều phối và dàn dựng các chương trình sự kiện quy mô lớn.</p></div><img class="tl-img logo w" src="assets/logos/xgenius.jpg" alt="" loading="lazy"></li>
           <li><i></i><div><div class="when">3 năm</div><h3>Video Grapher &amp; Editor · X Genius English</h3><p>Tiếp tục quay dựng sau khi X Genius English tiếp quản hệ thống Apax.</p></div><img class="tl-img ph" src="https://i.ytimg.com/vi/gqQBtvt0KNM/mqdefault.jpg" alt="" loading="lazy"></li>
           <li><i></i><div><div class="when">3 năm</div><h3>Video Grapher &amp; Editor · Apax English</h3><p>Video quảng bá, sự kiện nội bộ và tư liệu truyền thông cho hệ thống trung tâm Anh ngữ Apax.</p></div><img class="tl-img ph" src="https://i.ytimg.com/vi/qVWhU1zDxUA/mqdefault.jpg" alt="" loading="lazy"></li>
-          <li><i></i><div><div class="when">Trước đó</div><h3>Digital Marketing · Medialabotary</h3><p>Triển khai nội dung số và các chiến dịch truyền thông online.</p></div><span class="tl-img ic-tile" aria-hidden="true"><svg><use href="#i-share"/></svg></span></li>
+          <li><i></i><div><div class="when">Trước đó</div><h3>Digital Marketing · Medialabotary</h3><p>Triển khai nội dung số và chiến dịch online; xây kênh TikTok Media Lab review công nghệ (bàn phím cơ, chuột, PC gaming), video cao nhất 15,3K lượt xem.</p></div><img class="tl-img" src="assets/avatars/tt-medialab.jpg" alt="" loading="lazy"></li>
           <li><i></i><div><div class="when">Thực tập</div><h3>Thực tập sinh · VTVcab</h3><p>Thực tập tại Tổng công ty Truyền hình Cáp Việt Nam (VTVcab): làm quen quy trình sản xuất nội dung truyền hình.</p></div><img class="tl-img logo w" src="assets/logos/vtvcab-sq.png" alt="" loading="lazy"></li>
           <li><i></i><div><div class="when">Khởi đầu</div><h3>Designer · Sonets.vn &amp; Luxcasa.vn</h3><p>Thiết kế hình ảnh sản phẩm và thương hiệu.</p></div><img class="tl-img logo w" src="assets/logos/sonets.png" alt="" loading="lazy"></li>
         </ol>
@@ -908,7 +910,7 @@ footer a{color:var(--ink-2)}
           <figure class="pol p3"><img src="https://i.ytimg.com/vi/aQ4Xh0G2HvU/hqdefault.jpg" alt="Video ngành thẩm mỹ" loading="lazy"><figcaption>Ngành thẩm mỹ</figcaption></figure>
           <figure class="pol p4"><img src="assets/shots/bravin.jpg" alt="Bravin" loading="lazy"><figcaption>Beta · Bravin</figcaption></figure>
         </div>
-        <div class="edu glass reveal logos-row"><h4 class="panel-title">Từng làm cùng</h4><div class="orgs"><div class="org-c"><div class="org-l" style="background:#fff"><img src="assets/logos/xgenius.jpg" alt="X Genius English"></div><b>X Genius English</b><small>Trưởng phòng Truyền thông &amp; Sự kiện</small></div><div class="org-c"><div class="org-l" style="background:#fff"><span class="wm apax">APAX LEADERS</span></div><b>Apax Leaders · Apax English</b><small>Video Grapher &amp; Editor, 3 năm</small></div><div class="org-c"><div class="org-l" style="background:#fff"><img src="assets/logos/vtvcab.png" alt="VTVcab"></div><b>VTVcab</b><small>Thực tập</small></div><div class="org-c"><div class="org-l" style="background:#000"><img src="https://i.ytimg.com/vi/aQ4Xh0G2HvU/mqdefault.jpg" alt="" class="cover"></div><b>Viện thẩm mỹ</b><small>Phụ trách nội dung hình ảnh</small></div><div class="org-c"><div class="org-l" style="background:#fff"><img src="assets/logos/drvietlong.jpg" alt="Dr. Việt Long"></div><b>Dr. Việt Long</b><small>Thiết kế &amp; dựng website</small></div><div class="org-c"><div class="org-l" style="background:#111"><span class="wm mlb">Medialabotary</span></div><b>Medialabotary</b><small>Digital Marketing</small></div><div class="org-c"><div class="org-l" style="background:#fff"><img src="assets/logos/sonets.png" alt="Sonets"></div><b>Sonets.vn</b><small>Designer</small></div><div class="org-c"><div class="org-l" style="background:#111"><img src="assets/logos/luxcasa.png" alt="Luxcasa"></div><b>Luxcasa.vn</b><small>Designer</small></div></div></div>
+        <div class="edu glass reveal logos-row"><h4 class="panel-title">Từng làm cùng</h4><div class="orgs"><div class="org-c"><div class="org-l" style="background:#fff"><img src="assets/logos/xgenius.jpg" alt="X Genius English"></div><b>X Genius English</b><small>Trưởng phòng Truyền thông &amp; Sự kiện</small></div><div class="org-c"><div class="org-l" style="background:#fff"><span class="wm apax">APAX LEADERS</span></div><b>Apax Leaders · Apax English</b><small>Video Grapher &amp; Editor, 3 năm</small></div><div class="org-c"><div class="org-l" style="background:#fff"><img src="assets/logos/vtvcab.png" alt="VTVcab"></div><b>VTVcab</b><small>Thực tập</small></div><div class="org-c"><div class="org-l" style="background:#000"><img src="https://i.ytimg.com/vi/aQ4Xh0G2HvU/mqdefault.jpg" alt="" class="cover"></div><b>Viện thẩm mỹ</b><small>Phụ trách nội dung hình ảnh</small></div><div class="org-c"><div class="org-l" style="background:#fff"><img src="assets/logos/drvietlong.jpg" alt="Dr. Việt Long"></div><b>Dr. Việt Long</b><small>Thiết kế &amp; dựng website</small></div><div class="org-c"><div class="org-l" style="background:#d81b60"><img src="assets/logos/medialab.png" alt="Media Lab"></div><b>Medialabotary</b><small>Digital Marketing · review công nghệ</small></div><div class="org-c"><div class="org-l" style="background:#fff"><img src="assets/logos/sonets.png" alt="Sonets"></div><b>Sonets.vn</b><small>Designer</small></div><div class="org-c"><div class="org-l" style="background:#111"><img src="assets/logos/luxcasa.png" alt="Luxcasa"></div><b>Luxcasa.vn</b><small>Designer</small></div></div></div>
       </div>
     </div>
   </div>
@@ -1068,10 +1070,11 @@ footer a{color:var(--ink-2)}
         <div class="artist-txt">
           <span class="eyebrow glass"><svg class="ic" style="width:16px;height:16px"><use href="#i-tiktok"/></svg>TikTok · hình ảnh cá nhân</span>
           <h2 class="h2 nosplit tt-title" style="margin:12px 0 6px">havvking</h2>
-          <p class="lead">Hai kênh, hai mục đích: một kênh đời thường để thử nhịp dựng, góc máy và cách mở đầu video; một kênh chỉ để lưu các chuyến đi.</p>
+          <p class="lead">Ba kênh, ba mục đích: một kênh đời thường để thử nhịp dựng, góc máy và cách mở đầu video; một kênh review công nghệ cho Media Lab; một kênh chỉ để lưu các chuyến đi.</p>
           <div class="plats">
             <a class="plat magnet" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener" style="--p:#ff2d55"><svg><use href="#i-tiktok"/></svg>@havvking <small>2.478 theo dõi</small></a>
             <a class="plat magnet" href="https://www.tiktok.com/@havv_king" target="_blank" rel="noopener" style="--p:#25f4ee"><svg><use href="#i-route"/></svg>@havv_king <small>Trekking</small></a>
+            <a class="plat magnet" href="https://www.tiktok.com/@medialabotary" target="_blank" rel="noopener" style="--p:#d81b60"><svg><use href="#i-cam"/></svg>@medialabotary <small>Review công nghệ</small></a>
           </div>
         </div>
       </div>
@@ -1079,8 +1082,9 @@ footer a{color:var(--ink-2)}
 
     <div class="seg glass reveal" role="tablist" aria-label="Chọn kênh TikTok">
       <span class="seg-pill" aria-hidden="true"></span>
-      <button role="tab" aria-selected="true" aria-controls="p-havvking" id="t-havvking"><img src="assets/avatars/tt-havvking.jpg" alt="">@havvking<span class="sub"> · Đời thường</span></button>
-      <button role="tab" aria-selected="false" aria-controls="p-trek" id="t-trek"><img src="assets/avatars/tt-havv_king.jpg" alt="">@havv_king<span class="sub"> · Trekking</span></button>
+      <button role="tab" aria-selected="true" aria-controls="p-havvking" id="t-havvking"><img src="assets/avatars/tt-havvking.jpg" alt=""><span class="hd">@havvking</span><span class="sub">Đời thường</span></button>
+      <button role="tab" aria-selected="false" aria-controls="p-ml" id="t-ml"><img src="assets/avatars/tt-medialab.jpg" alt=""><span class="hd">@medialabotary</span><span class="sub">Công nghệ</span></button>
+      <button role="tab" aria-selected="false" aria-controls="p-trek" id="t-trek"><img src="assets/avatars/tt-havv_king.jpg" alt=""><span class="hd">@havv_king</span><span class="sub">Trekking</span></button>
     </div>
 
     <!-- kênh chính -->
@@ -1102,6 +1106,28 @@ footer a{color:var(--ink-2)}
           <a class="btn tint magnet" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener" style="margin-top:22px"><svg><use href="#i-tiktok"/></svg>Mở kênh @havvking</a>
         </div>
         <div class="tt-grid"><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v1.jpg" alt="Video TikTok, 107 lượt xem" width="355" height="472" loading="lazy"></a><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v2.jpg" alt="Video TikTok, 73,6 nghìn lượt xem" width="355" height="472" loading="lazy"></a><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v3.jpg" alt="Video TikTok, 107,1 nghìn lượt xem" width="355" height="472" loading="lazy"></a><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v4.jpg" alt="Video TikTok, 7.186 lượt xem" width="355" height="472" loading="lazy"></a><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v5.jpg" alt="Video TikTok, 92,6 nghìn lượt xem" width="355" height="472" loading="lazy"></a><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v6.jpg" alt="Video TikTok, 132,5 nghìn lượt xem" width="355" height="472" loading="lazy"></a></div>
+      </div>
+    </div>
+
+    <!-- kênh review công nghệ -->
+    <div class="panel" id="p-ml" role="tabpanel" aria-labelledby="t-ml" hidden>
+      <div class="tiktok">
+        <div>
+          <div class="prof glass">
+            <img src="assets/avatars/tt-medialab.jpg" alt="" width="240" height="240">
+            <div><b>@medialabotary · Media Lab</b><q>Media lab chúng tôi hiện đang nỗ lực xây dựng doanh nghiệp</q><small>Review công nghệ: bàn phím cơ, chuột, PC gaming · có TikTok Shop</small></div>
+          </div>
+          <div class="tt-stats" style="grid-template-columns:repeat(3,minmax(0,1fr))">
+            <div class="glass"><b>33</b><span>video</span></div>
+            <div class="glass"><b>5.640</b><span>lượt thích</span></div>
+            <div class="glass"><b>127</b><span>người theo dõi</span></div>
+            <div class="glass"><b>44K+</b><span>lượt xem từ 6 video ghim và mới</span></div>
+            <div class="glass"><b>15,3K</b><span>video cao nhất</span></div>
+            <div class="glass"><b>3 / 6</b><span>video vượt 9 nghìn lượt xem</span></div>
+          </div>
+          <a class="btn tint magnet" href="https://www.tiktok.com/@medialabotary" target="_blank" rel="noopener" style="margin-top:22px;--iris:#d81b60"><svg><use href="#i-cam"/></svg>Mở kênh Media Lab</a>
+        </div>
+        <div class="tt-grid"><a class="tt glass" href="https://www.tiktok.com/@medialabotary" target="_blank" rel="noopener"><img src="assets/tiktok/ml1.jpg" alt="Machenike KT68 Pro, 15,3K lượt xem" loading="lazy" width="355" height="472"></a><a class="tt glass" href="https://www.tiktok.com/@medialabotary" target="_blank" rel="noopener"><img src="assets/tiktok/ml2.jpg" alt="Razer · chuột không dây, 9.616 lượt xem" loading="lazy" width="355" height="472"></a><a class="tt glass" href="https://www.tiktok.com/@medialabotary" target="_blank" rel="noopener"><img src="assets/tiktok/ml3.jpg" alt="Machenike KT68, 13,2K lượt xem" loading="lazy" width="355" height="472"></a><a class="tt glass" href="https://www.tiktok.com/@medialabotary" target="_blank" rel="noopener"><img src="assets/tiktok/ml4.jpg" alt="Razer BlackWidow V3 Pro Wireless, 648 lượt xem" loading="lazy" width="355" height="472"></a><a class="tt glass" href="https://www.tiktok.com/@medialabotary" target="_blank" rel="noopener"><img src="assets/tiktok/ml5.jpg" alt="Machenike KT68 Smartscreen, 5.605 lượt xem" loading="lazy" width="355" height="472"></a><a class="tt glass" href="https://www.tiktok.com/@medialabotary" target="_blank" rel="noopener"><img src="assets/tiktok/ml6.jpg" alt="ROG · PC gaming, 172 lượt xem" loading="lazy" width="355" height="472"></a></div>
       </div>
     </div>
 
@@ -1308,7 +1334,7 @@ footer a{color:var(--ink-2)}
     const sc = document.createElement("script"); sc.async = true; sc.src = "https://www.tiktok.com/embed.js"; document.body.append(sc); };
   tabs.forEach((t, i) => t.addEventListener("click", () => {
     tabs.forEach((x, k) => { x.setAttribute("aria-selected", String(k === i)); document.getElementById(x.getAttribute("aria-controls")).hidden = k !== i; });
-    seg.dataset.i = i; if (i === 1) loadTrek();
+    seg.dataset.i = i; if (tabs[i].id === "t-trek") loadTrek();
   }));
   seg.addEventListener("keydown", e => { if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return; const i = tabs.findIndex(t => t.getAttribute("aria-selected") === "true"), n = (i + (e.key === "ArrowRight" ? 1 : tabs.length - 1)) % tabs.length; tabs[n].click(); tabs[n].focus(); });
 
