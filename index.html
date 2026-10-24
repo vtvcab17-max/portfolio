@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Phạm Việt Hà","jobTitle":"Người sáng lập Beta · Phát triển sản phẩm AI","birthDate":"2000-02-13","homeLocation":"Hà Nội","email":"mailto:vtvcab17@gmail.com","image":"https://vtvcab17-max.github.io/portfolio/assets/avatar.jpg","alumniOf":["Đại học FPT","Học viện Công nghệ Bưu chính Viễn thông","Arena Multimedia"],"knowsAbout":["Trí tuệ nhân tạo","Deep Learning","Kỹ thuật phần mềm"],"sameAs":["https://www.youtube.com/@havvkingofficial","https://www.tiktok.com/@havvking","https://www.tiktok.com/@havv_king","https://www.instagram.com/havvking_/","https://github.com/vtvcab17-max"]}
+{"@context":"https://schema.org","@type":"Person","name":"Phạm Việt Hà","jobTitle":"Người sáng lập Beta · Phát triển sản phẩm AI","birthDate":"2000-02-13","homeLocation":"Hà Nội","email":"mailto:vtvcab17@gmail.com","image":"https://vtvcab17-max.github.io/portfolio/assets/avatar.jpg","alumniOf":["Đại học FPT","Học viện Công nghệ Bưu chính Viễn thông","Arena Multimedia"],"knowsAbout":["Trí tuệ nhân tạo","Deep Learning","Kỹ thuật phần mềm"],"alternateName":"HAVVKING","sameAs":["https://www.youtube.com/@havvkingofficial","https://open.spotify.com/artist/2ytqsqgD4mLZ0qkOlQnsmn","https://soundcloud.com/ph-m-h-329852250","https://www.tiktok.com/@havvking","https://www.tiktok.com/@havv_king","https://www.instagram.com/havvking_/","https://github.com/vtvcab17-max"]}
 </script>
 <style>
 /* ============ Liquid Glass: token ============ */
@@ -101,9 +101,9 @@ section{padding:clamp(72px,10vw,128px) 0 0}
 
 /* ============ Thanh điều hướng nổi ============ */
 .nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:4px;height:58px;padding:0 8px 0 10px;border-radius:99px;max-width:calc(100% - 24px)}
-.nav .me{display:flex;align-items:center;gap:10px;padding-right:8px;text-decoration:none;font:600 15px/1 var(--font);white-space:nowrap}
+.nav .me{display:flex;align-items:center;gap:10px;padding-right:14px;text-decoration:none;font:600 15px/1 var(--font);white-space:nowrap}
 .nav .me img{width:36px;height:36px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px rgba(255,255,255,.35)}
-.nav ul{display:flex;gap:2px;margin:0;padding:0;list-style:none}
+.nav ul{display:flex;gap:2px;margin:0 0 0 8px;padding:0;list-style:none}
 .nav ul a{white-space:nowrap;display:flex;align-items:center;height:42px;padding:0 15px;border-radius:99px;text-decoration:none;font:500 14px/1 var(--font);color:var(--ink-2);transition:color .2s,background .3s}
 .nav ul a:hover{color:var(--ink)}
 .nav ul a.on{color:var(--ink);background:var(--glass-2);box-shadow:inset 0 1px 0 var(--edge)}
@@ -300,6 +300,104 @@ section{padding:clamp(72px,10vw,128px) 0 0}
 .ch small{display:block;margin-top:2px;font-size:13.5px;line-height:1.4;color:var(--ink-2)}
 .ch em{display:block;margin-top:4px;font:500 12px/1.3 var(--font);font-style:normal;color:var(--ink-3)}
 
+
+/* ============ Hiệu ứng: màn mở đầu ============ */
+.intro{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:var(--bg);transition:clip-path 1s cubic-bezier(.76,0,.24,1),opacity .6s;clip-path:circle(150% at 50% 50%)}
+.intro.out{clip-path:circle(0% at 50% 46%);pointer-events:none}
+.intro.gone{display:none}
+.intro-in{display:grid;justify-items:center;gap:18px;text-align:center}
+.intro img{width:84px;height:84px;border-radius:24px;animation:pop .9s cubic-bezier(.2,1.4,.3,1) both;box-shadow:0 20px 60px -10px var(--iris)}
+.intro-name{font:800 clamp(34px,7vw,72px)/1 var(--font);letter-spacing:-.04em}
+.intro-name span{display:inline-block;opacity:0;transform:translateY(40px) rotate(6deg);animation:rise .8s cubic-bezier(.2,.8,.2,1) forwards}
+.intro-name span:nth-child(2){animation-delay:.12s}.intro-name span:nth-child(3){animation-delay:.24s}
+.intro-sub{font:600 13px/1 var(--font);letter-spacing:.3em;text-transform:uppercase;color:var(--ink-3);opacity:0;animation:fade .8s .5s forwards}
+@keyframes pop{from{transform:scale(.3) rotate(-30deg);opacity:0}}
+@keyframes rise{to{opacity:1;transform:none}}
+@keyframes fade{to{opacity:1}}
+/* thanh tiến độ cuộn */
+.progress{position:fixed;left:0;top:0;height:3px;width:100%;z-index:60;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--b1),var(--b3),var(--b5))}
+/* thấu kính theo con trỏ */
+.lens{position:fixed;left:0;top:0;z-index:70;width:36px;height:36px;margin:-18px 0 0 -18px;border-radius:50%;pointer-events:none;opacity:0;
+  -webkit-backdrop-filter:blur(2px) saturate(220%) brightness(1.15);backdrop-filter:blur(2px) saturate(220%) brightness(1.15);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.7),inset 0 0 0 1px rgba(255,255,255,.35),0 6px 20px -6px rgba(0,0,0,.5);transition:width .3s,height .3s,margin .3s,opacity .3s}
+.lens.big{width:72px;height:72px;margin:-36px 0 0 -36px}
+html.refract .lens{-webkit-backdrop-filter:url(#lg-refract) saturate(220%) brightness(1.12);backdrop-filter:url(#lg-refract) saturate(220%) brightness(1.12)}
+@media (pointer:fine){.lens.on{opacity:1}}
+/* chữ tiêu đề hiện từng từ */
+.split .w{display:inline-block;opacity:0;filter:blur(12px);transform:translateY(.4em) scale(.96);transition:opacity .9s,filter .9s,transform .9s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i)*70ms + .1s)}
+.split.go .w{opacity:1;filter:none;transform:none}
+/* nghiêng 3D */
+.tilt{transform-style:preserve-3d;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.tilt.hot{transition:transform .08s linear}
+/* gợn nước khi bấm */
+.ripple{position:absolute;border-radius:50%;pointer-events:none;z-index:4;transform:translate(-50%,-50%) scale(0);background:radial-gradient(circle,rgba(255,255,255,.45),rgba(255,255,255,0) 70%);animation:rip .7s ease-out forwards}
+@keyframes rip{to{transform:translate(-50%,-50%) scale(1);opacity:0}}
+/* dải chữ chạy */
+.marquee{margin-top:clamp(56px,8vw,96px);overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.mq-track{display:flex;align-items:center;gap:28px;width:max-content;animation:mq 38s linear infinite;font:800 clamp(28px,4.4vw,56px)/1.2 var(--font);letter-spacing:-.03em;white-space:nowrap}
+.mq-track span{color:transparent;-webkit-text-stroke:1.2px var(--ink-3)}
+.mq-track span:nth-of-type(3n+1){color:var(--ink);-webkit-text-stroke:0}
+.mq-track i{font-style:normal;color:var(--iris);font-size:.5em}
+.marquee:hover .mq-track{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ============ Âm nhạc ============ */
+.artist{border-radius:44px;overflow:hidden;padding:0}
+.artist .banner{height:clamp(160px,24vw,300px);overflow:hidden;position:relative}
+.artist .banner img{width:100%;height:130%;object-fit:cover;transform:translate3d(0,var(--py,0px),0) scale(1.05)}
+.artist .banner::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,color-mix(in srgb,var(--bg) 70%,transparent))}
+.artist-body{display:grid;grid-template-columns:auto minmax(0,1fr);gap:28px;align-items:end;padding:0 clamp(20px,4vw,44px) clamp(24px,4vw,40px);margin-top:-70px}
+.artist-av{width:clamp(110px,14vw,170px);height:auto;aspect-ratio:1;border-radius:50%;object-fit:cover;box-shadow:0 0 0 5px color-mix(in srgb,var(--bg) 70%,transparent),0 20px 50px -10px rgba(255,45,140,.55);position:relative;z-index:3;animation:float 6s ease-in-out infinite}
+.artist .h2{font-size:clamp(44px,7vw,88px);letter-spacing:-.04em;background:linear-gradient(100deg,#ff4fb0,#b06bff 50%,#29e3ff);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 6px 24px rgba(255,60,170,.35))}
+.plats{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.plat{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 16px;border-radius:99px;text-decoration:none;font:600 14px/1 var(--font);background:var(--glass-2);box-shadow:inset 0 1px 0 var(--edge);transition:background .3s,box-shadow .3s}
+.plat svg{width:20px;height:20px;color:var(--p)}
+.plat small{font-weight:500;color:var(--ink-3)}
+.plat:hover{background:color-mix(in srgb,var(--p) 26%,var(--glass-2));box-shadow:inset 0 1px 0 var(--edge),0 10px 30px -10px var(--p)}
+@keyframes float{50%{transform:translateY(-8px)}}
+.studio{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:16px;margin-top:16px}
+.deck{border-radius:36px;padding:26px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:26px;align-items:center;position:relative;overflow:hidden}
+.vinyl-wrap{position:relative;width:clamp(170px,18vw,230px);aspect-ratio:1}
+.vinyl{position:absolute;inset:0;border-radius:50%;background:repeating-radial-gradient(circle,#111 0 2px,#1d1d22 2px 4px);box-shadow:0 24px 50px -16px rgba(0,0,0,.8),inset 0 0 0 2px rgba(255,255,255,.06);display:grid;place-items:center;animation:spin 6s linear infinite;animation-play-state:paused}
+.vinyl::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 30deg,transparent 0 20%,rgba(255,255,255,.14) 25%,transparent 32% 70%,rgba(255,255,255,.1) 75%,transparent 82%)}
+.vinyl img{width:44%;aspect-ratio:1;border-radius:50%;object-fit:cover;transition:transform .5s cubic-bezier(.2,1.4,.3,1),opacity .3s}
+.vinyl i{position:absolute;width:10px;height:10px;border-radius:50%;background:var(--bg);box-shadow:0 0 0 2px rgba(255,255,255,.2)}
+.vinyl.swap img{transform:scale(.3) rotate(-90deg);opacity:0}
+.deck.playing .vinyl{animation-play-state:running}
+.arm{position:absolute;right:-6%;top:-4%;width:46%;height:70%;border-right:4px solid rgba(255,255,255,.55);border-top:4px solid rgba(255,255,255,.55);border-top-right-radius:40px;transform-origin:100% 0;transform:rotate(-22deg);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.deck.playing .arm{transform:rotate(4deg)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.now small{font:600 12px/1 var(--font);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.now b{display:block;margin:8px 0 14px;font:750 clamp(22px,2.4vw,30px)/1.15 var(--font);letter-spacing:-.02em}
+.viz{display:flex;align-items:flex-end;gap:4px;height:46px;margin-bottom:18px}
+.viz i{flex:1;max-width:8px;border-radius:4px;background:linear-gradient(180deg,#ff4fb0,#7b6cf6);height:20%;transition:height .12s}
+.screen{grid-column:1/-1;aspect-ratio:16/9;border-radius:24px;overflow:hidden;background:#000;animation:pop .6s cubic-bezier(.2,1.2,.3,1)}
+.screen iframe{width:100%;height:100%;border:0;display:block}
+.tracks{list-style:none;margin:0;padding:10px;border-radius:36px;display:grid;gap:4px;align-content:start}
+.trk{width:100%;display:grid;grid-template-columns:28px 64px minmax(0,1fr) auto;gap:14px;align-items:center;padding:10px 12px;border:0;border-radius:22px;background:transparent;text-align:left;cursor:pointer;color:var(--ink);transition:background .3s,transform .3s}
+.trk:hover{background:var(--glass);transform:translateX(4px)}
+.trk.on{background:linear-gradient(90deg,color-mix(in srgb,#ff4fb0 22%,var(--glass)),var(--glass));box-shadow:inset 0 1px 0 var(--edge-soft)}
+.trk .n{font:600 13px/1 var(--font);color:var(--ink-3);font-variant-numeric:tabular-nums}
+.trk img{width:64px;aspect-ratio:16/10;object-fit:cover;border-radius:12px}
+.trk b{display:block;font:650 15px/1.25 var(--font);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.trk small{display:block;font-size:12.5px;color:var(--ink-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.trk .mv{font:500 12px/1 var(--font);color:var(--ink-3);white-space:nowrap}
+.trk .eq{display:none}
+.trk.on .mv{display:none}
+.trk.on .eq{display:flex;align-items:flex-end;gap:2px;height:16px}
+.trk .eq i{width:3px;background:#ff4fb0;border-radius:2px;animation:eq .9s ease-in-out infinite}
+.trk .eq i:nth-child(2){animation-delay:-.3s}.trk .eq i:nth-child(3){animation-delay:-.6s}.trk .eq i:nth-child(4){animation-delay:-.15s}
+@keyframes eq{0%,100%{height:25%}50%{height:100%}}
+.spot{margin-top:16px;border-radius:32px;padding:10px;min-height:172px}
+.spot iframe{display:block;width:100%;height:352px;border:0;border-radius:24px}
+.spot-ph{display:flex;align-items:center;gap:16px;padding:14px}
+.spot-ph img{width:120px;height:120px;border-radius:18px;object-fit:cover}
+.spot-ph b{display:block;font:700 20px/1.2 var(--font)}
+.spot-ph small{color:var(--ink-3)}
+@media (max-width:1000px){.studio{grid-template-columns:1fr}}
+@media (max-width:640px){.deck{grid-template-columns:1fr;justify-items:center;text-align:center}.viz{justify-content:center}.artist-body{grid-template-columns:1fr;margin-top:-56px}.trk{grid-template-columns:22px 56px minmax(0,1fr)}.trk .mv,.trk.on .eq{display:none}}
+@media (prefers-reduced-motion:reduce){.intro{display:none}.mq-track,.vinyl,.artist-av,.trk .eq i{animation:none}.split .w{opacity:1;filter:none;transform:none;transition:none}}
+
 /* ============ Liên hệ ============ */
 .contact{margin-top:0;padding:clamp(36px,6vw,72px);border-radius:48px;text-align:center;overflow:hidden}
 .contact .h2{margin-inline:auto;max-width:18ch}
@@ -314,6 +412,9 @@ footer a{color:var(--ink-2)}
 <body>
 <div class="wall" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
 <div class="grain" aria-hidden="true"></div>
+<div class="intro" id="intro" aria-hidden="true"><div class="intro-in"><img src="assets/brand/beta.svg" alt=""><div class="intro-name"><span>Phạm</span> <span>Việt</span> <span>Hà</span></div><div class="intro-sub">Beta · Bravinall · HAVVKING</div></div></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="lens" id="lens" aria-hidden="true"></div>
 
 <!-- bộ lọc khúc xạ cho kính (Chromium) -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -338,6 +439,11 @@ footer a{color:var(--ink-2)}
   <symbol id="i-spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2c.5 4.6 2.4 7 7.5 7.5-5.1.5-7 2.9-7.5 7.5-.5-4.6-2.4-7-7.5-7.5C9.6 9 11.5 6.6 12 2zm6.5 12c.3 2.4 1.2 3.4 3.5 3.7-2.3.3-3.2 1.3-3.5 3.8-.3-2.5-1.2-3.5-3.5-3.8 2.3-.3 3.2-1.3 3.5-3.7z"/></symbol>
   <symbol id="i-cap" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3 1 9l11 6 9-4.9V17h2V9zM5 13.2V17c0 1.7 3.1 4 7 4s7-2.3 7-4v-3.8l-7 3.8z"/></symbol>
   <symbol id="i-tiktok" viewBox="0 0 24 24"><path fill="currentColor" d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a7.7 7.7 0 0 0 4.4 1.4V6.7a4.4 4.4 0 0 1-4.4-4.4z"/></symbol>
+  <symbol id="i-note" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3v12.5a3.5 3.5 0 1 1-2-3.16V7.3l-8 1.8v8.4A3.5 3.5 0 1 1 7 14.34V5.5z"/></symbol>
+  <symbol id="i-yt" viewBox="0 0 24 24"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9L15.5 12z"/></symbol>
+  <symbol id="i-spotify" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22zm5 15.9a.7.7 0 0 1-.9.2c-2.6-1.6-5.8-1.9-9.6-1a.7.7 0 1 1-.3-1.3c4.2-1 7.7-.6 10.6 1.2.3.2.4.6.2.9zm1.3-3a.9.9 0 0 1-1.2.3c-2.9-1.8-7.4-2.3-10.9-1.3a.9.9 0 1 1-.5-1.7c4-1.2 9-.6 12.3 1.5.4.3.5.8.3 1.2zm.1-3.1C14.9 8.7 9 8.5 5.6 9.5a1 1 0 1 1-.6-2c3.9-1.2 10.4-1 14.4 1.4a1 1 0 0 1-1 1.8z"/></symbol>
+  <symbol id="i-sc" viewBox="0 0 24 24"><path fill="currentColor" d="M1 14.5c0 1.2.6 2.1 1.2 2.1V12.4c-.6 0-1.2.9-1.2 2.1zm2 2.4h.9V11.2H3zm1.7 0h.9V10.3h-.9zm1.8 0h.9V9.8h-.9zm1.8 0h.9V8.4h-.9zm1.7 0h.9V7.5h-.9zm1.8 0H20a3.5 3.5 0 0 0 0-7c-.4 0-.8.1-1.2.2A5.7 5.7 0 0 0 13.2 5c-.8 0-1.4.2-1.4.6z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><path fill="currentColor" d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4zm4.5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zm5-3.2a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></symbol>
   <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></symbol>
 </svg>
 
@@ -349,7 +455,7 @@ footer a{color:var(--ink-2)}
     <li><a href="#he-sinh-thai">Hệ sinh thái</a></li>
     <li><a href="#hoc-van">Học vấn</a></li>
     <li><a href="#hanh-trinh">Hành trình</a></li>
-    <li><a href="#video">Video</a></li>
+    <li><a href="#am-nhac">Âm nhạc</a></li>
   </ul>
   <a class="btn tint" href="#lien-he">Liên hệ</a>
 </nav>
@@ -357,7 +463,7 @@ footer a{color:var(--ink-2)}
   <a href="#top"><svg><use href="#i-home"/></svg>Giới thiệu</a>
   <a href="#he-sinh-thai"><svg><use href="#i-grid"/></svg>Sản phẩm</a>
   <a href="#hoc-van"><svg><use href="#i-cap"/></svg>Học vấn</a>
-  <a href="#hanh-trinh"><svg><use href="#i-route"/></svg>Hành trình</a>
+  <a href="#am-nhac"><svg><use href="#i-note"/></svg>Âm nhạc</a>
   <a href="#lien-he"><svg><use href="#i-mail"/></svg>Liên hệ</a>
 </nav>
 
@@ -394,6 +500,11 @@ footer a{color:var(--ink-2)}
     <div class="stat glass reveal"><b>6+ năm</b><span>làm hình ảnh, truyền thông và sự kiện trước khi viết sản phẩm</span></div>
   </div>
 </section>
+
+<div class="marquee" aria-hidden="true"><div class="mq-track">
+  <span>Bravin</span><i>✦</i><span>Antifact</span><i>✦</i><span>Micron</span><i>✦</i><span>Micow</span><i>✦</i><span>Beta HQ</span><i>✦</i><span>Beta Holding</span><i>✦</i><span>HAVVKING</span><i>✦</i><span>PTIT</span><i>✦</i><span>Đại học FPT</span><i>✦</i><span>Deep Learning</span><i>✦</i>
+  <span>Bravin</span><i>✦</i><span>Antifact</span><i>✦</i><span>Micron</span><i>✦</i><span>Micow</span><i>✦</i><span>Beta HQ</span><i>✦</i><span>Beta Holding</span><i>✦</i><span>HAVVKING</span><i>✦</i><span>PTIT</span><i>✦</i><span>Đại học FPT</span><i>✦</i><span>Deep Learning</span><i>✦</i>
+</div></div>
 
 <!-- ============ HỆ SINH THÁI ============ -->
 <section id="he-sinh-thai" data-nav="he-sinh-thai">
@@ -601,8 +712,79 @@ footer a{color:var(--ink-2)}
   </div>
 </section>
 
+<!-- ============ ÂM NHẠC ============ -->
+<section id="am-nhac" data-nav="am-nhac">
+  <div class="wrap">
+    <div class="artist glass reveal">
+      <div class="banner" data-parallax="0.25"><img src="assets/music/banner.jpg" alt="Ảnh bìa kênh Havvking Official"></div>
+      <div class="artist-body">
+        <img class="artist-av" src="assets/music/avatar.jpg" alt="Havvking" width="400" height="400">
+        <div class="artist-txt">
+          <span class="eyebrow glass">Âm nhạc · nghệ danh</span>
+          <h2 class="h2 nosplit" style="margin:12px 0 6px">HAVVKING</h2>
+          <p class="lead">Rapper · Producer · Latin Trap. Sẩm Hà Nội gặp hip-hop hiện đại, drill, trap Latin: tự viết, tự sản xuất, tự làm lyric video.</p>
+          <div class="plats">
+            <a class="plat magnet" href="https://www.youtube.com/@havvkingofficial" target="_blank" rel="noopener" style="--p:#ff0033"><svg><use href="#i-yt"/></svg>YouTube <small>2,31K đăng ký</small></a>
+            <a class="plat magnet" href="https://open.spotify.com/artist/2ytqsqgD4mLZ0qkOlQnsmn" target="_blank" rel="noopener" style="--p:#1db954"><svg><use href="#i-spotify"/></svg>Spotify</a>
+            <a class="plat magnet" href="https://soundcloud.com/ph-m-h-329852250" target="_blank" rel="noopener" style="--p:#ff5500"><svg><use href="#i-sc"/></svg>SoundCloud</a>
+            <a class="plat magnet" href="https://www.instagram.com/havvking_/" target="_blank" rel="noopener" style="--p:#e1306c"><svg><use href="#i-ig"/></svg>Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="studio">
+      <div class="deck glass reveal" id="deck">
+        <div class="vinyl-wrap">
+          <div class="vinyl" id="vinyl"><img id="vinylCover" src="assets/music/udsj6ugoTBk.jpg" alt=""><i></i></div>
+          <div class="arm" aria-hidden="true"></div>
+        </div>
+        <div class="now">
+          <small>Đang chọn</small>
+          <b id="nowTitle">Trai Thủ Đô 2026</b>
+          <div class="viz" id="viz" aria-hidden="true"></div>
+          <button class="btn tint magnet" id="playBtn"><svg><use href="#i-play"/></svg>Phát trên YouTube</button>
+        </div>
+        <div class="screen" id="screen" hidden></div>
+      </div>
+      <ol class="tracks glass reveal" aria-label="Danh sách bài"><li><button class="trk on" data-id="udsj6ugoTBk" data-title="Trai Thủ Đô 2026"><span class="n">01</span><img src="assets/music/udsj6ugoTBk.jpg" alt="" loading="lazy"><span class="tt2"><b>Trai Thủ Đô 2026</b><small>Instrumental · Sẩm Hà Nội × Hip-hop</small></span><span class="mv">14,9K lượt xem</span><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></button></li><li><button class="trk" data-id="sf3o1bXu9kI" data-title="Thuyết Tương Đối (Cench Theory)"><span class="n">02</span><img src="assets/music/sf3o1bXu9kI.jpg" alt="" loading="lazy"><span class="tt2"><b>Thuyết Tương Đối (Cench Theory)</b><small>Lyrics Video · Vietnamese Drill</small></span><span class="mv">mới phát hành</span><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></button></li><li><button class="trk" data-id="5t9-XrnhL5c" data-title="Trai Thủ Đô"><span class="n">03</span><img src="assets/music/5t9-XrnhL5c.jpg" alt="" loading="lazy"><span class="tt2"><b>Trai Thủ Đô</b><small>Lyric Video Official</small></span><span class="mv">4,1K lượt xem</span><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></button></li><li><button class="trk" data-id="rT4Qri-2KM0" data-title="Cô Gái Quàng Khăn Đỏ"><span class="n">04</span><img src="assets/music/rT4Qri-2KM0.jpg" alt="" loading="lazy"><span class="tt2"><b>Cô Gái Quàng Khăn Đỏ</b><small>Official Audio · Ethnic Trap</small></span><span class="mv">Club Banger</span><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></button></li><li><button class="trk" data-id="k9cc1AThCto" data-title="Safe House Tango"><span class="n">05</span><img src="assets/music/k9cc1AThCto.jpg" alt="" loading="lazy"><span class="tt2"><b>Safe House Tango</b><small>Lyrics Video · Latin Trap</small></span><span class="mv">mới phát hành</span><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></button></li><li><button class="trk" data-id="wcovMcddwKo" data-title="Lớp Thượng Tầng (High Class)"><span class="n">06</span><img src="assets/music/wcovMcddwKo.jpg" alt="" loading="lazy"><span class="tt2"><b>Lớp Thượng Tầng (High Class)</b><small>Lyrics Video</small></span><span class="mv">Havvking</span><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></button></li></ol>
+    </div>
+
+    <div class="spot glass reveal" id="spot" data-src="https://open.spotify.com/embed/artist/2ytqsqgD4mLZ0qkOlQnsmn?utm_source=generator&amp;theme=0">
+      <div class="spot-ph"><img src="assets/music/spotify.jpg" alt=""><span><b>Havvking trên Spotify</b><small>Trình phát Spotify tự mở khi bạn cuộn tới</small></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIKTOK ============ -->
+<section id="tiktok" data-nav="am-nhac">
+  <div class="wrap tiktok">
+    <div class="reveal">
+      <span class="eyebrow glass"><svg class="ic" style="width:16px;height:16px"><use href="#i-tiktok"/></svg>TikTok · 2 kênh</span>
+      <h2 class="h2">Tự quay, tự dựng, <span class="grad">tự kéo lượt xem.</span></h2>
+      <p class="lead">Hai kênh, hai mục đích. Kênh chính là nơi mình thử nhịp dựng, góc máy và cách mở đầu video; kênh còn lại chỉ để lưu các chuyến đi. Số liệu dưới đây của 6 video gần nhất trên @havvking.</p>
+      <div class="tt-stats">
+        <div class="glass"><b>413K+</b><span>lượt xem từ 6 video gần nhất</span></div>
+        <div class="glass"><b>132,5K</b><span>video cao nhất</span></div>
+        <div class="glass"><b>4 / 6</b><span>video vượt 70 nghìn lượt xem</span></div>
+      </div>
+      <div class="channels">
+        <a class="ch glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener">
+          <span class="chi" style="background:linear-gradient(160deg,#ff2d55,#25f4ee)"><svg><use href="#i-tiktok"/></svg></span>
+          <span><b>@havvking</b><small>Kênh chính · giải trí đời thường, thử nghiệm dựng video, TikTok Shop</small><em>2.478 người theo dõi · 110K lượt thích · 13 video</em></span>
+        </a>
+        <a class="ch glass" href="https://www.tiktok.com/@havv_king" target="_blank" rel="noopener">
+          <span class="chi" style="background:linear-gradient(160deg,#34a853,#0b6e8f)"><svg><use href="#i-route"/></svg></span>
+          <span><b>@havv_king · Trekking</b><small>Kênh du lịch · chỉ đăng các chuyến đi, trekking</small><em>9 video · 814 lượt thích</em></span>
+        </a>
+      </div>
+    </div>
+    <div class="tt-grid reveal"><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v1.jpg" alt="Video TikTok, 107 lượt xem" width="355" height="472" loading="lazy"></a><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v2.jpg" alt="Video TikTok, 73,6 nghìn lượt xem" width="355" height="472" loading="lazy"></a><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v3.jpg" alt="Video TikTok, 107,1 nghìn lượt xem" width="355" height="472" loading="lazy"></a><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v4.jpg" alt="Video TikTok, 7.186 lượt xem" width="355" height="472" loading="lazy"></a><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v5.jpg" alt="Video TikTok, 92,6 nghìn lượt xem" width="355" height="472" loading="lazy"></a><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v6.jpg" alt="Video TikTok, 132,5 nghìn lượt xem" width="355" height="472" loading="lazy"></a></div>
+  </div>
+</section>
+
 <!-- ============ VIDEO ============ -->
-<section id="video" data-nav="video">
+<section id="video" data-nav="am-nhac">
   <div class="wrap">
     <div class="reveal">
       <span class="eyebrow glass">Nền tảng hình ảnh</span>
@@ -629,33 +811,6 @@ footer a{color:var(--ink-2)}
 </section>
 
 
-<!-- ============ TIKTOK ============ -->
-<section id="tiktok" data-nav="video">
-  <div class="wrap tiktok">
-    <div class="reveal">
-      <span class="eyebrow glass"><svg class="ic" style="width:16px;height:16px"><use href="#i-tiktok"/></svg>TikTok · 2 kênh</span>
-      <h2 class="h2">Tự quay, tự dựng, <span class="grad">tự kéo lượt xem.</span></h2>
-      <p class="lead">Hai kênh, hai mục đích. Kênh chính là nơi mình thử nhịp dựng, góc máy và cách mở đầu video; kênh còn lại chỉ để lưu các chuyến đi. Số liệu dưới đây của 6 video gần nhất trên @havvking.</p>
-      <div class="tt-stats">
-        <div class="glass"><b>413K+</b><span>lượt xem từ 6 video gần nhất</span></div>
-        <div class="glass"><b>132,5K</b><span>video cao nhất</span></div>
-        <div class="glass"><b>4 / 6</b><span>video vượt 70 nghìn lượt xem</span></div>
-      </div>
-      <div class="channels">
-        <a class="ch glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener">
-          <span class="chi" style="background:linear-gradient(160deg,#ff2d55,#25f4ee)"><svg><use href="#i-tiktok"/></svg></span>
-          <span><b>@havvking</b><small>Kênh chính · giải trí đời thường, thử nghiệm dựng video, TikTok Shop</small><em>2.478 người theo dõi · 110K lượt thích · 13 video</em></span>
-        </a>
-        <a class="ch glass" href="https://www.tiktok.com/@havv_king" target="_blank" rel="noopener">
-          <span class="chi" style="background:linear-gradient(160deg,#34a853,#0b6e8f)"><svg><use href="#i-route"/></svg></span>
-          <span><b>@havv_king · Trekking</b><small>Kênh du lịch · chỉ đăng các chuyến đi, trekking</small><em>9 video · 814 lượt thích</em></span>
-        </a>
-      </div>
-    </div>
-    <div class="tt-grid reveal"><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v1.jpg" alt="Video TikTok, 107 lượt xem" width="355" height="472" loading="lazy"></a><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v2.jpg" alt="Video TikTok, 73,6 nghìn lượt xem" width="355" height="472" loading="lazy"></a><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v3.jpg" alt="Video TikTok, 107,1 nghìn lượt xem" width="355" height="472" loading="lazy"></a><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v4.jpg" alt="Video TikTok, 7.186 lượt xem" width="355" height="472" loading="lazy"></a><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v5.jpg" alt="Video TikTok, 92,6 nghìn lượt xem" width="355" height="472" loading="lazy"></a><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v6.jpg" alt="Video TikTok, 132,5 nghìn lượt xem" width="355" height="472" loading="lazy"></a></div>
-  </div>
-</section>
-
 <!-- ============ LIÊN HỆ ============ -->
 <section id="lien-he" data-nav="lien-he">
   <div class="wrap">
@@ -672,6 +827,8 @@ footer a{color:var(--ink-2)}
         <a class="chip glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener">TikTok @havvking</a>
         <a class="chip glass" href="https://www.tiktok.com/@havv_king" target="_blank" rel="noopener">TikTok du lịch</a>
         <a class="chip glass" href="https://www.instagram.com/havvking_/" target="_blank" rel="noopener">Instagram</a>
+        <a class="chip glass" href="https://open.spotify.com/artist/2ytqsqgD4mLZ0qkOlQnsmn" target="_blank" rel="noopener">Spotify</a>
+        <a class="chip glass" href="https://soundcloud.com/ph-m-h-329852250" target="_blank" rel="noopener">SoundCloud</a>
         <a class="chip glass" href="https://github.com/vtvcab17-max" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
@@ -716,9 +873,88 @@ footer a{color:var(--ink-2)}
     const box = document.createElement("div"); box.className = "yt"; box.append(f); b.replaceWith(box);
   }));
 
+
+  // ===== Hiệu ứng tương tác =====
+  const RM = matchMedia("(prefers-reduced-motion: reduce)").matches, FINE = matchMedia("(pointer: fine)").matches;
+  // màn mở đầu: chỉ lần đầu mỗi phiên
+  const intro = document.getElementById("intro");
+  let seen = false; try { seen = sessionStorage.getItem("pf-intro") === "1"; sessionStorage.setItem("pf-intro", "1"); } catch {}
+  if (RM || seen) intro.classList.add("gone");
+  else { document.documentElement.style.overflow = "hidden"; setTimeout(() => { intro.classList.add("out"); document.documentElement.style.overflow = ""; setTimeout(() => intro.classList.add("gone"), 1000); }, 1500); }
+  // tiêu đề lớn hiện từng từ
+  document.querySelectorAll("h1, .h2:not(.nosplit)").forEach(h => {
+    const walk = n => [...n.childNodes].forEach(c => {
+      if (c.nodeType === 3 && c.textContent.trim()) { const f = document.createDocumentFragment(); c.textContent.split(/(\s+)/).forEach(t => { if (!t.trim()) f.append(t); else { const sp = document.createElement("span"); sp.className = "w"; sp.textContent = t; f.append(sp); } }); c.replaceWith(f); }
+      else if (c.nodeType === 1 && !c.classList.contains("grad")) walk(c);
+      else if (c.nodeType === 1) { c.classList.add("w"); }
+    });
+    walk(h); h.classList.add("split"); h.querySelectorAll(".w").forEach((w, i) => w.style.setProperty("--i", i));
+    const o = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { h.classList.add("go"); o.disconnect(); } }), { threshold: .3 }); o.observe(h);
+  });
+  // thanh tiến độ + thị sai ảnh bìa
+  const prog = document.getElementById("progress"), par = [...document.querySelectorAll("[data-parallax]")];
+  let ticking = false;
+  const onScroll = () => { if (ticking) return; ticking = true; requestAnimationFrame(() => {
+    const h = document.documentElement.scrollHeight - innerHeight; prog.style.transform = "scaleX(" + (h > 0 ? scrollY / h : 0) + ")";
+    if (!RM) par.forEach(el => { const r = el.getBoundingClientRect(); el.style.setProperty("--py", ((r.top + r.height / 2 - innerHeight / 2) * -+el.dataset.parallax) + "px"); });
+    ticking = false; }); };
+  addEventListener("scroll", onScroll, { passive: true }); onScroll();
+  // đếm số
+  document.querySelectorAll(".stat b, .tt-stats b").forEach(b => {
+    const m = /^([\d.,]+)/.exec(b.textContent); if (!m || RM) return;
+    const raw = m[1], dec = raw.includes(",") ? raw.split(",")[1].length : 0, val = parseFloat(raw.replace(/\./g, "").replace(",", ".")), rest = b.textContent.slice(raw.length);
+    const o = new IntersectionObserver(es => es.forEach(e => { if (!e.isIntersecting) return; o.disconnect(); const t0 = performance.now();
+      const step = t => { const k = Math.min(1, (t - t0) / 1400), v = val * (1 - Math.pow(1 - k, 3)); b.textContent = v.toFixed(dec).replace(".", ",") + rest; if (k < 1) requestAnimationFrame(step); };
+      requestAnimationFrame(step); }), { threshold: .6 }); o.observe(b);
+  });
+  if (!RM && FINE) {
+    // nghiêng 3D theo con trỏ
+    document.querySelectorAll(".card, .stat, .skill, .tt, .portrait .frame, .web, .edus .card, .deck").forEach(el => {
+      el.classList.add("tilt");
+      el.addEventListener("pointermove", e => { const r = el.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+        el.classList.add("hot"); el.style.transform = `perspective(900px) rotateX(${(-y * 7).toFixed(2)}deg) rotateY(${(x * 9).toFixed(2)}deg) translateZ(0)`; });
+      el.addEventListener("pointerleave", () => { el.classList.remove("hot"); el.style.transform = ""; });
+    });
+    // nút hút theo con trỏ
+    document.querySelectorAll(".btn, .plat, .ch, .nav ul a").forEach(el => {
+      el.addEventListener("pointermove", e => { const r = el.getBoundingClientRect(); el.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .22}px,${(e.clientY - r.top - r.height / 2) * .3}px)`; });
+      el.addEventListener("pointerleave", () => { el.style.transform = ""; });
+    });
+    // thấu kính kính lỏng theo con trỏ
+    const lens = document.getElementById("lens"); let lx = innerWidth / 2, ly = innerHeight / 2, tx = lx, ty = ly;
+    addEventListener("pointermove", e => { tx = e.clientX; ty = e.clientY; lens.classList.add("on"); lens.classList.toggle("big", !!e.target.closest("a, button")); }, { passive: true });
+    document.addEventListener("pointerleave", () => lens.classList.remove("on"));
+    const loop = () => { lx += (tx - lx) * .18; ly += (ty - ly) * .18; lens.style.transform = `translate(${lx}px,${ly}px)`; requestAnimationFrame(loop); }; loop();
+    // ảnh chân dung và các thẻ nổi lệch theo chiều sâu
+    const hero = document.querySelector(".hero"), floats = [...document.querySelectorAll(".portrait .float")];
+    hero.addEventListener("pointermove", e => { const x = e.clientX / innerWidth - .5, y = e.clientY / innerHeight - .5; floats.forEach((f, i) => f.style.translate = `${x * (18 + i * 14)}px ${y * (14 + i * 10)}px`); });
+  }
+  // gợn nước khi bấm vào kính
+  document.addEventListener("pointerdown", e => { if (RM) return; const g = e.target.closest(".glass, .btn"); if (!g) return; const r = g.getBoundingClientRect(), d = Math.max(r.width, r.height) * 1.6;
+    const rp = document.createElement("span"); rp.className = "ripple"; rp.style.cssText = `left:${e.clientX - r.left}px;top:${e.clientY - r.top}px;width:${d}px;height:${d}px`;
+    if (getComputedStyle(g).position === "static") g.style.position = "relative"; g.append(rp); setTimeout(() => rp.remove(), 700); });
+
+  // ===== Âm nhạc: bàn xoay đĩa =====
+  const deck = document.getElementById("deck"), vinyl = document.getElementById("vinyl"), cover = document.getElementById("vinylCover"), nowT = document.getElementById("nowTitle"), screen = document.getElementById("screen"), viz = document.getElementById("viz");
+  for (let i = 0; i < 28; i++) viz.append(document.createElement("i"));
+  const bars = [...viz.children]; let cur = document.querySelector(".trk.on");
+  const vizLoop = t => { const on = deck.classList.contains("playing"); bars.forEach((b, i) => { b.style.height = on ? (18 + 82 * Math.abs(Math.sin(t / 220 + i * .7) * Math.sin(t / 530 + i * .33))) + "%" : (12 + 8 * Math.sin(i)) + "%"; }); requestAnimationFrame(vizLoop); };
+  if (!RM) requestAnimationFrame(vizLoop);
+  const play = () => { screen.hidden = false; screen.innerHTML = ""; const f = document.createElement("iframe"); f.src = "https://www.youtube-nocookie.com/embed/" + cur.dataset.id + "?autoplay=1&rel=0"; f.title = cur.dataset.title + " · HAVVKING"; f.allow = "autoplay; encrypted-media; picture-in-picture"; f.allowFullscreen = true; screen.append(f); deck.classList.add("playing"); };
+  document.querySelectorAll(".trk").forEach(b => b.addEventListener("click", () => {
+    if (cur === b && deck.classList.contains("playing")) return;
+    cur.classList.remove("on"); b.classList.add("on"); cur = b; nowT.textContent = b.dataset.title;
+    vinyl.classList.add("swap"); setTimeout(() => { cover.src = "assets/music/" + b.dataset.id + ".jpg"; vinyl.classList.remove("swap"); }, 250);
+    if (deck.classList.contains("playing")) play(); else deck.classList.add("playing");
+  }));
+  document.getElementById("playBtn").addEventListener("click", play);
+  // Spotify: chỉ tải trình phát khi cuộn tới
+  const spot = document.getElementById("spot");
+  new IntersectionObserver((es, o) => es.forEach(e => { if (!e.isIntersecting) return; o.disconnect(); const f = document.createElement("iframe"); f.src = spot.dataset.src; f.title = "Havvking trên Spotify"; f.loading = "lazy"; f.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"; spot.innerHTML = ""; spot.append(f); }), { rootMargin: "200px" }).observe(spot);
+
   // Beta Holding: số liệu thật đọc từ repo công khai (raw.githubusercontent, không tính hạn mức API)
   const RAW = "https://raw.githubusercontent.com/vtvcab17-max/beta-holding/";
-  const get = async p => { try { const r = await fetch(RAW + p + "?t=" + Math.floor(Date.now() / 6e4), { cache: "no-store" }); return r.ok ? r.json() : null; } catch { return null; } };
+  const get = async p => { try { const r = await fetch(RAW + p + "?t=" + Math.floor(Date.now() / 6e4), { cache: "no-store" }); return r.ok ? await r.json() : null; } catch { return null; } };
   const ago = iso => { const s = (Date.now() - new Date(iso)) / 1000; return s < 90 ? "vừa xong" : s < 3600 ? Math.round(s / 60) + " phút trước" : s < 86400 ? Math.round(s / 3600) + " giờ trước" : Math.round(s / 86400) + " ngày trước"; };
   async function live() {
     const [hbMain, hbRun, bounties, repos] = await Promise.all([get("main/data/heartbeat_state.json"), get("paperclip-chay/data/heartbeat_state.json"), get("main/data/active_bounties.json"), get("main/data/scouted_repos.json")]);
