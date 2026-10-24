@@ -560,6 +560,21 @@ html.refract .lens{-webkit-backdrop-filter:url(#lg-refract) saturate(220%) brigh
 .polaroids:hover .p1{transform:rotate(-14deg) translate(-18px,-10px)}.polaroids:hover .p2{transform:rotate(12deg) translate(18px,-8px)}
 .polaroids:hover .p3{transform:rotate(-2deg) translate(-12px,10px)}.polaroids:hover .p4{transform:rotate(-10deg) translate(14px,14px)}
 .pol:hover{z-index:5;transform:rotate(0) scale(1.08)!important;transition:transform .5s cubic-bezier(.2,1.2,.3,1)}
+.orgs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.org-c{display:grid;gap:3px;padding:10px;border-radius:18px;background:var(--glass);box-shadow:inset 0 1px 0 var(--edge-soft);transition:transform .45s cubic-bezier(.2,1.4,.3,1),background .3s}
+.org-c:hover{transform:translateY(-6px) scale(1.03);background:var(--glass-2)}
+.org-l{height:64px;border-radius:12px;display:grid;place-items:center;overflow:hidden;margin-bottom:6px;padding:8px}
+.org-l img{height:48px;width:auto;max-width:100%;object-fit:contain;transition:transform .5s cubic-bezier(.2,1.4,.3,1)}
+.org-l img.cover{width:calc(100% + 16px);height:calc(100% + 16px);max-width:none;max-height:none;margin:-8px;object-fit:cover}
+.org-c:hover .org-l img{transform:scale(1.08)}
+.org-c b{font:650 14px/1.25 var(--font)}
+.org-c small{font-size:12px;line-height:1.3;color:var(--ink-3)}
+.wm{font:900 15px/1 var(--font);letter-spacing:.02em}
+.wm.apax{color:#fff;background:#d7192d;padding:7px 12px;transform:skewX(-12deg);display:inline-block}
+.wm.vtv,.wm-tile{color:#1d4f9c;font-size:22px;letter-spacing:-.02em}
+.wm.vtv b,.wm-tile b{color:#e1251b}
+.wm.mlb{color:#fff;font-size:14px;letter-spacing:.04em}
+.tl-img.wm-tile{display:grid;place-items:center;background:#fff;font:900 17px/1 var(--font)}
 .logos-row .lr{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 .logos-row .lr>img,.logos-row .lux{height:52px;width:auto;max-width:120px;padding:8px 12px;border-radius:14px;background:#fff;object-fit:contain;transition:transform .4s cubic-bezier(.2,1.4,.3,1)}
 .logos-row .lux{display:grid;place-items:center;background:#111}
@@ -882,6 +897,7 @@ footer a{color:var(--ink-2)}
           <li><i></i><div><div class="when">3 năm</div><h3>Video Grapher &amp; Editor · X Genius English</h3><p>Tiếp tục quay dựng sau khi X Genius English tiếp quản hệ thống Apax.</p></div><img class="tl-img ph" src="https://i.ytimg.com/vi/gqQBtvt0KNM/mqdefault.jpg" alt="" loading="lazy"></li>
           <li><i></i><div><div class="when">3 năm</div><h3>Video Grapher &amp; Editor · Apax English</h3><p>Video quảng bá, sự kiện nội bộ và tư liệu truyền thông cho hệ thống trung tâm Anh ngữ Apax.</p></div><img class="tl-img ph" src="https://i.ytimg.com/vi/qVWhU1zDxUA/mqdefault.jpg" alt="" loading="lazy"></li>
           <li><i></i><div><div class="when">Trước đó</div><h3>Digital Marketing · Medialabotary</h3><p>Triển khai nội dung số và các chiến dịch truyền thông online.</p></div><span class="tl-img ic-tile" aria-hidden="true"><svg><use href="#i-share"/></svg></span></li>
+          <li><i></i><div><div class="when">Thực tập</div><h3>Thực tập sinh · VTVcab</h3><p>Thực tập tại Tổng công ty Truyền hình Cáp Việt Nam (VTVcab): làm quen quy trình sản xuất nội dung truyền hình.</p></div><span class="tl-img wm-tile" aria-hidden="true"><b>VTV</b>cab</span></li>
           <li><i></i><div><div class="when">Khởi đầu</div><h3>Designer · Sonets.vn &amp; Luxcasa.vn</h3><p>Thiết kế hình ảnh sản phẩm và thương hiệu.</p></div><img class="tl-img logo w" src="assets/logos/sonets.png" alt="" loading="lazy"></li>
         </ol>
       </div>
@@ -892,7 +908,7 @@ footer a{color:var(--ink-2)}
           <figure class="pol p3"><img src="https://i.ytimg.com/vi/aQ4Xh0G2HvU/hqdefault.jpg" alt="Video ngành thẩm mỹ" loading="lazy"><figcaption>Ngành thẩm mỹ</figcaption></figure>
           <figure class="pol p4"><img src="assets/shots/bravin.jpg" alt="Bravin" loading="lazy"><figcaption>Beta · Bravin</figcaption></figure>
         </div>
-        <div class="edu glass reveal logos-row"><h4 class="panel-title">Từng làm cùng</h4><div class="lr"><img src="assets/logos/xgenius.jpg" alt="X Genius"><img src="assets/logos/sonets.png" alt="Sonets"><span class="lux"><img src="assets/logos/luxcasa.png" alt="Luxcasa"></span><img src="assets/edu/ptit.svg" alt="PTIT"></div></div>
+        <div class="edu glass reveal logos-row"><h4 class="panel-title">Từng làm cùng</h4><div class="orgs"><div class="org-c"><div class="org-l" style="background:#fff"><img src="assets/logos/xgenius.jpg" alt="X Genius English"></div><b>X Genius English</b><small>Trưởng phòng Truyền thông &amp; Sự kiện</small></div><div class="org-c"><div class="org-l" style="background:#fff"><span class="wm apax">APAX LEADERS</span></div><b>Apax Leaders · Apax English</b><small>Video Grapher &amp; Editor, 3 năm</small></div><div class="org-c"><div class="org-l" style="background:#fff"><span class="wm vtv"><b>VTV</b>cab</span></div><b>VTVcab</b><small>Thực tập</small></div><div class="org-c"><div class="org-l" style="background:#000"><img src="https://i.ytimg.com/vi/aQ4Xh0G2HvU/mqdefault.jpg" alt="" class="cover"></div><b>Viện thẩm mỹ</b><small>Phụ trách nội dung hình ảnh</small></div><div class="org-c"><div class="org-l" style="background:#fff"><img src="assets/logos/drvietlong.jpg" alt="Dr. Việt Long"></div><b>Dr. Việt Long</b><small>Thiết kế &amp; dựng website</small></div><div class="org-c"><div class="org-l" style="background:#111"><span class="wm mlb">Medialabotary</span></div><b>Medialabotary</b><small>Digital Marketing</small></div><div class="org-c"><div class="org-l" style="background:#fff"><img src="assets/logos/sonets.png" alt="Sonets"></div><b>Sonets.vn</b><small>Designer</small></div><div class="org-c"><div class="org-l" style="background:#111"><img src="assets/logos/luxcasa.png" alt="Luxcasa"></div><b>Luxcasa.vn</b><small>Designer</small></div></div></div>
       </div>
     </div>
   </div>
