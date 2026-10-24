@@ -276,6 +276,19 @@ section{padding:clamp(72px,10vw,128px) 0 0}
 .web p{margin:0;color:var(--ink-2);font-size:15px}
 .web .links{display:flex;gap:8px;flex-wrap:wrap}
 .web .links a{display:inline-flex;align-items:center;height:38px;padding:0 15px;border-radius:99px;text-decoration:none;font:600 13.5px/1 var(--font);background:var(--glass-2);box-shadow:inset 0 1px 0 var(--edge)}
+.shot.dev{display:block;aspect-ratio:16/11;background:radial-gradient(120% 90% at 20% 0%,color-mix(in srgb,var(--c2) 55%,transparent),transparent 60%),linear-gradient(140deg,var(--c1),color-mix(in srgb,var(--c1) 60%,#000))}
+.dev .browser{position:absolute;left:6%;top:9%;width:74%;bottom:-6%;border-radius:14px 14px 0 0;overflow:hidden;background:#fff;box-shadow:0 30px 60px -20px rgba(0,0,0,.7);transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.dev .browser .bar{position:relative;height:26px;padding:0 10px;background:#eceef3}
+.dev .browser .bar i{width:8px;height:8px;background:#c9ccd4}
+.dev .browser .bar i:nth-child(1){background:#ff5f57}.dev .browser .bar i:nth-child(2){background:#febc2e}.dev .browser .bar i:nth-child(3){background:#28c840}
+.dev .browser .bar span{font-size:11px;color:#5f6368}
+.dev .scr{position:absolute;inset:26px 0 0;overflow:hidden}
+.dev .scr img{width:100%;height:auto;transform:translateY(0);transition:transform 9s cubic-bezier(.4,0,.2,1)}
+.web:hover .dev .scr img{transform:translateY(calc(-100% + 260px))}
+.dev .phone{position:absolute;right:5%;bottom:-8%;width:24%;aspect-ratio:390/844;border-radius:22px;padding:5px;background:#111;box-shadow:0 0 0 1.5px rgba(255,255,255,.18),0 30px 50px -14px rgba(0,0,0,.8);transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.dev .phone img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:17px}
+.web:hover .dev .phone{transform:translateY(-14px) rotate(-2deg)}
+.web:hover .dev .browser{transform:translateY(-6px)}
 @media (max-width:800px){.webs{grid-template-columns:1fr}}
 
 /* ============ TikTok ============ */
@@ -848,7 +861,7 @@ footer a{color:var(--ink-2)}
     </div>
     <div class="webs">
       <article class="web glass reveal">
-        <div class="shot" style="--c1:#d6a77a;--c2:#7a4a8c"><div class="bar"><i></i><i></i><i></i><span>drvietlong.com</span></div><b>drvietlong.com</b></div>
+        <div class="shot dev" style="--c1:#0b2a6b;--c2:#c9a56a"><div class="browser"><div class="bar"><i></i><i></i><i></i><span>drvietlong.com</span></div><div class="scr"><img src="assets/web-drvietlong-desktop.jpg" alt="Giao diện máy tính drvietlong.com" loading="lazy" width="800" height="2333"></div></div><div class="phone"><img src="assets/web-drvietlong-mobile.jpg" alt="Giao diện điện thoại drvietlong.com" loading="lazy" width="390" height="844"></div></div>
         <div class="body">
           <div class="tools"><span class="tag">Thiết kế &amp; dựng website</span><span class="tag">Freelance</span></div>
           <h3>Website phòng khám thẩm mỹ</h3>
@@ -857,7 +870,7 @@ footer a{color:var(--ink-2)}
         </div>
       </article>
       <article class="web glass reveal">
-        <div class="shot" style="--c1:#7b6cf6;--c2:#14c9c9"><div class="bar"><i></i><i></i><i></i><span>bravinall.vtvcab17.workers.dev</span></div><b>Bravinall</b></div>
+        <div class="shot dev" style="--c1:#2a1f6b;--c2:#14c9c9"><div class="browser"><div class="bar"><i></i><i></i><i></i><span>bravinall.vtvcab17.workers.dev</span></div><div class="scr"><img src="assets/web-bravinall-desktop.jpg" alt="Giao diện máy tính trang Bravinall" loading="lazy" width="800" height="900"></div></div><div class="phone"><img src="assets/web-bravinall-mobile.jpg" alt="Giao diện điện thoại trang Bravinall" loading="lazy" width="390" height="844"></div></div>
         <div class="body">
           <div class="tools"><span class="tag">Sản phẩm của mình</span><span class="tag">Cloudflare Workers</span></div>
           <h3>Trang chủ hệ sinh thái Bravinall</h3>
