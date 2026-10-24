@@ -103,8 +103,9 @@ section{padding:clamp(72px,10vw,128px) 0 0}
 .nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:4px;height:58px;padding:0 8px 0 10px;border-radius:99px;max-width:calc(100% - 24px)}
 .nav .me{display:flex;align-items:center;gap:10px;padding-right:14px;text-decoration:none;font:600 15px/1 var(--font);white-space:nowrap}
 .nav .me img{width:36px;height:36px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px rgba(255,255,255,.35)}
-.nav ul{display:flex;gap:2px;margin:0 0 0 8px;padding:0;list-style:none}
-.nav ul a{white-space:nowrap;display:flex;align-items:center;height:42px;padding:0 15px;border-radius:99px;text-decoration:none;font:500 14px/1 var(--font);color:var(--ink-2);transition:color .2s,background .3s}
+.nav .me{margin-right:12px}
+.nav ul{display:flex;gap:2px;margin:0;padding:0;list-style:none}
+.nav ul a{white-space:nowrap;display:flex;align-items:center;height:42px;padding:0 13px;border-radius:99px;text-decoration:none;font:500 14px/1 var(--font);color:var(--ink-2);transition:color .2s,background .3s}
 .nav ul a:hover{color:var(--ink)}
 .nav ul a.on{color:var(--ink);background:var(--glass-2);box-shadow:inset 0 1px 0 var(--edge)}
 .nav .btn{white-space:nowrap;height:42px;padding:0 18px;font-size:14px;margin-left:6px}
@@ -401,6 +402,34 @@ html.refract .lens{-webkit-backdrop-filter:url(#lg-refract) saturate(220%) brigh
 @media (max-width:640px){.deck{grid-template-columns:1fr;justify-items:center;text-align:center}.viz{justify-content:center}.artist-body{grid-template-columns:1fr;margin-top:-56px}.trk{grid-template-columns:22px 56px minmax(0,1fr)}.trk .mv,.trk.on .eq{display:none}}
 @media (prefers-reduced-motion:reduce){.intro{display:none}.mq-track,.vinyl,.artist-av,.trk .eq i{animation:none}.split .w{opacity:1;filter:none;transform:none;transition:none}}
 
+/* ============ TikTok: kênh hình ảnh cá nhân ============ */
+.creator .mosaic{background:#000}
+.mos{display:grid;grid-template-columns:repeat(8,1fr);height:100%;transform:translate3d(0,var(--py,0px),0) rotate(-4deg) scale(1.25);filter:saturate(1.2) brightness(.8)}
+.mos img{width:100%;height:100%;object-fit:cover}
+.creator .banner::after{background:linear-gradient(180deg,rgba(255,45,85,.18),color-mix(in srgb,var(--bg) 75%,transparent) 85%)}
+.creator .tt-title{font-size:clamp(44px,7vw,88px)!important;letter-spacing:-.04em;background:linear-gradient(100deg,#25f4ee,#fff 45%,#ff2d55);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 6px 24px rgba(255,45,85,.35))}
+.creator .artist-av{box-shadow:0 0 0 5px color-mix(in srgb,var(--bg) 70%,transparent),-6px 0 30px -6px #25f4ee,6px 10px 40px -8px #ff2d55}
+.seg{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:6px;margin:16px auto 0;border-radius:99px;max-width:620px}
+.seg button{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;gap:10px;height:52px;border:0;border-radius:99px;background:transparent;cursor:pointer;font:600 14.5px/1 var(--font);color:var(--ink-2);transition:color .3s}
+.seg button[aria-selected="true"]{color:var(--ink)}
+.seg button img{width:30px;height:30px;border-radius:50%;object-fit:cover}
+.seg-pill{position:absolute;z-index:1;top:6px;bottom:6px;left:6px;width:calc(50% - 8px);border-radius:99px;background:var(--glass-2);box-shadow:inset 0 1px 0 var(--edge),0 8px 24px -10px rgba(0,0,0,.6);transition:transform .55s cubic-bezier(.3,1.4,.4,1)}
+.seg[data-i="1"] .seg-pill{transform:translateX(calc(100% + 4px))}
+.panel{margin-top:16px;animation:panelIn .6s cubic-bezier(.2,.8,.2,1)}
+@keyframes panelIn{from{opacity:0;transform:translateY(18px) scale(.985);filter:blur(6px)}}
+.prof{display:flex;gap:16px;align-items:center;padding:16px;border-radius:26px}
+.prof img{width:72px;height:72px;border-radius:50%;object-fit:cover;flex:none;box-shadow:0 0 0 2px var(--edge)}
+.prof b{display:block;font:700 18px/1.25 var(--font)}
+.prof q{display:block;margin:4px 0;font-size:15px;font-style:italic;color:var(--ink)}
+.prof small{display:block;font-size:13px;color:var(--ink-3)}
+.panel .tt-stats{margin-top:12px}
+.embed{border-radius:32px;padding:10px;min-height:520px;display:grid;place-items:center;overflow:hidden}
+.embed blockquote{margin:0!important;width:100%}
+.embed iframe{border-radius:22px}
+.embed-ph{display:grid;justify-items:center;gap:12px;color:var(--ink-3);text-align:center}
+.embed-ph img{width:96px;height:96px;border-radius:50%;object-fit:cover;animation:float 3s ease-in-out infinite}
+@media (max-width:560px){.seg button{font-size:13px;gap:6px}.seg button img{width:24px;height:24px}.seg .sub{display:none}.panel .tt-stats{grid-template-columns:repeat(3,minmax(0,1fr))!important}.panel .tt-stats div{padding:12px 10px}}
+
 /* ============ Liên hệ ============ */
 .contact{margin-top:0;padding:clamp(36px,6vw,72px);border-radius:48px;text-align:center;overflow:hidden}
 .contact .h2{margin-inline:auto;max-width:18ch}
@@ -459,6 +488,7 @@ footer a{color:var(--ink-2)}
     <li><a href="#hoc-van">Học vấn</a></li>
     <li><a href="#hanh-trinh">Hành trình</a></li>
     <li><a href="#am-nhac">Âm nhạc</a></li>
+    <li><a href="#tiktok">TikTok</a></li>
   </ul>
   <a class="btn tint" href="#lien-he">Liên hệ</a>
 </nav>
@@ -467,6 +497,7 @@ footer a{color:var(--ink-2)}
   <a href="#he-sinh-thai"><svg><use href="#i-grid"/></svg>Sản phẩm</a>
   <a href="#hoc-van"><svg><use href="#i-cap"/></svg>Học vấn</a>
   <a href="#am-nhac"><svg><use href="#i-note"/></svg>Âm nhạc</a>
+  <a href="#tiktok"><svg><use href="#i-tiktok"/></svg>TikTok</a>
   <a href="#lien-he"><svg><use href="#i-mail"/></svg>Liên hệ</a>
 </nav>
 
@@ -760,29 +791,72 @@ footer a{color:var(--ink-2)}
 </section>
 
 <!-- ============ TIKTOK ============ -->
-<section id="tiktok" data-nav="am-nhac">
-  <div class="wrap tiktok">
-    <div class="reveal">
-      <span class="eyebrow glass"><svg class="ic" style="width:16px;height:16px"><use href="#i-tiktok"/></svg>TikTok · 2 kênh</span>
-      <h2 class="h2">Tự quay, tự dựng, <span class="grad">tự kéo lượt xem.</span></h2>
-      <p class="lead">Hai kênh, hai mục đích. Kênh chính là nơi mình thử nhịp dựng, góc máy và cách mở đầu video; kênh còn lại chỉ để lưu các chuyến đi. Số liệu dưới đây của 6 video gần nhất trên @havvking.</p>
-      <div class="tt-stats">
-        <div class="glass"><b>413K+</b><span>lượt xem từ 6 video gần nhất</span></div>
-        <div class="glass"><b>132,5K</b><span>video cao nhất</span></div>
-        <div class="glass"><b>4 / 6</b><span>video vượt 70 nghìn lượt xem</span></div>
-      </div>
-      <div class="channels">
-        <a class="ch glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener">
-          <span class="chi av"><img src="assets/avatars/tt-havvking.jpg" alt=""><svg><use href="#i-tiktok"/></svg></span>
-          <span><b>@havvking</b><small>Kênh chính · giải trí đời thường, thử nghiệm dựng video, TikTok Shop</small><em>2.478 người theo dõi · 110K lượt thích · 13 video</em></span>
-        </a>
-        <a class="ch glass" href="https://www.tiktok.com/@havv_king" target="_blank" rel="noopener">
-          <span class="chi av"><img src="assets/avatars/tt-havv_king.jpg" alt=""><svg><use href="#i-route"/></svg></span>
-          <span><b>@havv_king · Trekking</b><small>Kênh du lịch · chỉ đăng các chuyến đi, trekking</small><em>9 video · 814 lượt thích</em></span>
-        </a>
+<section id="tiktok" data-nav="tiktok">
+  <div class="wrap">
+    <div class="artist creator glass reveal">
+      <div class="banner mosaic" data-parallax="0.18" aria-hidden="true"><div class="mos"><img src="assets/tiktok/v3.jpg" alt=""><img src="assets/tiktok/v6.jpg" alt=""><img src="assets/tiktok/v2.jpg" alt=""><img src="assets/tiktok/v5.jpg" alt=""><img src="assets/tiktok/v1.jpg" alt=""><img src="assets/tiktok/v4.jpg" alt=""><img src="assets/tiktok/v3.jpg" alt=""><img src="assets/tiktok/v6.jpg" alt=""></div></div>
+      <div class="artist-body">
+        <img class="artist-av" src="assets/avatars/tt-havvking.jpg" alt="Ảnh đại diện TikTok havvking" width="240" height="240">
+        <div class="artist-txt">
+          <span class="eyebrow glass"><svg class="ic" style="width:16px;height:16px"><use href="#i-tiktok"/></svg>TikTok · hình ảnh cá nhân</span>
+          <h2 class="h2 nosplit tt-title" style="margin:12px 0 6px">havvking</h2>
+          <p class="lead">Hai kênh, hai mục đích: một kênh đời thường để thử nhịp dựng, góc máy và cách mở đầu video; một kênh chỉ để lưu các chuyến đi.</p>
+          <div class="plats">
+            <a class="plat magnet" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener" style="--p:#ff2d55"><svg><use href="#i-tiktok"/></svg>@havvking <small>2.478 theo dõi</small></a>
+            <a class="plat magnet" href="https://www.tiktok.com/@havv_king" target="_blank" rel="noopener" style="--p:#25f4ee"><svg><use href="#i-route"/></svg>@havv_king <small>Trekking</small></a>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="tt-grid reveal"><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v1.jpg" alt="Video TikTok, 107 lượt xem" width="355" height="472" loading="lazy"></a><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v2.jpg" alt="Video TikTok, 73,6 nghìn lượt xem" width="355" height="472" loading="lazy"></a><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v3.jpg" alt="Video TikTok, 107,1 nghìn lượt xem" width="355" height="472" loading="lazy"></a><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v4.jpg" alt="Video TikTok, 7.186 lượt xem" width="355" height="472" loading="lazy"></a><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v5.jpg" alt="Video TikTok, 92,6 nghìn lượt xem" width="355" height="472" loading="lazy"></a><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v6.jpg" alt="Video TikTok, 132,5 nghìn lượt xem" width="355" height="472" loading="lazy"></a></div>
+
+    <div class="seg glass reveal" role="tablist" aria-label="Chọn kênh TikTok">
+      <span class="seg-pill" aria-hidden="true"></span>
+      <button role="tab" aria-selected="true" aria-controls="p-havvking" id="t-havvking"><img src="assets/avatars/tt-havvking.jpg" alt="">@havvking<span class="sub"> · Đời thường</span></button>
+      <button role="tab" aria-selected="false" aria-controls="p-trek" id="t-trek"><img src="assets/avatars/tt-havv_king.jpg" alt="">@havv_king<span class="sub"> · Trekking</span></button>
+    </div>
+
+    <!-- kênh chính -->
+    <div class="panel" id="p-havvking" role="tabpanel" aria-labelledby="t-havvking">
+      <div class="tiktok">
+        <div>
+          <div class="prof glass">
+            <img src="assets/avatars/tt-havvking.jpg" alt="" width="240" height="240">
+            <div><b>@havvking</b><q>Tôi thẳng nhé chẳng qua nhìn nó thế thôi!</q><small>Kênh chính · giải trí đời thường, thử nghiệm dựng video, có TikTok Shop</small></div>
+          </div>
+          <div class="tt-stats" style="grid-template-columns:repeat(3,minmax(0,1fr))">
+            <div class="glass"><b>2.478</b><span>người theo dõi</span></div>
+            <div class="glass"><b>110K</b><span>lượt thích</span></div>
+            <div class="glass"><b>13</b><span>video</span></div>
+            <div class="glass"><b>413K+</b><span>lượt xem từ 6 video gần nhất</span></div>
+            <div class="glass"><b>132,5K</b><span>video cao nhất</span></div>
+            <div class="glass"><b>4 / 6</b><span>video vượt 70 nghìn lượt xem</span></div>
+          </div>
+          <a class="btn tint magnet" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener" style="margin-top:22px"><svg><use href="#i-tiktok"/></svg>Mở kênh @havvking</a>
+        </div>
+        <div class="tt-grid"><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v1.jpg" alt="Video TikTok, 107 lượt xem" width="355" height="472" loading="lazy"></a><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v2.jpg" alt="Video TikTok, 73,6 nghìn lượt xem" width="355" height="472" loading="lazy"></a><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v3.jpg" alt="Video TikTok, 107,1 nghìn lượt xem" width="355" height="472" loading="lazy"></a><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v4.jpg" alt="Video TikTok, 7.186 lượt xem" width="355" height="472" loading="lazy"></a><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v5.jpg" alt="Video TikTok, 92,6 nghìn lượt xem" width="355" height="472" loading="lazy"></a><a class="tt glass" href="https://www.tiktok.com/@havvking?_r=1&amp;_t=ZS-9AoMUEkEsGP" target="_blank" rel="noopener"><img src="assets/tiktok/v6.jpg" alt="Video TikTok, 132,5 nghìn lượt xem" width="355" height="472" loading="lazy"></a></div>
+      </div>
+    </div>
+
+    <!-- kênh du lịch -->
+    <div class="panel" id="p-trek" role="tabpanel" aria-labelledby="t-trek" hidden>
+      <div class="tiktok">
+        <div>
+          <div class="prof glass">
+            <img src="assets/avatars/tt-havv_king.jpg" alt="" width="240" height="240">
+            <div><b>@havv_king · Trekking</b><q>chỉ để đăng du lịch</q><small>Kênh du lịch · các chuyến đi, trekking, cảnh đẹp dọc đường</small></div>
+          </div>
+          <div class="tt-stats">
+            <div class="glass"><b>9</b><span>video</span></div>
+            <div class="glass"><b>814</b><span>lượt thích</span></div>
+            <div class="glass"><b>19</b><span>người theo dõi</span></div>
+          </div>
+          <a class="btn tint magnet" href="https://www.tiktok.com/@havv_king" target="_blank" rel="noopener" style="margin-top:22px;--iris:#14b8a6"><svg><use href="#i-route"/></svg>Mở kênh Trekking</a>
+        </div>
+        <div class="embed glass" id="trekEmbed" data-user="havv_king">
+          <div class="embed-ph"><img src="assets/avatars/tt-havv_king.jpg" alt=""><span>Đang mở các video mới nhất từ TikTok…</span></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -907,7 +981,7 @@ footer a{color:var(--ink-2)}
     const m = /^([\d.,]+)/.exec(b.textContent); if (!m || RM) return;
     const raw = m[1], dec = raw.includes(",") ? raw.split(",")[1].length : 0, val = parseFloat(raw.replace(/\./g, "").replace(",", ".")), rest = b.textContent.slice(raw.length);
     const o = new IntersectionObserver(es => es.forEach(e => { if (!e.isIntersecting) return; o.disconnect(); const t0 = performance.now();
-      const step = t => { const k = Math.min(1, (t - t0) / 1400), v = val * (1 - Math.pow(1 - k, 3)); b.textContent = v.toFixed(dec).replace(".", ",") + rest; if (k < 1) requestAnimationFrame(step); };
+      const step = t => { const k = Math.min(1, (t - t0) / 1400), v = val * (1 - Math.pow(1 - k, 3)); b.textContent = (raw.includes(".") ? Math.round(v).toLocaleString("vi-VN") : v.toFixed(dec).replace(".", ",")) + rest; if (k < 1) requestAnimationFrame(step); };
       requestAnimationFrame(step); }), { threshold: .6 }); o.observe(b);
   });
   if (!RM && FINE) {
@@ -954,6 +1028,18 @@ footer a{color:var(--ink-2)}
   // Spotify: chỉ tải trình phát khi cuộn tới
   const spot = document.getElementById("spot");
   new IntersectionObserver((es, o) => es.forEach(e => { if (!e.isIntersecting) return; o.disconnect(); const f = document.createElement("iframe"); f.src = spot.dataset.src; f.title = "Havvking trên Spotify"; f.loading = "lazy"; f.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"; spot.innerHTML = ""; spot.append(f); }), { rootMargin: "200px" }).observe(spot);
+
+  // ===== TikTok: chuyển kênh =====
+  const seg = document.querySelector(".seg"), tabs = [...seg.querySelectorAll("button")];
+  let ttLoaded = false;
+  const loadTrek = () => { if (ttLoaded) return; ttLoaded = true; const box = document.getElementById("trekEmbed");
+    box.innerHTML = '<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@havv_king" data-unique-id="havv_king" data-embed-type="creator" style="max-width:780px;min-width:288px"><section><a target="_blank" rel="noopener" href="https://www.tiktok.com/@havv_king">@havv_king</a></section></blockquote>';
+    const sc = document.createElement("script"); sc.async = true; sc.src = "https://www.tiktok.com/embed.js"; document.body.append(sc); };
+  tabs.forEach((t, i) => t.addEventListener("click", () => {
+    tabs.forEach((x, k) => { x.setAttribute("aria-selected", String(k === i)); document.getElementById(x.getAttribute("aria-controls")).hidden = k !== i; });
+    seg.dataset.i = i; if (i === 1) loadTrek();
+  }));
+  seg.addEventListener("keydown", e => { if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return; const i = tabs.findIndex(t => t.getAttribute("aria-selected") === "true"), n = (i + (e.key === "ArrowRight" ? 1 : tabs.length - 1)) % tabs.length; tabs[n].click(); tabs[n].focus(); });
 
   // Beta Holding: số liệu thật đọc từ repo công khai (raw.githubusercontent, không tính hạn mức API)
   const RAW = "https://raw.githubusercontent.com/vtvcab17-max/beta-holding/";
