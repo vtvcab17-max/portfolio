@@ -11,7 +11,8 @@ Người sáng lập **Beta**, xây sản phẩm AI. Trang chạy trên GitHub P
 | `index-1.html` | Bản portfolio cũ, giữ để đối chiếu (không đưa lên web) |
 | `blog-src/` | Bài blog viết bằng Markdown (nguồn, không đưa lên web) |
 | `blog/`, `sitemap.xml`, `robots.txt` | Blog đã dựng, sinh bởi `scripts/blog.py` (đừng sửa tay) |
-| `scripts/` | `blog.py` dựng blog, `blog-covers.js` vẽ ảnh bìa, `blog_style.css` giao diện blog |
+| `pages-src/` | Nội dung hai trang hồ sơ `/havvking/` và `/pham-viet-ha/` (Markdown), dựng cùng blog |
+| `scripts/` | `blog.py` dựng blog và trang hồ sơ, `blog-covers.js` vẽ ảnh bìa, `blog_style.css` giao diện, `indexnow.py` báo Bing/Yandex có trang mới |
 
 ## Viết bài blog
 
@@ -22,5 +23,6 @@ Người sáng lập **Beta**, xây sản phẩm AI. Trang chạy trên GitHub P
    Liên kết tới bài khác: `[chữ](post:slug)`. Thẻ đặc biệt (mỗi thẻ một dòng riêng):
    `{{yt ID Tiêu đề}}` nhúng YouTube, `{{post slug}}` thẻ "Đọc thêm", `{{link URL|ảnh|tiêu đề|mô tả}}` thẻ liên kết.
 3. Chạy `python3 scripts/blog.py` rồi `node scripts/blog-covers.js` (vẽ ảnh bìa cho bài mới), commit và đẩy lên.
+4. Khi trang đã lên web, chạy `python3 scripts/indexnow.py` để báo Bing, Yandex có bài mới (Google: nộp sitemap trong Search Console).
 
 Blog không chấp nhận link GitHub (script báo lỗi nếu có).

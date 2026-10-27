@@ -13,6 +13,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC, OUT = ROOT / "blog-src", ROOT / "blog"
+PAGES = ROOT / "pages-src"  # trang hồ sơ ở gốc: /havvking/, /pham-viet-ha/
 BASE = "https://portfolio.vtvcab17.workers.dev"
 AUTHOR = "Phạm Việt Hà"
 SAME_AS = [
@@ -63,6 +64,33 @@ def fmt_date(d):
 
 
 # ---------------- đọc bài ----------------
+def read_md(f):
+    raw = f.read_text(encoding="utf-8")
+    m = re.match(r"---\n(.*?)\n---\n(.*)", raw, re.S)
+    if not m:
+        raise SystemExit(f"{f.name}: thiếu phần đầu ---")
+    meta = {}
+    for line in m.group(1).splitlines():
+        k, _, v = line.partition(":")
+        meta[k.strip()] = v.strip()
+    meta["body"] = m.group(2)
+    meta["keywords"] = [k.strip() for k in meta.get("keywords", "").split(",") if k.strip()]
+    return meta
+
+
+def load_pages():
+    pages = []
+    for f in sorted(PAGES.glob("*.md")):
+        meta = read_md(f)
+        for k in ("slug", "title", "description", "h1", "image", "show"):
+            if not meta.get(k):
+                raise SystemExit(f"{f.name}: thiếu '{k}'")
+        if not (ROOT / meta["image"]).exists():
+            raise SystemExit(f"{f.name}: không có ảnh {meta['image']}")
+        pages.append(meta)
+    return pages
+
+
 def load():
     posts = []
     for f in sorted(SRC.glob("*.md")):
@@ -245,7 +273,7 @@ def foot(rel):
     year = date.today().year
     return f"""<footer class="bfoot"><div class="wrap">
   <span>© {year} {AUTHOR} · HAVVKING</span>
-  <span><a href="{rel}">Portfolio</a> · <a href="{rel}blog/">Blog</a> · <a href="{rel}#lien-he">Liên hệ</a></span>
+  <span><a href="{rel}">Portfolio</a> · <a href="{rel}pham-viet-ha/">Phạm Việt Hà</a> · <a href="{rel}havvking/">HAVVKING</a> · <a href="{rel}blog/">Blog</a> · <a href="{rel}#lien-he">Liên hệ</a></span>
 </div></footer>
 <div class="lbx" aria-hidden="true"><img alt=""></div>
 <script src="{rel}assets/blog.js" defer></script>
@@ -255,7 +283,8 @@ def foot(rel):
 
 
 def person():
-    return {"@type": "Person", "name": AUTHOR, "alternateName": "HAVVKING", "url": BASE + "/",
+    return {"@type": "Person", "@id": BASE + "/#person", "name": AUTHOR, "alternateName": ["HAVVKING", "Havvking", "Pham Viet Ha"], "url": BASE + "/",
+            "description": "Người sáng lập Beta, xây sản phẩm AI; rapper và producer với nghệ danh HAVVKING.",
             "image": BASE + "/assets/avatars/hero.jpg", "sameAs": SAME_AS}
 
 
@@ -338,6 +367,65 @@ def build_post(p, posts, bylug):
     (d / "index.html").write_text(out, encoding="utf-8")
 
 
+def build_page(pg, posts, bylug):
+    """Trang hồ sơ ở gốc site (ProfilePage): /havvking/, /pham-viet-ha/."""
+    rel = "../"
+    md = MD(rel, bylug, pg["slug"])
+    body = md.render(pg["body"])
+    canon = f"{BASE}/{pg['slug']}/"
+    cats = [c.strip() for c in pg["show"].split(",")]
+    pick = [p for p in posts if p["category"] in cats][:6]
+    who = person() | {"@id": BASE + "/#person"}
+    ld = [{"@context": "https://schema.org", "@type": "ProfilePage", "@id": canon + "#profile", "url": canon, "name": pg["title"],
+           "inLanguage": "vi", "dateModified": pg.get("updated", date.today().isoformat()), "mainEntity": who,
+           "isPartOf": {"@type": "WebSite", "@id": BASE + "/#website", "name": "Phạm Việt Hà · HAVVKING", "url": BASE + "/"}},
+          {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+              {"@type": "ListItem", "position": 1, "name": "Trang chủ", "item": BASE + "/"},
+              {"@type": "ListItem", "position": 2, "name": pg["h1"], "item": canon}]}]
+    if pg.get("tracks"):
+        items = []
+        for i, t in enumerate(pg["tracks"].split(";")):
+            vid, name = [x.strip() for x in t.split("=", 1)]
+            items.append({"@type": "ListItem", "position": i + 1, "item": {
+                "@type": "MusicRecording", "name": name, "url": f"https://www.youtube.com/watch?v={vid}",
+                "byArtist": {"@id": BASE + "/#person", "name": "HAVVKING"}}})
+        ld.append({"@context": "https://schema.org", "@type": "ItemList", "name": "Bài hát của HAVVKING", "itemListElement": items})
+    extra = '<meta property="og:type" content="profile">\n'
+    if pg["keywords"]:
+        extra += f'<meta name="keywords" content="{esc(", ".join(pg["keywords"]))}">\n'
+    soc = "".join(f'<a class="chip glass magnet" href="{u}" target="_blank" rel="noopener">{n}</a>' for n, u in SOCIAL)
+    out = head(rel, pg["title"], pg["description"], canon, pg["image"], extra, ld).replace('class="l on" href="../blog/"', 'class="l" href="../blog/"')
+    out += f"""<main>
+<header class="wrap phead">
+  <ol class="crumb"><li><a href="{rel}">Trang chủ</a></li><li>{esc(pg['h1'])}</li></ol>
+  <div class="pgrid">
+    <div class="ptxt reveal">
+      <span class="eyebrow glass">{esc(pg.get('eyebrow', 'Hồ sơ'))}</span>
+      <h1>{esc(pg['h1'])}</h1>
+      <p class="lead">{esc(pg['description'])}</p>
+      <div class="soc">{soc}<a class="chip glass magnet" href="{rel}">Portfolio</a><a class="chip glass magnet" href="{rel}blog/">Blog</a></div>
+    </div>
+    <div class="pav glass tilt reveal"><img src="{rel}{pg['image']}" alt="{esc(pg['h1'])}" width="600" height="600" fetchpriority="high"></div>
+  </div>
+</header>
+<div class="wrap alayout">
+  <article>
+    <details class="toc-m glass"><summary>Mục lục</summary><nav class="toc"><ol>{"".join(f'<li><a href="#{h}">{esc(t)}</a></li>' for h, t in md.toc)}</ol></nav></details>
+    <div class="prose">
+{body}
+    </div>
+  </article>
+  <aside class="toc-side glass"><h4>Trong trang này</h4><nav class="toc"><ol>{"".join(f'<li><a href="#{h}">{esc(t)}</a></li>' for h, t in md.toc)}</ol></nav></aside>
+</div>
+<section class="wrap related"><h2>Bài viết liên quan</h2><div class="posts">{''.join(card(q, rel) for q in pick)}</div></section>
+</main>
+"""
+    out += foot(rel)
+    d = ROOT / pg["slug"]
+    d.mkdir(parents=True, exist_ok=True)
+    (d / "index.html").write_text(out, encoding="utf-8")
+
+
 def build_index(posts):
     rel = "../"
     canon = f"{BASE}/blog/"
@@ -395,9 +483,9 @@ def build_home_teaser(posts):
     f.write_text(s, encoding="utf-8")
 
 
-def build_sitemap(posts):
+def build_sitemap(posts, pages=()):
     today = date.today().isoformat()
-    urls = [(BASE + "/", today, "1.0"), (BASE + "/blog/", today, "0.9")]
+    urls = [(BASE + "/", today, "1.0")] + [(f"{BASE}/{pg['slug']}/", today, "1.0") for pg in pages] + [(BASE + "/blog/", today, "0.9")]
     urls += [(f"{BASE}/blog/{p['slug']}/", p.get("updated", p["date"]), "0.8") for p in posts]
     x = "".join(f"<url><loc>{u}</loc><lastmod>{d}</lastmod><priority>{pr}</priority></url>" for u, d, pr in urls)
     (ROOT / "sitemap.xml").write_text(
@@ -420,13 +508,16 @@ def main():
     build_index(posts)
     for p in posts:
         build_post(p, posts, bylug)
+    pages = load_pages()
+    for pg in pages:
+        build_page(pg, posts, bylug)
     build_home_teaser(posts)
-    build_sitemap(posts)
+    build_sitemap(posts, pages)
     (ROOT / "scripts" / "blog-covers.json").write_text(json.dumps(
         [{k: p[k] for k in ("slug", "title", "category", "image", "cover")} | {"color": CATS[p["category"]]} for p in posts],
         ensure_ascii=False, indent=1), encoding="utf-8")
     missing = [p["cover"] for p in posts if not (ROOT / p["cover"]).exists()]
-    print(f"Đã dựng {len(posts)} bài, {sum(p['words'] for p in posts)} từ.")
+    print(f"Đã dựng {len(posts)} bài, {sum(p['words'] for p in posts)} từ, {len(pages)} trang hồ sơ.")
     if missing:
         print("Thiếu ảnh bìa, chạy: node scripts/blog-covers.js →", ", ".join(missing))
 
