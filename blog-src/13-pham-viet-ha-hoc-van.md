@@ -65,4 +65,4 @@ AI và phần mềm giúp sản phẩm *chạy được*. Thiết kế và hình
 
 {{post hanh-trinh-pham-viet-ha}}
 
-{{link home:#hoc-van|assets/blog/img/hoc-van.jpg|Xem bằng cấp trên portfolio|Bằng cử nhân FPT, bằng Arena, khoá Machine Learning và quyết định trúng tuyển PTIT, chỉ xem trên trang, có hình mờ bảo vệ}}
+{{link home:#hoc-van|assets/blog/img/hoc-van.jpg|Xem bằng cấp trên portfolio|Bằng cử nhân FPT, bằng Arena và khoá Machine Learning, chỉ xem trên trang, có hình mờ bảo vệ}}

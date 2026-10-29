@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "private" / "creds"
 OUT = ROOT / "assets" / "edu" / "creds.bin"
 KEY_FILE = ROOT / "private" / "creds-key.txt"  # khoá hex (không đưa lên git); index.html giữ cùng khoá dưới dạng đã trộn
-ITEMS = ["fpt", "arena", "ml", "ptit"]
+ITEMS = ["fpt", "arena", "ml"]
 FONT = "/usr/share/fonts/opentype/inter/Inter-SemiBold.otf"
 MARK = "PHẠM VIỆT HÀ · CHỈ ĐỂ XEM · portfolio.vtvcab17.workers.dev"
 
