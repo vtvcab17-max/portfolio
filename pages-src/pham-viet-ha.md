@@ -3,7 +3,7 @@ slug: pham-viet-ha
 title: Phạm Việt Hà · Người sáng lập Beta, nghệ danh HAVVKING | Hồ sơ chính thức
 h1: Phạm Việt Hà
 eyebrow: Hồ sơ chính thức · HAVVKING
-description: Phạm Việt Hà (sinh năm 2000, Hà Nội) là người sáng lập Beta, xây các sản phẩm AI Bravin, Antifact, Micron, Micow, Beta HQ; cử nhân Trí tuệ nhân tạo ĐH FPT; làm nhạc với nghệ danh HAVVKING.
+description: Phạm Việt Hà (sinh năm 2000, Hà Nội) là người sáng lập Beta, xây các sản phẩm AI Bravin, Antifact, Micron, Micow, Beta HQ; cử nhân Trí tuệ nhân tạo và Khoa học dữ liệu ĐH FPT; làm nhạc với nghệ danh HAVVKING.
 keywords: phạm việt hà, pham viet ha, phạm việt hà là ai, phạm việt hà beta, phạm việt hà havvking, havvking
 image: assets/avatars/hero.jpg
 show: Phạm Việt Hà, Sản phẩm
@@ -19,7 +19,7 @@ show: Phạm Việt Hà, Sản phẩm
 | Năm sinh | 2000 |
 | Nơi sống | Hà Nội, Việt Nam |
 | Công việc | Người sáng lập Beta, xây sản phẩm AI |
-| Học vấn | Cử nhân Trí tuệ nhân tạo (ĐH FPT); đang học Kỹ sư phần mềm (PTIT) |
+| Học vấn | Cử nhân Trí tuệ nhân tạo và Khoa học dữ liệu, ĐH FPT (loại Giỏi); Advanced Diploma in Multimedia, Arena; đang học Kỹ sư phần mềm (PTIT) |
 | Âm nhạc | Rapper, producer: Latin trap, drill, hip-hop |
 
 ## Người sáng lập Beta
@@ -36,10 +36,12 @@ Beta là công ty mẹ của một hệ sinh thái sản phẩm do Phạm Việt
 
 ## Học vấn
 
-- Cử nhân **Trí tuệ nhân tạo**, Đại học FPT.
+- Cử nhân **Trí tuệ nhân tạo và Khoa học dữ liệu**, Đại học FPT, tốt nghiệp loại Giỏi (2/2023).
 - Đang học **Kỹ sư phần mềm** trình độ bậc 6, Học viện Công nghệ Bưu chính Viễn thông (PTIT).
 - Đang học **Deep Learning Specialization**, DeepLearning.AI (Andrew Ng).
-- **Mỹ thuật đa phương tiện**, Arena Multimedia.
+- **Advanced Diploma in Multimedia**, Arena Multimedia (2022, xếp loại Credit).
+
+![Bằng cử nhân Đại học FPT của Phạm Việt Hà](assets/edu/bang-fpt.jpg)
 
 {{post pham-viet-ha-hoc-van}}
 
