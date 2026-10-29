@@ -35,7 +35,7 @@ Bốn ứng dụng đầu nằm chung trong **Bravinall**, ngôi nhà của các
 
 - **Cử nhân Trí tuệ nhân tạo**, Đại học FPT.
 - **Đang học Kỹ sư phần mềm** (trình độ bậc 6) tại Học viện Công nghệ Bưu chính Viễn thông (PTIT).
-- **Đang học Deep Learning Specialization** của DeepLearning.AI, do Andrew Ng giảng dạy.
+- **Đang học Machine Learning Specialization** của Stanford Online và DeepLearning.AI, và **Deep Learning Specialization** của DeepLearning.AI, cùng do Andrew Ng giảng dạy.
 - **Mỹ thuật đa phương tiện** tại Arena Multimedia.
 
 Chi tiết từng chương trình nằm trong bài [Phạm Việt Hà học gì](post:pham-viet-ha-hoc-van).

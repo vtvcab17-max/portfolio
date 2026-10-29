@@ -1,9 +1,9 @@
 ---
 slug: pham-viet-ha-hoc-van
 title: Phạm Việt Hà học gì? Cử nhân AI ĐH FPT loại Giỏi, Arena Multimedia, Kỹ sư phần mềm PTIT
-description: Học vấn của Phạm Việt Hà, gồm cử nhân Trí tuệ nhân tạo và Khoa học dữ liệu ĐH FPT (loại Giỏi), Advanced Diploma in Multimedia của Arena, đang học Kỹ sư phần mềm PTIT và Deep Learning.
+description: Học vấn của Phạm Việt Hà, gồm cử nhân Trí tuệ nhân tạo và Khoa học dữ liệu ĐH FPT (loại Giỏi), Advanced Diploma in Multimedia của Arena, đang học Kỹ sư phần mềm PTIT, Machine Learning (Stanford Online) và Deep Learning.
 category: Phạm Việt Hà
-keywords: phạm việt hà, phạm việt hà học vấn, bằng cử nhân trí tuệ nhân tạo và khoa học dữ liệu, advanced diploma in multimedia, cử nhân trí tuệ nhân tạo fpt, kỹ sư phần mềm ptit, deep learning specialization
+keywords: phạm việt hà, phạm việt hà học vấn, machine learning specialization stanford online, bằng cử nhân trí tuệ nhân tạo và khoa học dữ liệu, advanced diploma in multimedia, cử nhân trí tuệ nhân tạo fpt, kỹ sư phần mềm ptit, deep learning specialization
 image: assets/edu/bang-fpt.jpg
 date: 2026-10-24
 updated: 2026-10-29
@@ -19,6 +19,7 @@ Một câu hỏi hay gặp: một người làm nhạc và dựng video thì h�
 |---|---|---|
 | Cử nhân Trí tuệ nhân tạo và Khoa học dữ liệu | Đại học FPT | Tốt nghiệp loại Giỏi, 2/2023 |
 | Kỹ sư phần mềm, trình độ bậc 6 | Học viện Công nghệ Bưu chính Viễn thông (PTIT) | Đang học |
+| Machine Learning Specialization | Stanford Online và DeepLearning.AI (Andrew Ng) | Đang học |
 | Deep Learning Specialization | DeepLearning.AI (Andrew Ng) | Đang học |
 | Advanced Diploma in Multimedia | Arena Multimedia | Hoàn thành 7/2022, xếp loại Credit |
 
@@ -33,6 +34,12 @@ Phạm Việt Hà nhận bằng cử nhân ngành Công nghệ thông tin, chuy�
 ## Kỹ sư phần mềm bậc 6, PTIT
 
 Học viện Công nghệ Bưu chính Viễn thông (PTIT) đào tạo về công nghệ thông tin và viễn thông. Chương trình kỹ sư phần mềm trình độ bậc 6 tập trung vào kiến trúc phần mềm, kiểm thử và quy trình phát triển. Đó là những thứ cần để Beta lớn lên mà vẫn vững, và cũng là lý do mỗi sản phẩm Beta đều có kiểm thử trước khi phát hành.
+
+## Machine Learning Specialization: Stanford Online và DeepLearning.AI
+
+**Machine Learning Specialization** là chương trình trực tuyến gồm 3 khoá, do **Stanford Online** và **DeepLearning.AI** cùng xây dựng, **Andrew Ng** giảng dạy. Đây là bản cập nhật của khoá Machine Learning nổi tiếng của Andrew Ng, dạy nền tảng học máy và cách dùng chúng để xây ứng dụng AI thật. Phạm Việt Hà đã ghi danh và đang theo học.
+
+![Machine Learning Specialization của Stanford Online và DeepLearning.AI](assets/edu/ml-specialization.jpg)
 
 ## Deep Learning Specialization
 
