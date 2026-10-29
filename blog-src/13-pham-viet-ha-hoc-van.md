@@ -4,7 +4,7 @@ title: Phạm Việt Hà học gì? Cử nhân AI ĐH FPT loại Giỏi, Arena M
 description: Học vấn của Phạm Việt Hà, gồm cử nhân Trí tuệ nhân tạo và Khoa học dữ liệu ĐH FPT (loại Giỏi), Advanced Diploma in Multimedia của Arena, đang học Kỹ sư phần mềm PTIT, Machine Learning (Stanford Online) và Deep Learning.
 category: Phạm Việt Hà
 keywords: phạm việt hà, phạm việt hà học vấn, machine learning specialization stanford online, bằng cử nhân trí tuệ nhân tạo và khoa học dữ liệu, advanced diploma in multimedia, cử nhân trí tuệ nhân tạo fpt, kỹ sư phần mềm ptit, deep learning specialization
-image: assets/edu/bang-fpt.jpg
+image: assets/blog/img/hoc-van.jpg
 date: 2026-10-24
 updated: 2026-10-29
 order: 13
@@ -18,7 +18,7 @@ Một câu hỏi hay gặp: một người làm nhạc và dựng video thì h�
 | Chương trình | Nơi học | Trạng thái |
 |---|---|---|
 | Cử nhân Trí tuệ nhân tạo và Khoa học dữ liệu | Đại học FPT | Tốt nghiệp loại Giỏi, 2/2023 |
-| Kỹ sư phần mềm, trình độ bậc 6 | Học viện Công nghệ Bưu chính Viễn thông (PTIT) | Đang học |
+| Kỹ sư phần mềm, trình độ bậc 6 | Học viện Công nghệ Bưu chính Viễn thông (PTIT) | Trúng tuyển 10/2026, đang học |
 | Machine Learning Specialization | Stanford Online và DeepLearning.AI (Andrew Ng) | Đang học |
 | Deep Learning Specialization | DeepLearning.AI (Andrew Ng) | Đang học |
 | Advanced Diploma in Multimedia | Arena Multimedia | Hoàn thành 7/2022, xếp loại Credit |
@@ -27,11 +27,12 @@ Một câu hỏi hay gặp: một người làm nhạc và dựng video thì h�
 
 Phạm Việt Hà nhận bằng cử nhân ngành Công nghệ thông tin, chuyên ngành **Trí tuệ nhân tạo và Khoa học dữ liệu** (Bachelor in Artificial Intelligence and Data Science) của Đại học FPT ngày 23/02/2023, **tốt nghiệp loại Giỏi** (Very Good).
 
-![Bằng cử nhân Trí tuệ nhân tạo và Khoa học dữ liệu, Đại học FPT, loại Giỏi](assets/edu/bang-fpt.jpg)
 
 Đây là nền tảng để Phạm Việt Hà tự xây các mô hình và tác nhân AI của Bravinall, từ mô hình làm nhạc [Micow](post:micow-mo-hinh-lam-nhac) đến hệ thống tác tử Beta Holding. Trí tuệ nhân tạo cho mình cách nghĩ về mô hình và dữ liệu.
 
 ## Kỹ sư phần mềm bậc 6, PTIT
+
+Phạm Việt Hà trúng tuyển trình độ đại học và kỹ sư ngành Công nghệ thông tin của Học viện Công nghệ Bưu chính Viễn thông, đợt 5 năm 2026, theo Quyết định số 3596/QĐ-HĐTS ngày 19/10/2026, phương thức xét tuyển bằng học bạ và bằng cử nhân.
 
 Học viện Công nghệ Bưu chính Viễn thông (PTIT) đào tạo về công nghệ thông tin và viễn thông. Chương trình kỹ sư phần mềm trình độ bậc 6 tập trung vào kiến trúc phần mềm, kiểm thử và quy trình phát triển. Đó là những thứ cần để Beta lớn lên mà vẫn vững, và cũng là lý do mỗi sản phẩm Beta đều có kiểm thử trước khi phát hành.
 
@@ -39,7 +40,6 @@ Học viện Công nghệ Bưu chính Viễn thông (PTIT) đào tạo về côn
 
 **Machine Learning Specialization** là chương trình trực tuyến gồm 3 khoá, do **Stanford Online** và **DeepLearning.AI** cùng xây dựng, **Andrew Ng** giảng dạy. Đây là bản cập nhật của khoá Machine Learning nổi tiếng của Andrew Ng, dạy nền tảng học máy và cách dùng chúng để xây ứng dụng AI thật. Phạm Việt Hà đã ghi danh và đang theo học.
 
-![Machine Learning Specialization của Stanford Online và DeepLearning.AI](assets/edu/ml-specialization.jpg)
 
 ## Deep Learning Specialization
 
@@ -56,7 +56,6 @@ Kiến thức này dùng thẳng vào các mô hình chạy trên máy như Mico
 
 Phạm Việt Hà hoàn thành chương trình **Advanced Diploma in Multimedia** tại trung tâm Arena Hà Nội (Aprotrain) ngày 25/07/2022, xếp loại **Credit**. Bằng do Aptech Limited cấp ngày 15/02/2023.
 
-![Bằng Advanced Diploma in Multimedia của Arena Multimedia](assets/edu/bang-arena.jpg)
 
 Arena Multimedia là nơi hình thành nền tảng **thiết kế, dựng hình và tư duy hình ảnh**. Đây là nửa còn lại, khiến giao diện các sản phẩm Beta trông như hôm nay.
 
@@ -65,3 +64,5 @@ Arena Multimedia là nơi hình thành nền tảng **thiết kế, dựng hình
 AI và phần mềm giúp sản phẩm *chạy được*. Thiết kế và hình ảnh giúp sản phẩm *được dùng*. Hành trình của Phạm Việt Hà là thử ghép hai nửa đó vào cùng một người.
 
 {{post hanh-trinh-pham-viet-ha}}
+
+{{link home:#hoc-van|assets/blog/img/hoc-van.jpg|Xem bằng cấp trên portfolio|Bằng cử nhân FPT, bằng Arena, khoá Machine Learning và quyết định trúng tuyển PTIT, chỉ xem trên trang, có hình mờ bảo vệ}}

@@ -37,12 +37,10 @@ Beta là công ty mẹ của một hệ sinh thái sản phẩm do Phạm Việt
 ## Học vấn
 
 - Cử nhân **Trí tuệ nhân tạo và Khoa học dữ liệu**, Đại học FPT, tốt nghiệp loại Giỏi (2/2023).
-- Đang học **Kỹ sư phần mềm** trình độ bậc 6, Học viện Công nghệ Bưu chính Viễn thông (PTIT).
+- **Kỹ sư phần mềm** trình độ bậc 6, ngành Công nghệ thông tin, Học viện Công nghệ Bưu chính Viễn thông (PTIT): trúng tuyển đợt 5 năm 2026, đang học.
 - Đang học **Machine Learning Specialization**, Stanford Online và DeepLearning.AI (Andrew Ng).
 - Đang học **Deep Learning Specialization**, DeepLearning.AI (Andrew Ng).
 - **Advanced Diploma in Multimedia**, Arena Multimedia (2022, xếp loại Credit).
-
-![Bằng cử nhân Đại học FPT của Phạm Việt Hà](assets/edu/bang-fpt.jpg)
 
 {{post pham-viet-ha-hoc-van}}
 

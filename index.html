@@ -772,9 +772,12 @@ footer a{color:var(--ink-2)}
 /* ============ Bằng cấp trong Học vấn ============ */
 .dip{display:flex;align-items:center;gap:14px;width:100%;padding:8px 14px 8px 8px;border:0;border-radius:20px;background:var(--glass);box-shadow:inset 0 1px 0 var(--edge-soft);color:var(--ink);font:inherit;text-align:left;cursor:zoom-in;transition:transform .45s cubic-bezier(.2,1.4,.3,1),background .3s}
 .dip:hover{transform:translateY(-3px);background:var(--glass-2)}
-.dip img{flex:none;width:96px;height:66px;object-fit:cover;object-position:center top;border-radius:12px;box-shadow:0 10px 22px -10px rgba(0,0,0,.6);transform:rotate(-3deg);transition:transform .5s cubic-bezier(.2,1.4,.3,1)}
-.dip.tall img{width:56px;height:76px}
-.dip:hover img{transform:rotate(2deg) scale(1.08)}
+.dip canvas{flex:none;width:96px;height:66px;object-fit:cover;object-position:center top;border-radius:12px;background:var(--glass-2);box-shadow:0 10px 22px -10px rgba(0,0,0,.6);transform:rotate(-3deg);transition:transform .5s cubic-bezier(.2,1.4,.3,1)}
+.dip.tall canvas{width:56px;height:76px}
+.dip:hover canvas{transform:rotate(2deg) scale(1.08)}
+canvas.cred,.lb-in canvas{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-user-drag:none}
+.lb-in canvas.cred-full{display:block;max-width:min(90vw,940px);max-height:80vh;width:auto;height:auto;border-radius:22px}
+@media print{canvas.cred,.lb-in canvas{visibility:hidden}}
 .dip b{display:block;font:650 14.5px/1.3 var(--font)}
 .dip small{display:block;margin-top:2px;color:var(--ink-3);font-size:12.5px}
 </style>
@@ -992,29 +995,30 @@ footer a{color:var(--ink-2)}
     <div class="edus">
       <article class="card glass reveal now" style="--c:#c8102e">
         <div class="glow" aria-hidden="true"></div>
-        <div class="top"><div class="logo edu-logo"><img src="assets/edu/ptit.svg" alt="Logo Học viện Công nghệ Bưu chính Viễn thông"></div><div><h3>Học viện Công nghệ Bưu chính Viễn thông</h3><div class="kind"><span class="dot" aria-hidden="true" style="display:inline-block;margin-right:6px"></span>Đang học</div></div></div>
-        <p><b>Kỹ sư phần mềm</b> · trình độ bậc 6. Kiến trúc phần mềm, kiểm thử, quy trình phát triển: đúng những thứ cần để Beta lớn lên mà vẫn vững.</p>
+        <div class="top"><div class="logo edu-logo"><img src="assets/edu/ptit.svg" alt="Logo Học viện Công nghệ Bưu chính Viễn thông"></div><div><h3>Học viện Công nghệ Bưu chính Viễn thông</h3><div class="kind"><span class="dot" aria-hidden="true" style="display:inline-block;margin-right:6px"></span>Trúng tuyển 10/2026 · Đang học</div></div></div>
+        <p><b>Kỹ sư phần mềm</b> · trình độ bậc 6, ngành Công nghệ thông tin. Trúng tuyển đợt 5 năm 2026 theo Quyết định số 3596/QĐ-HĐTS ngày 19/10/2026, xét tuyển bằng học bạ và bằng cử nhân. Kiến trúc phần mềm, kiểm thử, quy trình phát triển: đúng những thứ cần để Beta lớn lên mà vẫn vững.</p>
+        <button class="dip tall" type="button" data-cred="ptit" aria-label="Xem quyết định trúng tuyển của Học viện Công nghệ Bưu chính Viễn thông"><canvas class="cred" aria-hidden="true"></canvas><span><b>Quyết định trúng tuyển</b><small>Số 3596/QĐ-HĐTS · 19/10/2026</small></span></button>
         <div class="tags"><span class="tag">Kỹ thuật phần mềm</span><span class="tag">Bậc 6</span><span class="tag">Đang học</span></div>
       </article>
       <article class="card glass reveal now" style="--c:#0f9d8f">
         <div class="glow" aria-hidden="true"></div>
         <div class="top"><div class="logo edu-logo"><img src="assets/edu/deeplearning-ai.png" alt="Logo DeepLearning.AI"></div><div><h3>Machine Learning &amp; Deep Learning</h3><div class="kind"><span class="dot" aria-hidden="true" style="display:inline-block;margin-right:6px"></span>Đang học · Stanford Online · DeepLearning.AI</div></div></div>
         <p><b>Andrew Ng</b> giảng dạy cả hai chuỗi khoá: Machine Learning Specialization do Stanford Online và DeepLearning.AI cùng xây dựng (3 khoá), và Deep Learning Specialization của DeepLearning.AI. Andrew Ng dẫn dắt nghiên cứu AI ở Stanford và đồng sáng lập Google Brain. Mạng nơ-ron, tối ưu huấn luyện, CNN, mô hình chuỗi; kiến thức dùng thẳng vào các mô hình chạy trên máy như Micow.</p>
-        <button class="dip tall" type="button" data-dip="assets/edu/ml-specialization.jpg"><img src="assets/edu/ml-specialization.jpg" alt="Machine Learning Specialization của Stanford Online và DeepLearning.AI, Phạm Việt Hà đang theo học" loading="lazy" width="1080" height="1886"><span><b>Machine Learning Specialization</b><small>Stanford Online × DeepLearning.AI · Andrew Ng</small></span></button>
+        <button class="dip tall" type="button" data-cred="ml" aria-label="Xem Machine Learning Specialization của Stanford Online và DeepLearning.AI"><canvas class="cred" aria-hidden="true"></canvas><span><b>Machine Learning Specialization</b><small>Stanford Online × DeepLearning.AI · Andrew Ng</small></span></button>
         <div class="tags"><span class="tag">Machine Learning</span><span class="tag">Deep Learning</span><span class="tag">Stanford Online</span><span class="tag">Andrew Ng</span><span class="tag">Đang học</span></div>
       </article>
       <article class="card glass reveal" style="--c:#f37021">
         <div class="glow" aria-hidden="true"></div>
         <div class="top"><div class="logo edu-logo"><img src="assets/edu/fpt.png" alt="Logo Đại học FPT"></div><div><h3>Đại học FPT</h3><div class="kind">Tốt nghiệp loại Giỏi · 2/2023</div></div></div>
         <p><b>Cử nhân Trí tuệ nhân tạo và Khoa học dữ liệu</b> (ngành Công nghệ thông tin). Nền tảng để mình tự xây các mô hình và tác nhân AI của Bravinall, từ Micow đến hệ thống tác tử Beta Holding.</p>
-        <button class="dip" type="button" data-dip="assets/edu/bang-fpt.jpg"><img src="assets/edu/bang-fpt.jpg" alt="Bằng cử nhân Trí tuệ nhân tạo và Khoa học dữ liệu, Đại học FPT, của Phạm Việt Hà" loading="lazy" width="1438" height="1005"><span><b>Xem bằng cử nhân</b><small>Very Good · Giỏi · 23/02/2023</small></span></button>
+        <button class="dip" type="button" data-cred="fpt" aria-label="Xem bằng cử nhân Trí tuệ nhân tạo và Khoa học dữ liệu, Đại học FPT"><canvas class="cred" aria-hidden="true"></canvas><span><b>Xem bằng cử nhân</b><small>Very Good · Giỏi · 23/02/2023</small></span></button>
         <div class="tags"><span class="tag">Trí tuệ nhân tạo</span><span class="tag">Khoa học dữ liệu</span><span class="tag">Loại Giỏi</span></div>
       </article>
       <article class="card glass reveal" style="--c:#8b7dff">
         <div class="glow" aria-hidden="true"></div>
         <div class="top"><div class="logo edu-logo wide"><img src="assets/edu/arena.png" alt="Logo Arena Multimedia"></div><div><h3>Arena Multimedia</h3><div class="kind">Advanced Diploma in Multimedia · 2022</div></div></div>
         <p><b>Advanced Diploma in Multimedia</b>, hoàn thành tháng 7/2022, xếp loại Credit. Nơi hình thành nền tảng thiết kế, dựng hình và tư duy hình ảnh, thứ làm giao diện các sản phẩm Beta trông như hôm nay.</p>
-        <button class="dip tall" type="button" data-dip="assets/edu/bang-arena.jpg"><img src="assets/edu/bang-arena.jpg" alt="Bằng Advanced Diploma in Multimedia của Arena Multimedia, cấp cho Phạm Việt Hà" loading="lazy" width="1018" height="1462"><span><b>Xem bằng Arena</b><small>Credit · cấp ngày 15/02/2023</small></span></button>
+        <button class="dip tall" type="button" data-cred="arena" aria-label="Xem bằng Advanced Diploma in Multimedia, Arena Multimedia"><canvas class="cred" aria-hidden="true"></canvas><span><b>Xem bằng Arena</b><small>Credit · cấp ngày 15/02/2023</small></span></button>
         <div class="tags"><span class="tag">Thiết kế</span><span class="tag">Dựng hình</span><span class="tag">Advanced Diploma</span></div>
       </article>
     </div>
@@ -1531,8 +1535,30 @@ footer a{color:var(--ink-2)}
   const closeLb = () => { lb.hidden = true; lbIn.innerHTML = ""; document.documentElement.style.overflow = ""; if (lastFocus) lastFocus.focus(); };
   lb.addEventListener("click", e => { if (e.target === lb || e.target.closest(".lb-x")) closeLb(); });
   addEventListener("keydown", e => { if (e.key === "Escape" && !lb.hidden) closeLb(); });
-  // bằng cấp trong phần Học vấn: bấm để xem lớn
-  document.querySelectorAll(".dip").forEach(b => b.addEventListener("click", () => { const im = new Image(); im.src = b.dataset.dip; im.alt = b.querySelector("img").alt; openLb(im, im.alt); }));
+  // ===== Bằng cấp: ảnh đã in hình mờ, mã hoá AES-GCM trong assets/edu/creds.bin (scripts/creds.py) =====
+  // Giải mã trong trình duyệt rồi vẽ lên <canvas>: không có đường dẫn ảnh, không "Lưu ảnh", không kéo thả.
+  const credKey = (() => { const a = [17,196,165,25,19,233,122,212,112,102,244,80,42,213,250,190,65,49,117,42,198,127,98,23,50,113,201,247,14,172,46,151], b = [112,242,208,200,6,71,202,103,155,91,95,220,247,62,131,243,3,147,12,227,156,148,221,113,246,249,198,91,36,13,19,221]; return new Uint8Array(a.map((v, i) => v ^ b[i])); })();
+  let creds = null;
+  const loadCreds = () => creds || (creds = (async () => {
+    const buf = new Uint8Array(await (await fetch("assets/edu/creds.bin")).arrayBuffer());
+    const k = await crypto.subtle.importKey("raw", credKey, "AES-GCM", false, ["decrypt"]);
+    const plain = await crypto.subtle.decrypt({ name: "AES-GCM", iv: buf.slice(4, 16) }, k, buf.slice(16));
+    const data = JSON.parse(new TextDecoder().decode(plain)), out = {};
+    const bmp = b64 => createImageBitmap(new Blob([Uint8Array.from(atob(b64), c => c.charCodeAt(0))], { type: "image/jpeg" }));
+    for (const [n, v] of Object.entries(data)) out[n] = { full: () => bmp(v.full), thumb: await bmp(v.thumb), w: v.w, h: v.h };
+    return out;
+  })());
+  const paint = (cv, bm) => { cv.width = bm.width; cv.height = bm.height; cv.getContext("2d").drawImage(bm, 0, 0); };
+  const block = e => { if (e.target.closest("canvas.cred, .lb-in canvas")) e.preventDefault(); };
+  ["contextmenu", "dragstart", "copy"].forEach(t => document.addEventListener(t, block));
+  new IntersectionObserver((es, o) => es.forEach(e => { if (!e.isIntersecting) return; o.disconnect();
+    loadCreds().then(c => document.querySelectorAll(".dip[data-cred]").forEach(b => { const it = c[b.dataset.cred]; if (it) paint(b.querySelector("canvas"), it.thumb); })).catch(() => {});
+  }), { rootMargin: "600px" }).observe(document.getElementById("hoc-van"));
+  document.querySelectorAll(".dip[data-cred]").forEach(b => b.addEventListener("click", async () => {
+    const it = (await loadCreds())[b.dataset.cred]; if (!it) return;
+    const cv = document.createElement("canvas"); cv.className = "cred-full"; paint(cv, await it.full());
+    const t = b.getAttribute("aria-label").replace(/^Xem /, ""); openLb(cv, t.charAt(0).toUpperCase() + t.slice(1));
+  }));
   const initDuAn = root => {
     root.querySelectorAll(".wv").forEach(b => b.addEventListener("click", () => {
       const f = document.createElement("iframe"); f.src = "https://drive.google.com/file/d/" + b.dataset.drive + "/preview"; f.allow = "autoplay; fullscreen"; f.allowFullscreen = true; f.title = b.dataset.title; if (b.dataset.wide) f.className = "wide"; openLb(f, b.dataset.title); }));
