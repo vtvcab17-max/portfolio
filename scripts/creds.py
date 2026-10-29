@@ -47,7 +47,7 @@ def watermark(im):
     band = ImageDraw.Draw(out)
     bh = size * 2
     band.rectangle((0, h - bh, w, h), fill=(20, 18, 30, 170))
-    note = "Bản sao chỉ để xem trên portfolio của Phạm Việt Hà, không có giá trị xác thực"
+    note = "Ảnh đã được mã hoá. Mọi lượt tải ảnh đều được ghi nhận địa chỉ IP."
     fs = round(size * .8)
     while fs > 9 and band.textlength(note, font=ImageFont.truetype(FONT, fs)) > w - size * 2:
         fs -= 1

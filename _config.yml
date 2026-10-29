@@ -1,0 +1,12 @@
+# GitHub Pages (Jekyll): không phục vụ ảnh bằng cấp mã hoá (chỉ Cloudflare Workers phục vụ và ghi IP),
+# mã dựng và nguồn bài viết.
+exclude:
+  - assets/edu/creds.bin
+  - scripts
+  - blog-src
+  - pages-src
+  - private
+  - worker.js
+  - wrangler.jsonc
+  - README.md
+  - index-1.html
